@@ -1,0 +1,37 @@
+als Spieler: 
+-stehen (atmen o.ä)
+-laufen (Animationen links / rechts; Logik 360°)
+-rennen (links / rechts)
+-schlagen / schießen (links / rechts)
+-tot sein. gloly to china. 
+[-]springen
+[-]Spezialangriff
+[-]Gegenstände aufheben
+
+
+als Gegner: 
+-stehen (atmen oä) 
+-laufen
+-angreifen
+
+
+als Webseite: 
+-existieren
+[-]Impressum
+
+
+als Spiel: 
+-KI Gegner
+-Startmenü
+[-]Charakter Auswahlbildschirm
+[-]verschiedene Charaktere
+-Gegenstände
+-scrollbare Level
+-Gegner sterben & verschwinden
+-nach gewonnenem Level neues Level laden
+-verschieden starke Gegner (drei Stufen; zwei normale und [ein Endgegner]) 
+-Endbildschirm führt zu Startmenü
+-Todesbildschirm
+-Soundeffekte
+-Musik
+-Impressum
