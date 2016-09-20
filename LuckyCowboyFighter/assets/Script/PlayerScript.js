@@ -72,13 +72,13 @@ cc.Class({
             if(this.node.x > -400) {
                 this.node.x = this.node.x - this.playerTempo * dt
             } else {
-                this.moveBackground = -1
+                this.moveBackground = 1
             }
         } else if(this.right == true){
             if(this.node.x <  400) {
                 this.node.x = this.node.x + this.playerTempo * dt
             } else {
-                this.moveBackground =  1
+                this.moveBackground =  -1
             }
         }
         

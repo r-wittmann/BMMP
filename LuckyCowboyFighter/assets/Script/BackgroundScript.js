@@ -2,16 +2,18 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        // foo: {
-        //    default: null,      // The default value will be used only when the component attaching
-        //                           to a node for the first time
-        //    url: cc.Texture2D,  // optional, default is typeof default
-        //    serializable: true, // optional, default is true
-        //    visible: true,      // optional, default is true
-        //    displayName: 'Foo', // optional
-        //    readonly: false,    // optional, default is false
-        // },
-        // ...
+        secondBackground: {
+            default: null,
+            type: cc.Sprite
+        },
+        firstBackground: {
+            default: null,
+            type: cc.Sprite
+        },
+        floor: {
+            default: null,
+            type: cc.Sprite
+        }
     },
 
     // use this for initialization
@@ -26,5 +28,16 @@ cc.Class({
 
     moveBackgroundChildren: function (direction, dt) {
         cc.log('moveBackgroundChildren');
+        cc.log("direction" + direction);
+        cc.log("dt" + dt);
+        cc.log(this.floor.x);
+        //this.floor.x = this.floor.x + 200 * dt * direction;
+        var floor = this.node.getChildByName("Floor");
+        var firstBackground = this.node.getChildByName("FirstBackground");
+        var secondBackground = this.node.getChildByName("SecondBackground");
+
+        floor.x = floor.x + 200 * dt * direction;
+        firstBackground.x = firstBackground.x + 100 * dt * direction;
+        secondBackground.x = secondBackground.x + 3 * dt * direction;
     }
 });
