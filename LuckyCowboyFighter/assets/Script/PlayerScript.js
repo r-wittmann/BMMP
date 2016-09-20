@@ -8,6 +8,8 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
+        //-1:move to right; 0: do not move; 1:move to left
+        this.moveBackground = 0;
         this.left = false;
         this.right = false;
         this.up = false;
@@ -27,19 +29,15 @@ cc.Class({
            
                     switch(keyCode) {
                     case cc.KEY.left:
-                        cc.log("LEFT!!");
                         self.left = true;
                         break;
                     case cc.KEY.right:
-                        cc.log("RIGHT!");
                         self.right = true;
                         break;
                     case cc.KEY.up:
-                        cc.log("UP!");
                         self.up = true;
                         break;
                     case cc.KEY.down:
-                        cc.log("DOWn!");
                         self.down = true;
                         break;
                 }
@@ -48,19 +46,17 @@ cc.Class({
             onKeyReleased: function(keyCode, event) {
                 switch(keyCode) {
                     case cc.KEY.left:
-                        cc.log("LEFT!!");
                         self.left = false;
+                        self.moveBackground = 0;
                         break;
                     case cc.KEY.right:
-                        cc.log("RIGHT!");
                         self.right = false;
+                        self.moveBackground = 0;
                         break;
                     case cc.KEY.up:
-                        cc.log("UP!");
                         self.up = false;
                         break;
                     case cc.KEY.down:
-                        cc.log("DOWn!");
                         self.down = false;
                         break;
                 }
@@ -72,10 +68,18 @@ cc.Class({
     // called every frame, uncomment this function to activate update callback
      update: function (dt) {
         
-        if(this.left == true && this.node.x > -400){
-            this.node.x = this.node.x - this.playerTempo * dt;
-        }else if(this.right == true && this.node.x < 400){
-            this.node.x = this.node.x + this.playerTempo * dt;
+        if(this.left == true){
+            if(this.node.x > -400) {
+                this.node.x = this.node.x - this.playerTempo * dt
+            } else {
+                this.moveBackground = -1
+            }
+        } else if(this.right == true){
+            if(this.node.x <  400) {
+                this.node.x = this.node.x + this.playerTempo * dt
+            } else {
+                this.moveBackground =  1
+            }
         }
         
 

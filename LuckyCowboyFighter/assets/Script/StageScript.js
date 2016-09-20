@@ -5,6 +5,11 @@ cc.Class({
     	player: {
     		default: null,
     		type: cc.Sprite
+    	},
+
+    	background: {
+    		default: null,
+    		type: cc.Node
     	}
  
     },
@@ -16,7 +21,8 @@ cc.Class({
     },
 
     // called every frame, uncomment this function to activate update callback
-    // update: function (dt) {
-
-    // },
+    update: function (dt) {
+    	let moveBackground = this.player.getComponent('PlayerScript').moveBackground;
+    	moveBackground !== 0 && this.background.getComponent('BackgroundScript').moveBackgroundChildren(moveBackground, dt);
+    },
 });
