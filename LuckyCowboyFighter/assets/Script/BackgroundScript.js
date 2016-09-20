@@ -27,12 +27,8 @@ cc.Class({
     // },
 
     moveBackgroundChildren: function (direction, dt) {
-        cc.log('moveBackgroundChildren');
-        cc.log("direction" + direction);
-        cc.log("dt" + dt);
         //this.floor.x = this.floor.x + 200 * dt * direction;
         var floor = this.node.getChildByName("Floor");
-        cc.log(floor.x);
         var firstBackground = this.node.getChildByName("FirstBackground");
         var secondBackground = this.node.getChildByName("SecondBackground");
 
