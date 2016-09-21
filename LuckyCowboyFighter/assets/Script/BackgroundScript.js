@@ -32,9 +32,9 @@ cc.Class({
         var firstBackground = this.node.getChildByName("FirstBackground");
         var secondBackground = this.node.getChildByName("SecondBackground");
 
-        this.moveSprites(floor.getChildByName('FloorSprite1'), floor.getChildByName('FloorSprite2'), 2000, direction, dt);
-        this.moveSprites(firstBackground.getChildByName('FirstBackgroundSprite1'), firstBackground.getChildByName('FirstBackgroundSprite2'), 1000, direction, dt);
-        this.moveSprites(secondBackground.getChildByName('SecondBackgroundSprite1'), secondBackground.getChildByName('SecondBackgroundSprite2'), 100, direction, dt);
+        this.moveSprites(floor.getChildByName('FloorSprite1'), floor.getChildByName('FloorSprite2'), 200, direction, dt);
+        this.moveSprites(firstBackground.getChildByName('FirstBackgroundSprite1'), firstBackground.getChildByName('FirstBackgroundSprite2'), 100, direction, dt);
+        this.moveSprites(secondBackground.getChildByName('SecondBackgroundSprite1'), secondBackground.getChildByName('SecondBackgroundSprite2'), 10, direction, dt);
 
     },
     moveSprites: function (sprite1, sprite2, speed, direction, dt) {
