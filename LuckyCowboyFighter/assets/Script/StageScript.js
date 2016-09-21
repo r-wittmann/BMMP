@@ -4,7 +4,7 @@ cc.Class({
     properties: {
     	player: {
     		default: null,
-    		type: cc.Sprite
+    		type: cc.Node
     	},
 
     	background: {

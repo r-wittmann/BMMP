@@ -3,11 +3,18 @@ cc.Class({
 
     properties: {
         playerTempo: 0,
+
+        animation:{
+        default: null,
+        type:cc.Animation,
+        },
+
  
     },
 
     // use this for initialization
     onLoad: function () {
+        this.animation.play("standStillAnim_Cowboy"); 
         //-1:move to right; 0: do not move; 1:move to left
         this.moveBackground = 0;
         this.left = false;
