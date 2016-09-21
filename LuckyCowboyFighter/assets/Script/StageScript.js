@@ -2,10 +2,11 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-      enemyPrefab: {
+        enemyPrefab: {
             default: null,
             type: cc.Prefab
-        },
+         },
+        maximumEnemies: 0,
     	player: {
     		default: null,
     		type: cc.Node
@@ -43,14 +44,14 @@ cc.Class({
         this.wonFlag = 0;
         this.loseFlag = 0;
         this.wonPositionX = 0;
-        this.enemyCount = 0;
+        this.currentEnemies = 0;
     },
 
     // called every frame, uncomment this function to activate update callback
     update: function (dt) {
-      if(this.enemyCount < 100){
+      if(this.currentEnemies < this.maximumEnemies){
         this.spawnNewEnemy();
-        this.enemyCount++;
+        this.currentEnemies++;
       }
 
     	let moveBackground = this.player.getComponent('PlayerScript').moveBackground;
