@@ -15,12 +15,16 @@ cc.Class({
             default: null,
             type: cc.Label
         },
-        winDistance: 0
+        winDistance: 0,
+        loseTimeout: 0
     },
 
     // use this for initialization
     onLoad: function () {
-        this.wonFlag = false;
+        // won and loseFlag are set to 0 by default. Once the player has won or lost, the flag will be set to 1. 
+        // Once the winGame or loseGame function is called, the respective flag will be set to 2
+        this.wonFlag = 0;
+        this.loseFlag = 0;
         this.wonPositionX = 0;
     },
 
@@ -32,25 +36,39 @@ cc.Class({
         }
         
         let floor = this.background.getChildByName('Floor')
-        // winGameMessage is, at the moment, called, when the player reaches a certain point in the world
-        // this, of course, has to be replaced by a better way to check, whether the player has won (all enemies dead for example)
-        if (floor.x < -500 && !this.wonFlag) {
-            this.wonFlag = true;
+
+        // player wins and looses game, once he reaches a certain point in the world
+        // this has to be replaced with the acutal win and lose criteria
+        if (floor.x < -500 && this.wonFlag === 0) {
+            this.wonFlag = 1;
             this.wonPositionX = floor.x;
-            this.winGameMessage();
-        } else if (this.wonFlag) {
+            this.writeMessage('You Won! Continue to the right for the next Stage >>>');
+        } else if (this.wonFlag === 1) {
             this.winGame(floor.x, this.wonPositionX)
+        }
+
+        if (floor.x > 500 && this.loseFlag === 0) {
+            this.loseFlag = 1;
+            this.writeMessage('You lost. You will be returned to the Main Menu')
+        } else if (this.loseFlag === 1) {
+            this.loseFlag = 2;
+            // player is returned to main menu after loseTimeout seconds
+            this.scheduleOnce(() => this.loseGame(), this.loseTimeout);
         }
     },
 
-    winGameMessage: function () {
-        this.winLoseLabel.string = 'You Won! Continue to the right for the next Stage >>>';
+    writeMessage: function (message) {
+        this.winLoseLabel.string = message;
     },
     winGame: function (floorX, wonPositionX) {
+        // next stage is loaded after the player has continued to run the winDistance to the right
         if (floorX < wonPositionX - this.winDistance) {
-            this.wonFlag = false;
+            this.wonFlag = 2;
             // this loadScene has to load the next stage
-            cc.director.loadScene('01startMenu')
+            cc.director.loadScene('01startMenu');
         }
+    },
+    loseGame: function () {
+        cc.director.loadScene('01startMenu');
     }
 });
