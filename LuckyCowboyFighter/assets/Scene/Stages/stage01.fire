@@ -1142,6 +1142,10 @@
       "__id__": 2
     },
     "_enabled": true,
+    "enemyPrefab": {
+      "__uuid__": "c4833dff-8310-410f-8b8e-0cd2a41554ca"
+    },
+    "maximumEnemies": 20,
     "player": {
       "__id__": 22
     },

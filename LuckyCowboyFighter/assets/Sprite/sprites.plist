@@ -251,7 +251,7 @@
 			<key>size</key>
 			<string>{1024,1024}</string>
 			<key>textureFileName</key>
-			<string>cowboySpriteSheet.png</string>
+			<string>sprites.png</string>
 			</dict>
 		</dict>
 </plist>
