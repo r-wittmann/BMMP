@@ -4,15 +4,15 @@ cc.Class({
     properties: {
         secondBackground: {
             default: null,
-            type: cc.Sprite
+            type: cc.Node
         },
         firstBackground: {
             default: null,
-            type: cc.Sprite
+            type: cc.Node
         },
         floor: {
             default: null,
-            type: cc.Sprite
+            type: cc.Node
         }
     },
 
@@ -32,8 +32,29 @@ cc.Class({
         var firstBackground = this.node.getChildByName("FirstBackground");
         var secondBackground = this.node.getChildByName("SecondBackground");
 
-        floor.x = floor.x + 200 * dt * direction;
-        firstBackground.x = firstBackground.x + 100 * dt * direction;
-        secondBackground.x = secondBackground.x + 3 * dt * direction;
+        this.moveSprites(floor.getChildByName('FloorSprite1'), floor.getChildByName('FloorSprite2'), 2000, direction, dt);
+        this.moveSprites(firstBackground.getChildByName('FirstBackgroundSprite1'), firstBackground.getChildByName('FirstBackgroundSprite2'), 1000, direction, dt);
+        this.moveSprites(secondBackground.getChildByName('SecondBackgroundSprite1'), secondBackground.getChildByName('SecondBackgroundSprite2'), 100, direction, dt);
+
+    },
+    moveSprites: function (sprite1, sprite2, speed, direction, dt) {
+        sprite1.x = sprite1.x + speed * dt * direction;
+        sprite2.x = sprite2.x + speed * dt * direction;
+
+        let sprite1Width = sprite1.getBoundingBox().size.width;
+        let sprite2Width = sprite2.getBoundingBox().size.width;
+
+        if (sprite1.x < -sprite1Width) {
+            sprite1.x += sprite1Width * 2;
+        } 
+        if (sprite2.x < -sprite2Width) {
+            sprite2.x += sprite2Width * 2;
+        }
+
+        if (sprite1.x > sprite1Width) {
+            sprite1.x -= sprite1Width * 2;
+        } else if (sprite2.x > sprite2Width) {
+            sprite2.x -= sprite2Width * 2;
+        }
     }
 });

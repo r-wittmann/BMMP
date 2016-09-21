@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "5cef1283-51cf-43ed-aa88-bb0a59724115",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "Stadtneu": {
+      "ver": "1.0.3",
+      "uuid": "587d27a2-3994-4c63-a403-e679215a36d7",
+      "rawTextureUuid": "5cef1283-51cf-43ed-aa88-bb0a59724115",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": -5,
+      "trimX": 0,
+      "trimY": 10,
+      "width": 1280,
+      "height": 391,
+      "rawWidth": 1280,
+      "rawHeight": 401,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
