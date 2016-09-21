@@ -24,7 +24,7 @@ cc.Class({
 
         //playerDirection -1: left, 0:standStill, +1: right
         this.playerDirection = 0;
-        this.oldPlayerDirection = 0;
+        this.oldPlayerDirection = 1;
 
         this.setInputControl();
 
@@ -38,31 +38,27 @@ cc.Class({
             // When there is a key being pressed down, judge if it's the designated directional button and set up acceleration in the corresponding direction
             onKeyPressed: function(keyCode, event) {
            
-                    switch(keyCode) {
+                    switch(keyCode) {					 
                     case cc.KEY.left:
                     	self.moveBackground = 0;
                     	self.right = false;
                         self.left = true;
-                        self.playerDirection = -1;
-                        self.oldPlayerDirection = self.playerDirection;
+                        self.oldPlayerDirection = 0;
                         self.playAnimation();
                         break;
                     case cc.KEY.right:
                     	self.moveBackground = 0;
                     	self.left = false;
                         self.right = true;
-						self.playerDirection = 1;
-						self.oldPlayerDirection = self.playerDirection;
+                        self.oldPlayerDirection = 0;
                         self.playAnimation();
                         break;
                     case cc.KEY.up:
                         self.up = true;
-                        self.playerDirection = self.oldPlayerDirection;
                         self.playAnimation();
                         break;
                     case cc.KEY.down:
                         self.down = true;
-                        self.playerDirection = self.oldPlayerDirection;
                         self.playAnimation();
                         break;
                 }
@@ -73,32 +69,22 @@ cc.Class({
                     case cc.KEY.left:
                         self.left = false;
                         self.moveBackground = 0;
-                        if(self.playerDirection != 1){
-                        	self.playerDirection = 0;
-                        }
+                        self.oldPlayerDirection = -1;
                         self.playAnimation();
                         break;
                     case cc.KEY.right:
                         self.right = false;
                         self.moveBackground = 0;
-                        if(self.playerDirection != -1){
-                        	self.playerDirection = 0;
-                        }
+                        self.oldPlayerDirection = 1;
                         self.playAnimation();
                         break;
                     case cc.KEY.up:
-                    	self.playerDirection == 0;
-                    		
-                    	
-                    	self.playAnimation();
                         self.up = false;
+                        self.playAnimation();
                         break;
-                    case cc.KEY.down:
-	                    self.playerDirection == 0;
-	                    self.playAnimation();
-                    	
-                    	
+                    case cc.KEY.down:                    	
                         self.down = false;
+                        self.playAnimation();
                         break;
                 }
             }
@@ -107,11 +93,12 @@ cc.Class({
     },
 
     playAnimation: function(){
-    	if(this.playerDirection == -1){
+    	if(this.left || (this.oldPlayerDirection == -1 && (this.up || this.down))){
     		this.animation.play("runAnimLeft_Cowboy"); 
-    	}else if(this.playerDirection == 1){
+    	}else if(this.right || (this.oldPlayerDirection == 1 && (this.up || this.down))){
     		this.animation.play("runAnimRight_Cowboy"); 
-    	}else {
+    	}
+    	else {
     		this.animation.play("standStillAnim_Cowboy");
     	}
     },
