@@ -29,9 +29,13 @@ cc.Class({
            
                     switch(keyCode) {
                     case cc.KEY.left:
+                    	self.moveBackground = 0;
+                    	self.right = false;
                         self.left = true;
                         break;
                     case cc.KEY.right:
+                    	self.moveBackground = 0;
+                    	self.left = false;
                         self.right = true;
                         break;
                     case cc.KEY.up:
@@ -70,15 +74,15 @@ cc.Class({
         
         if(this.left == true){
             if(this.node.x > -400) {
-                this.node.x = this.node.x - this.playerTempo * dt
+                this.node.x = this.node.x - this.playerTempo * dt;
             } else {
-                this.moveBackground = 1
+                this.moveBackground = 1;
             }
         } else if(this.right == true){
             if(this.node.x <  400) {
-                this.node.x = this.node.x + this.playerTempo * dt
+                this.node.x = this.node.x + this.playerTempo * dt;
             } else {
-                this.moveBackground =  -1
+                this.moveBackground =  -1;
             }
         }
         
