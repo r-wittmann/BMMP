@@ -93,9 +93,13 @@ cc.Class({
     },
 
     playAnimation: function(){
-    	if(this.left || (this.oldPlayerDirection == -1 && (this.up || this.down))){
+    	if(this.left){
     		this.animation.play("runAnimLeft_Cowboy"); 
-    	}else if(this.right || (this.oldPlayerDirection == 1 && (this.up || this.down))){
+    	}else if(this.right ){
+    		this.animation.play("runAnimRight_Cowboy"); 
+    	}else if((this.node.getChildByName("PlayerAnimation").scaleX == -1 && (this.up || this.down))){
+    		this.animation.play("runAnimLeft_Cowboy"); 
+    	}else if((this.node.getChildByName("PlayerAnimation").scaleX == 1 && (this.up || this.down))){
     		this.animation.play("runAnimRight_Cowboy"); 
     	}
     	else {
