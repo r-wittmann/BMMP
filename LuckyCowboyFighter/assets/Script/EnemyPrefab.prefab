@@ -162,7 +162,9 @@
       "__id__": 1
     },
     "_enabled": true,
-    "attackRadius": 50
+    "attackRadius": 50,
+    "xSpeed": 200,
+    "ySpeed": 100
   },
   {
     "__type__": "cc.PrefabInfo",
