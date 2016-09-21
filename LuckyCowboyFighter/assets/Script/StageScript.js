@@ -2,9 +2,13 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
+      enemyPrefab: {
+            default: null,
+            type: cc.Prefab
+        },
     	player: {
     		default: null,
-    		type: cc.Sprite
+    		type: cc.Node
     	},
 
     	background: {
@@ -19,22 +23,41 @@ cc.Class({
         loseTimeout: 0
     },
 
+    spawnNewEnemy: function (){
+      var newEnemy = cc.instantiate(this.enemyPrefab);
+      this.node.addChild(newEnemy);
+      newEnemy.setPosition(this.getNewEnemyPosition());
+      newEnemy.getComponent('EnemyScript').game = this;
+    },
+
+    getNewEnemyPosition: function () {
+        var randomX = (cc.random0To1() * 500)+100;
+        var randomY = (cc.random0To1() * 500)-50;
+        return cc.p(randomX, randomY);
+    },
+
     // use this for initialization
     onLoad: function () {
-        // won and loseFlag are set to 0 by default. Once the player has won or lost, the flag will be set to 1. 
+        // won and loseFlag are set to 0 by default. Once the player has won or lost, the flag will be set to 1.
         // Once the winGame or loseGame function is called, the respective flag will be set to 2
         this.wonFlag = 0;
         this.loseFlag = 0;
         this.wonPositionX = 0;
+        this.enemyCount = 0;
     },
 
     // called every frame, uncomment this function to activate update callback
     update: function (dt) {
+      if(this.enemyCount < 100){
+        this.spawnNewEnemy();
+        this.enemyCount++;
+      }
+
     	let moveBackground = this.player.getComponent('PlayerScript').moveBackground;
         if (moveBackground !== 0) {
             this.background.getComponent('BackgroundScript').moveBackgroundChildren(moveBackground, dt);
         }
-        
+
         let floor = this.background.getChildByName('Floor')
 
         // player wins and looses game, once he reaches a certain point in the world
