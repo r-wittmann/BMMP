@@ -39,11 +39,13 @@ cc.Class({
                     	self.moveBackground = 0;
                     	self.right = false;
                         self.left = true;
+                        self.animation.play("runAnimLeft_Cowboy"); 
                         break;
                     case cc.KEY.right:
                     	self.moveBackground = 0;
                     	self.left = false;
                         self.right = true;
+                        self.animation.play("runAnimRight_Cowboy"); 
                         break;
                     case cc.KEY.up:
                         self.up = true;
@@ -59,10 +61,12 @@ cc.Class({
                     case cc.KEY.left:
                         self.left = false;
                         self.moveBackground = 0;
+                        self.animation.play("standStillAnim_Cowboy");
                         break;
                     case cc.KEY.right:
                         self.right = false;
                         self.moveBackground = 0;
+                        self.animation.play("standStillAnim_Cowboy");
                         break;
                     case cc.KEY.up:
                         self.up = false;
