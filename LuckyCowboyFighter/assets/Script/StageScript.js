@@ -21,7 +21,8 @@ cc.Class({
             type: cc.Label
         },
         winDistance: 0,
-        loseTimeout: 0
+        loseTimeout: 0,
+        selectedCharacter: 0,
     },
 
     spawnNewEnemy: function (){
