@@ -9,26 +9,23 @@ cc.Class({
         type:cc.Animation,
         },
 
-
+ 
     },
 
     // use this for initialization
     onLoad: function () {
-        this.animState = this.animation.play("standStillAnim_Cowboy");
+      this.animation.play("standStillAnim_Cowboy"); 
         //-1:move to right; 0: do not move; 1:move to left
         this.moveBackground = 0;
         this.left = false;
         this.right = false;
         this.up = false;
         this.down = false;
-        this.isHit = false;
-
-        //playerDirection -1: left, 0:standStill, +1: right
-        this.playerDirection = 0;
-        this.oldPlayerDirection = 1;
+        this.punch = false;
 
         this.setInputControl();
-
+        this.playerDirection = 1;
+      
 
     },
 
@@ -39,8 +36,10 @@ cc.Class({
             event: cc.EventListener.KEYBOARD,
             // When there is a key being pressed down, judge if it's the designated directional button and set up acceleration in the corresponding direction
             onKeyPressed: function(keyCode, event) {
+           
 
-                    switch(keyCode) {
+           			if(self.punch == false) {
+                    switch(keyCode) {					 
                     case cc.KEY.left:
                     	self.moveBackground = 0;
                     	self.right = false;
@@ -48,7 +47,6 @@ cc.Class({
                     		self.left = true;
                     		self.playAnimation();
                     	}
-                        self.oldPlayerDirection = 0;
                         break;
                     case cc.KEY.right:
                     	self.moveBackground = 0;
@@ -57,10 +55,9 @@ cc.Class({
                     		self.right = true;
                     		self.playAnimation();
                     	}
-                        self.oldPlayerDirection = 0;
                         break;
                     case cc.KEY.up:
-						if(self.up == false){
+						if(self.up == false){                    
 	                        self.up = true;
 	                        self.playAnimation();
 	                    }
@@ -71,6 +68,14 @@ cc.Class({
                         	self.playAnimation();
                     	}
                         break;
+                    case cc.KEY.space:
+                    	cc.log("space");
+                    	self.punch = true;
+                    	self.playPunchAnimation();
+                    	break;
+                    }
+                   
+
                 }
             },
             // when releasing the button, stop acceleration in this direction
@@ -79,23 +84,26 @@ cc.Class({
                     case cc.KEY.left:
                         self.left = false;
                         self.moveBackground = 0;
-                        self.oldPlayerDirection = -1;
                         self.playAnimation();
                         break;
                     case cc.KEY.right:
                         self.right = false;
                         self.moveBackground = 0;
-                        self.oldPlayerDirection = 1;
                         self.playAnimation();
                         break;
                     case cc.KEY.up:
                         self.up = false;
                         self.playAnimation();
                         break;
-                    case cc.KEY.down:
+                    case cc.KEY.down:                    	
                         self.down = false;
                         self.playAnimation();
                         break;
+                    case cc.KEY.space:
+                    	//self.punch = false;
+                    	cc.log("space up")
+                    	self.playAnimation();
+                    	break;
                 }
             }
         }, self.node);
@@ -103,23 +111,59 @@ cc.Class({
     },
 
     playAnimation: function(){
+ 
+    	this.playerDirection = this.node.getChildByName("PlayerAnimation").scaleX;
+
+
+
+
+    	// if(this.animation.getAnimationState("punchAnimLeft_Cowboy").isPlaying == true){
+    	// 			cc.log(this.animation.getAnimationState("punchAnimLeft_Cowboy").isPlaying );
+
+    	// 	this.punch = false;
+    		
+
+    	// }else 
     	if(this.left){
-    		this.animState = this.animation.play("runAnimLeft_Cowboy");
+    		this.animation.playAdditive("runAnimLeft_Cowboy");
+    		//this.animation.playAdditive("punchAnimLeft_Cowboy"); 
+    		
     	}else if(this.right ){
-    		this.animState = this.animation.play("runAnimRight_Cowboy");
-    	}else if((this.node.getChildByName("PlayerAnimation").scaleX == -1 && (this.up || this.down))){
-    		this.animState = this.animation.play("runAnimLeft_Cowboy");
-    	}else if((this.node.getChildByName("PlayerAnimation").scaleX == 1 && (this.up || this.down))){
-    		this.animState = this.animation.play("runAnimRight_Cowboy");
+    		this.animation.play("runAnimRight_Cowboy");     		
+    	}else if((this.playerDirection == -1 && (this.up || this.down))){
+    		this.animation.play("runAnimLeft_Cowboy"); 
+    	}else if((this.playerDirection == 1 && (this.up || this.down))){
+    		this.animation.play("runAnimRight_Cowboy"); 
+    	}/*else if(this.punch == true && playerDirection == -1){		
+    		
+    		this.animation.play("punchAnimLeft_Cowboy"); 
+    		if(this.animation.getAnimationState("punchAnimLeft_Cowboy").isPlaying == false){
+    				cc.log("false?!?!")
+    					this.punch  = false;
+    					this.playAnimation();
+    				
+    			}
+    	}else if(this.punch == true && playerDirection == 1){
+    			this.animation.play("punchAnimRight_Cowboy"); 
+    	}*/else {
+    		this.animation.play("standStillAnim_Cowboy");
     	}
-    	else {
-    		this.animState =this.animation.play("standStillAnim_Cowboy");
-    	}
+
+    	
+    },
+
+    playPunchAnimation : function(){
+
+    	// if(this.playerDirection == -1){
+    		this.animation.play("punchAnimLeft_Cowboy");
+    	// }else if(this.playDirection == 1){
+    		// this.animation.play("punchAnimRight_Cowboy");
+    	// }
     },
 
     // called every frame, uncomment this function to activate update callback
      update: function (dt) {
-
+        
         if(this.left == true){
             if(this.node.x > -400) {
                 this.node.x = this.node.x - this.playerTempo * dt;
@@ -133,7 +177,7 @@ cc.Class({
                 this.moveBackground =  -1;
             }
         }
-
+        
 
         if(this.up == true  && this.node.y < -80){
             this.node.y = this.node.y + this.playerTempo * dt;
