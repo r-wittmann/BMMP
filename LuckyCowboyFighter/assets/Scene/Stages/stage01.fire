@@ -953,7 +953,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 104,
+      "width": 113,
       "height": 205
     },
     "_children": [],
@@ -994,7 +994,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "572d0e3b-e5ea-420a-a7f8-7aca39647746"
+      "__uuid__": "28a2623b-db12-4fed-b734-fe4d4e06f3d6"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -1033,6 +1033,12 @@
       },
       {
         "__uuid__": "b1d90978-edc1-4f69-8ffc-ba2a7daa809a"
+      },
+      {
+        "__uuid__": "be2036ab-7ee0-4301-8b8e-9b295305d913"
+      },
+      {
+        "__uuid__": "a31a63e2-2db9-4459-ac9b-5d6ee34a9efc"
       }
     ],
     "playOnLoad": false
@@ -1149,7 +1155,7 @@
     "enemyPrefab": {
       "__uuid__": "c4833dff-8310-410f-8b8e-0cd2a41554ca"
     },
-    "maximumEnemies": 5,
+    "maximumEnemies": 0,
     "player": {
       "__id__": 22
     },
@@ -1160,6 +1166,7 @@
       "__id__": 28
     },
     "winDistance": 200,
-    "loseTimeout": 500
+    "loseTimeout": 500,
+    "selectedCharacter": 0
   }
 ]

@@ -14,19 +14,17 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        this.animState = this.animation.play("standStillAnim_Cowboy"); 
+      this.animation.play("standStillAnim_Cowboy"); 
         //-1:move to right; 0: do not move; 1:move to left
         this.moveBackground = 0;
         this.left = false;
         this.right = false;
         this.up = false;
         this.down = false;
-
-        //playerDirection -1: left, 0:standStill, +1: right
-        this.playerDirection = 0;
-        this.oldPlayerDirection = 1;
+        this.punch = false;
 
         this.setInputControl();
+        this.playerDirection = 1;
       
 
     },
@@ -47,7 +45,6 @@ cc.Class({
                     		self.left = true;
                     		self.playAnimation();
                     	}
-                        self.oldPlayerDirection = 0;
                         break;
                     case cc.KEY.right:
                     	self.moveBackground = 0;
@@ -56,7 +53,6 @@ cc.Class({
                     		self.right = true;
                     		self.playAnimation();
                     	}
-                        self.oldPlayerDirection = 0;
                         break;
                     case cc.KEY.up:
 						if(self.up == false){                    
@@ -70,6 +66,12 @@ cc.Class({
                         	self.playAnimation();
                     	}
                         break;
+                    case cc.KEY.space:
+                    	cc.log("space");
+                    	self.punch = true;
+                    	self.playAnimation();
+                    	break;
+
                 }
             },
             // when releasing the button, stop acceleration in this direction
@@ -78,13 +80,11 @@ cc.Class({
                     case cc.KEY.left:
                         self.left = false;
                         self.moveBackground = 0;
-                        self.oldPlayerDirection = -1;
                         self.playAnimation();
                         break;
                     case cc.KEY.right:
                         self.right = false;
                         self.moveBackground = 0;
-                        self.oldPlayerDirection = 1;
                         self.playAnimation();
                         break;
                     case cc.KEY.up:
@@ -95,6 +95,11 @@ cc.Class({
                         self.down = false;
                         self.playAnimation();
                         break;
+                    case cc.KEY.space:
+                    	self.punch = false;
+                    	cc.log("space up")
+                    	self.playAnimation();
+                    	break;
                 }
             }
         }, self.node);
@@ -102,18 +107,45 @@ cc.Class({
     },
 
     playAnimation: function(){
+
+    	this.playerDirection = this.node.getChildByName("PlayerAnimation").scaleX;
+
+
+
+
+    	// if(this.animation.getAnimationState("punchAnimLeft_Cowboy").isPlaying == true){
+    	// 			cc.log(this.animation.getAnimationState("punchAnimLeft_Cowboy").isPlaying );
+
+    	// 	this.punch = false;
+    		
+
+    	// }else 
     	if(this.left){
-    		this.animState = this.animation.play("runAnimLeft_Cowboy"); 
+    		this.animation.playAdditive("runAnimLeft_Cowboy");
+    		//this.animation.playAdditive("punchAnimLeft_Cowboy"); 
+    		
     	}else if(this.right ){
-    		this.animState = this.animation.play("runAnimRight_Cowboy"); 
-    	}else if((this.node.getChildByName("PlayerAnimation").scaleX == -1 && (this.up || this.down))){
-    		this.animState = this.animation.play("runAnimLeft_Cowboy"); 
-    	}else if((this.node.getChildByName("PlayerAnimation").scaleX == 1 && (this.up || this.down))){
-    		this.animState = this.animation.play("runAnimRight_Cowboy"); 
+    		this.animation.play("runAnimRight_Cowboy");     		
+    	}else if((playerDirection == -1 && (this.up || this.down))){
+    		this.animation.play("runAnimLeft_Cowboy"); 
+    	}else if((playerDirection == 1 && (this.up || this.down))){
+    		this.animation.play("runAnimRight_Cowboy"); 
+    	}/*else if(this.punch == true && playerDirection == -1){		
+    		
+    		this.animation.play("punchAnimLeft_Cowboy"); 
+    		if(this.animation.getAnimationState("punchAnimLeft_Cowboy").isPlaying == false){
+    				cc.log("false?!?!")
+    					this.punch  = false;
+    					this.playAnimation();
+    				
+    			}
+    	}else if(this.punch == true && playerDirection == 1){
+    			this.animation.play("punchAnimRight_Cowboy"); 
+    	}*/else {
+    		this.animation.play("standStillAnim_Cowboy");
     	}
-    	else {
-    		this.animState =this.animation.play("standStillAnim_Cowboy");
-    	}
+
+    	
     },
 
     // called every frame, uncomment this function to activate update callback
