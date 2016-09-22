@@ -37,6 +37,8 @@ cc.Class({
             // When there is a key being pressed down, judge if it's the designated directional button and set up acceleration in the corresponding direction
             onKeyPressed: function(keyCode, event) {
            
+
+           			if(self.punch == false) {
                     switch(keyCode) {					 
                     case cc.KEY.left:
                     	self.moveBackground = 0;
@@ -68,9 +70,12 @@ cc.Class({
                         break;
                     case cc.KEY.space:
                     	cc.log("space");
-                    	self.punch = true;
-                    	self.playAnimation();
+                    	//self.animation.play("punchAnimRight_Cowboy");
+                    	this.punch = true;
+                    	self.playPunchAnimation();
                     	break;
+                    }
+                   
 
                 }
             },
@@ -96,9 +101,9 @@ cc.Class({
                         self.playAnimation();
                         break;
                     case cc.KEY.space:
-                    	self.punch = false;
+                    	//self.punch = false;
                     	cc.log("space up")
-                    	self.playAnimation();
+                    	//self.playAnimation();
                     	break;
                 }
             }
@@ -107,45 +112,29 @@ cc.Class({
     },
 
     playAnimation: function(){
-
+ 
     	this.playerDirection = this.node.getChildByName("PlayerAnimation").scaleX;
 
-
-
-
-    	// if(this.animation.getAnimationState("punchAnimLeft_Cowboy").isPlaying == true){
-    	// 			cc.log(this.animation.getAnimationState("punchAnimLeft_Cowboy").isPlaying );
-
-    	// 	this.punch = false;
-    		
-
-    	// }else 
     	if(this.left){
-    		this.animation.playAdditive("runAnimLeft_Cowboy");
-    		//this.animation.playAdditive("punchAnimLeft_Cowboy"); 
-    		
+    		this.animation.play("runAnimLeft_Cowboy");    		
     	}else if(this.right ){
     		this.animation.play("runAnimRight_Cowboy");     		
     	}else if((this.playerDirection == -1 && (this.up || this.down))){
     		this.animation.play("runAnimLeft_Cowboy"); 
     	}else if((this.playerDirection == 1 && (this.up || this.down))){
     		this.animation.play("runAnimRight_Cowboy"); 
-    	}/*else if(this.punch == true && playerDirection == -1){		
-    		
-    		this.animation.play("punchAnimLeft_Cowboy"); 
-    		if(this.animation.getAnimationState("punchAnimLeft_Cowboy").isPlaying == false){
-    				cc.log("false?!?!")
-    					this.punch  = false;
-    					this.playAnimation();
-    				
-    			}
-    	}else if(this.punch == true && playerDirection == 1){
-    			this.animation.play("punchAnimRight_Cowboy"); 
-    	}*/else {
+    	}else {
     		this.animation.play("standStillAnim_Cowboy");
     	}
 
     	
+    },
+
+    playPunchAnimation : function(){
+
+    		
+    		this.animation.play("punchAnimRight_Cowboy");
+   
     },
 
     // called every frame, uncomment this function to activate update callback
@@ -173,4 +162,7 @@ cc.Class({
         }
 
     },
+     doOtherStuff: function(){
+     	cc.log("JUST DO IT!");
+     } 
 });
