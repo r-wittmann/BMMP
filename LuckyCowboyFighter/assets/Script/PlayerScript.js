@@ -14,7 +14,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        this.animation.play("standStillAnim_Cowboy"); 
+        this.animState = this.animation.play("standStillAnim_Cowboy"); 
         //-1:move to right; 0: do not move; 1:move to left
         this.moveBackground = 0;
         this.left = false;
@@ -27,6 +27,7 @@ cc.Class({
         this.oldPlayerDirection = 1;
 
         this.setInputControl();
+      
 
     },
 
@@ -42,24 +43,32 @@ cc.Class({
                     case cc.KEY.left:
                     	self.moveBackground = 0;
                     	self.right = false;
-                        self.left = true;
+                    	if(self.left == false){
+                    		self.left = true;
+                    		self.playAnimation();
+                    	}
                         self.oldPlayerDirection = 0;
-                        self.playAnimation();
                         break;
                     case cc.KEY.right:
                     	self.moveBackground = 0;
                     	self.left = false;
-                        self.right = true;
+                    	if(self.right == false){
+                    		self.right = true;
+                    		self.playAnimation();
+                    	}
                         self.oldPlayerDirection = 0;
-                        self.playAnimation();
                         break;
                     case cc.KEY.up:
-                        self.up = true;
-                        self.playAnimation();
+						if(self.up == false){                    
+	                        self.up = true;
+	                        self.playAnimation();
+	                    }
                         break;
                     case cc.KEY.down:
-                        self.down = true;
-                        self.playAnimation();
+                    	if(self.down == false){
+                       	 	self.down = true;
+                        	self.playAnimation();
+                    	}
                         break;
                 }
             },
@@ -94,16 +103,16 @@ cc.Class({
 
     playAnimation: function(){
     	if(this.left){
-    		this.animation.play("runAnimLeft_Cowboy"); 
+    		this.animState = this.animation.play("runAnimLeft_Cowboy"); 
     	}else if(this.right ){
-    		this.animation.play("runAnimRight_Cowboy"); 
+    		this.animState = this.animation.play("runAnimRight_Cowboy"); 
     	}else if((this.node.getChildByName("PlayerAnimation").scaleX == -1 && (this.up || this.down))){
-    		this.animation.play("runAnimLeft_Cowboy"); 
+    		this.animState = this.animation.play("runAnimLeft_Cowboy"); 
     	}else if((this.node.getChildByName("PlayerAnimation").scaleX == 1 && (this.up || this.down))){
-    		this.animation.play("runAnimRight_Cowboy"); 
+    		this.animState = this.animation.play("runAnimRight_Cowboy"); 
     	}
     	else {
-    		this.animation.play("standStillAnim_Cowboy");
+    		this.animState =this.animation.play("standStillAnim_Cowboy");
     	}
     },
 
@@ -125,9 +134,9 @@ cc.Class({
         }
         
 
-        if(this.up == true  && this.node.y < 50){
+        if(this.up == true  && this.node.y < -80){
             this.node.y = this.node.y + this.playerTempo * dt;
-        }else if(this.down == true  && this.node.y > -180){
+        }else if(this.down == true  && this.node.y > -250){
             this.node.y = this.node.y - this.playerTempo * dt;
         }
 
