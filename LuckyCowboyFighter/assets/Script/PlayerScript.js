@@ -131,10 +131,7 @@ cc.Class({
     },
 
     playPunchAnimation : function(){
-
-    		
-    		this.animation.play("punchAnimRight_Cowboy");
-   
+    	this.animation.play("punchAnim_Cowboy");
     },
 
     // called every frame, uncomment this function to activate update callback
