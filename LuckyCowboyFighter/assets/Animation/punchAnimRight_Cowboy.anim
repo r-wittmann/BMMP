@@ -1,0 +1,43 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "punchAnimRight_Cowboy",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.38333333333333336,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "28a2623b-db12-4fed-b734-fe4d4e06f3d6"
+            }
+          },
+          {
+            "frame": 0.08333333333333345,
+            "value": {
+              "__uuid__": "a9b14398-ccee-4146-8259-3f901bdf0180"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "fcd2973c-6c80-48a8-80c9-94b81f286a4d"
+            }
+          },
+          {
+            "frame": 0.36666666666666664,
+            "value": {
+              "__uuid__": "a9b14398-ccee-4146-8259-3f901bdf0180"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

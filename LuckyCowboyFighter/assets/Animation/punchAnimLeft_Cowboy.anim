@@ -1,12 +1,12 @@
 {
   "__type__": "cc.AnimationClip",
-  "_name": "runAnimLeft_Cowboy",
+  "_name": "punchAnimLeft_Cowboy",
   "_objFlags": 0,
   "_rawFiles": null,
-  "_duration": 0.35,
+  "_duration": 0.36666666666666664,
   "sample": 60,
   "speed": 1,
-  "wrapMode": 2,
+  "wrapMode": 1,
   "curveData": {
     "props": {
       "scaleX": [
@@ -22,42 +22,30 @@
           {
             "frame": 0,
             "value": {
-              "__uuid__": "d335fc0e-e12e-4f6a-b310-a6d804d84b15"
+              "__uuid__": "28a2623b-db12-4fed-b734-fe4d4e06f3d6"
             }
           },
           {
             "frame": 0.08333333333333333,
             "value": {
-              "__uuid__": "4e3f977e-cf95-49c7-aee8-bb23e698abb3"
+              "__uuid__": "a9b14398-ccee-4146-8259-3f901bdf0180"
             }
           },
           {
             "frame": 0.16666666666666666,
             "value": {
-              "__uuid__": "0ef8972a-354c-47e0-b440-24e2d0a05f20"
+              "__uuid__": "fcd2973c-6c80-48a8-80c9-94b81f286a4d"
             }
           },
           {
-            "frame": 0.25,
+            "frame": 0.35,
             "value": {
-              "__uuid__": "aef1ddaa-a63d-4e4c-8de7-b398ecda0000"
-            }
-          },
-          {
-            "frame": 0.3333333333333333,
-            "value": {
-              "__uuid__": "d335fc0e-e12e-4f6a-b310-a6d804d84b15"
+              "__uuid__": "a9b14398-ccee-4146-8259-3f901bdf0180"
             }
           }
         ]
       }
     }
   },
-  "events": [
-    {
-      "frame": 0,
-      "func": "",
-      "params": []
-    }
-  ]
+  "events": []
 }
