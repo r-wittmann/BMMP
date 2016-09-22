@@ -1041,7 +1041,10 @@
         "__uuid__": "be2036ab-7ee0-4301-8b8e-9b295305d913"
       },
       {
-        "__uuid__": "a31a63e2-2db9-4459-ac9b-5d6ee34a9efc"
+        "__uuid__": "4e95cc66-1dc1-4120-b72d-f89e8cc538f1"
+      },
+      {
+        "__uuid__": "60ab0c8e-b7fa-4340-b104-2f01e6672e82"
       }
     ],
     "playOnLoad": false
@@ -1170,7 +1173,7 @@
     "enemyPrefab": {
       "__uuid__": "c4833dff-8310-410f-8b8e-0cd2a41554ca"
     },
-    "maximumEnemies": 0,
+    "maximumEnemies": 5,
     "player": {
       "__id__": 22
     },

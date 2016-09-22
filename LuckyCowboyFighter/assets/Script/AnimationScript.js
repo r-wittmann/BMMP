@@ -11,16 +11,15 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
+        var playerScript = this.parent.getComponent("PlayerScript");
 
     },
-     doSomething: function(){
+     returnToStandardMode: function(){
              cc.log("DO IT!!");
-             this.parent.getComponent("PlayerScript").doOtherStuff();
-             cc.log(this.parent.getComponent("PlayerScript").punch );
              this.parent.getComponent("PlayerScript").punch = false;
-             cc.log(this.parent.getComponent("PlayerScript").punch );
+             this.parent.getComponent("PlayerScript").shoot = false;
              this.parent.getComponent("PlayerScript").playAnimation();
-                  },
+        },
 
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {

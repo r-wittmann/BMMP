@@ -1,9 +1,9 @@
 {
   "__type__": "cc.AnimationClip",
-  "_name": "punchAnim_Cowboy",
+  "_name": "shootAnim_Cowboy",
   "_objFlags": 0,
   "_rawFiles": null,
-  "_duration": 0.38333333333333336,
+  "_duration": 0.18333333333333332,
   "sample": 60,
   "speed": 1,
   "wrapMode": 1,
@@ -14,25 +14,19 @@
           {
             "frame": 0,
             "value": {
-              "__uuid__": "28a2623b-db12-4fed-b734-fe4d4e06f3d6"
+              "__uuid__": "feec5109-2854-4fb1-aec7-06e83a243cec"
             }
           },
           {
-            "frame": 0.08333333333333345,
+            "frame": 0.05,
             "value": {
-              "__uuid__": "a9b14398-ccee-4146-8259-3f901bdf0180"
+              "__uuid__": "b539f2e6-a8e2-4bf1-b3de-67909c8de248"
             }
           },
           {
             "frame": 0.16666666666666666,
             "value": {
-              "__uuid__": "fcd2973c-6c80-48a8-80c9-94b81f286a4d"
-            }
-          },
-          {
-            "frame": 0.36666666666666664,
-            "value": {
-              "__uuid__": "a9b14398-ccee-4146-8259-3f901bdf0180"
+              "__uuid__": "feec5109-2854-4fb1-aec7-06e83a243cec"
             }
           }
         ]
@@ -41,7 +35,7 @@
   },
   "events": [
     {
-      "frame": 0.36666666666666664,
+      "frame": 0.16666666666666666,
       "func": "returnToStandardMode",
       "params": []
     }

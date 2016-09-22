@@ -1,0 +1,37 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "dieAnim_Cowboy",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 1,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "31a4f7c3-3333-46cd-90e6-a8e81ff004af"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "f6c284a2-5fc7-49f8-a043-602a02c15894"
+            }
+          },
+          {
+            "frame": 0.9833333333333333,
+            "value": {
+              "__uuid__": "7dd061b8-28c7-4055-8881-791529815dfb"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

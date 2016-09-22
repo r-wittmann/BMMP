@@ -22,6 +22,7 @@ cc.Class({
         this.up = false;
         this.down = false;
         this.punch = false;
+        this.shoot = false;
 
         this.setInputControl();
         this.playerDirection = 1;
@@ -38,7 +39,7 @@ cc.Class({
             onKeyPressed: function(keyCode, event) {
            
 
-           			if(self.punch == false) {
+           			if(self.punch == false && self.shoot == false) {
                     switch(keyCode) {					 
                     case cc.KEY.left:
                     	self.moveBackground = 0;
@@ -74,6 +75,12 @@ cc.Class({
                     	this.punch = true;
                     	self.playPunchAnimation();
                     	break;
+                    case cc.KEY.x:
+                    	cc.log("x");
+                    	this.shoot = true;
+                    	self.playShootAnimation();
+                    	break;
+
                     }
                    
 
@@ -132,6 +139,10 @@ cc.Class({
 
     playPunchAnimation : function(){
     	this.animation.play("punchAnim_Cowboy");
+    },
+
+    playShootAnimation: function(){
+    	this.animation.play("shootAnim_Cowboy");
     },
 
     // called every frame, uncomment this function to activate update callback
