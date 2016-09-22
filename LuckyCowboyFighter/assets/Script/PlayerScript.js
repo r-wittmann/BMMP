@@ -126,9 +126,9 @@ cc.Class({
     		
     	}else if(this.right ){
     		this.animation.play("runAnimRight_Cowboy");     		
-    	}else if((playerDirection == -1 && (this.up || this.down))){
+    	}else if((this.playerDirection == -1 && (this.up || this.down))){
     		this.animation.play("runAnimLeft_Cowboy"); 
-    	}else if((playerDirection == 1 && (this.up || this.down))){
+    	}else if((this.playerDirection == 1 && (this.up || this.down))){
     		this.animation.play("runAnimRight_Cowboy"); 
     	}/*else if(this.punch == true && playerDirection == -1){		
     		
