@@ -204,8 +204,8 @@
     },
     "_enabled": true,
     "attackRadius": 50,
-    "xSpeed": 200,
-    "ySpeed": 100,
+    "xSpeed": 100,
+    "ySpeed": 50,
     "animation": {
       "__id__": 4
     },

@@ -18,8 +18,11 @@ cc.Class({
     onLoad: function () {
         //Will be triggered after being hit by player. This is so that a player
         //will only hit the enemy once with each punch.
+        this.left = false;
+        this.triggeredAnim = false;
         this.isStanding = false;
         this.isAttacking = false;
+        this.animation.play("enemyRunRightAnim_"+this.enemyType);
     },
 
 
@@ -31,6 +34,8 @@ cc.Class({
 
     attack: function () {
         // triggerAnimation
+        
+        this.animation.play("enemyShootAnim_" + this.enemyType);
         this.isAttacking = true;
         this.node.runAction(
             cc.sequence(
@@ -53,18 +58,46 @@ cc.Class({
         var playerY = this.game.player.getPositionY();
         var xPos = this.node.x;
         var yPos = this.node.y;
+        
 
         if(!this.isStanding){
             if(yPos <= playerY){
               this.node.y = yPos + this.ySpeed * dt;
-            }else{
+            }else {
               this.node.y = yPos - this.ySpeed * dt;
             }
+             
 
-            if(xPos <= playerX){
+            //von links nach rechts
+             if(xPos <= playerX){
+                if(this.left == false){
+                    this.triggeredAnim = false;
+                }else {
+                    this.triggeredAnim = true;
+                }
               this.node.x = xPos + this.xSpeed * dt;
+              this.left = false;
+
+            //von rechts nach links
             }else{
+                if(this.left == true){
+                    this.triggeredAnim = false;
+                }
+                else{
+                    this.triggeredAnim = true;
+                }
               this.node.x = xPos - this.xSpeed * dt;
+              this.left = true;
+            }
+
+            if(this.left == true && this.triggeredAnim == true){
+                this.animation.play("enemyRunLeftAnim_"+this.enemyType);
+                            this.triggeredAnim = false;
+
+
+            }else if (this.left == false && this.triggeredAnim == true){
+                this.animation.play("enemyRunRightAnim_"+this.enemyType);
+                            this.triggeredAnim = false;
             }
         }
     },

@@ -34,7 +34,7 @@ cc.Class({
 
     getNewEnemyPosition: function () {
         var randomX = (cc.random0To1() * 500)+100;
-        var randomY = (cc.random0To1() * 500)-50;
+        var randomY = (cc.random0To1() * -200)-100;
         return cc.p(randomX, randomY);
     },
 
