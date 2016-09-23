@@ -1,0 +1,57 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "enemyRunLeft_Knight",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.5166666666666667,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "props": {
+      "scaleX": [
+        {
+          "frame": 0,
+          "value": -1
+        }
+      ]
+    },
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "a7e892ef-cc81-47b9-8d4e-96e15990f4ff"
+            }
+          },
+          {
+            "frame": 0.11666666666666667,
+            "value": {
+              "__uuid__": "a9ded4bd-7984-4769-a99c-e4663b4b3c02"
+            }
+          },
+          {
+            "frame": 0.25,
+            "value": {
+              "__uuid__": "0a8d91d1-d7c4-430a-88e1-5590347e2317"
+            }
+          },
+          {
+            "frame": 0.38333333333333336,
+            "value": {
+              "__uuid__": "9280af45-5841-493a-9f56-22ed55730d75"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "a7e892ef-cc81-47b9-8d4e-96e15990f4ff"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

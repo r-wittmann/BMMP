@@ -169,6 +169,8 @@ cc.Class({
             this.node.y = this.node.y - (this.playerTempo/2) * dt;
         }
 
+        if(this.punch  == true) cc.log("punch = TRUE")
+
     },
      doOtherStuff: function(){
      	cc.log("JUST DO IT!");

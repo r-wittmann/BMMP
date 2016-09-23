@@ -1,0 +1,49 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "enemyPunchAnim_Knight",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.45,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "059b3aaf-50c3-4b81-9baf-dd0cec2e4879"
+            }
+          },
+          {
+            "frame": 0.05,
+            "value": {
+              "__uuid__": "1b187fc6-63fc-467f-be14-8113e3d106fd"
+            }
+          },
+          {
+            "frame": 0.2,
+            "value": {
+              "__uuid__": "e8cfa996-b790-4813-8332-032bde83c7c3"
+            }
+          },
+          {
+            "frame": 0.26666666666666666,
+            "value": {
+              "__uuid__": "c130108f-6000-48d4-8090-3dd542dbcc3a"
+            }
+          },
+          {
+            "frame": 0.43333333333333335,
+            "value": {
+              "__uuid__": "e8cfa996-b790-4813-8332-032bde83c7c3"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}
