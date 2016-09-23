@@ -123,13 +123,13 @@ cc.Class({
     	this.playerDirection = this.node.getChildByName("PlayerAnimation").scaleX;
 
     	if(this.left){
-    		this.animation.play("runAnimLeft_Cowboy");    		
+    		this.animation.play("runLeftAnim_Cowboy");    		
     	}else if(this.right ){
-    		this.animation.play("runAnimRight_Cowboy");     		
+    		this.animation.play("runRightAnim_Cowboy");     		
     	}else if((this.playerDirection == -1 && (this.up || this.down))){
-    		this.animation.play("runAnimLeft_Cowboy"); 
+    		this.animation.play("runLeftAnim_Cowboy"); 
     	}else if((this.playerDirection == 1 && (this.up || this.down))){
-    		this.animation.play("runAnimRight_Cowboy"); 
+    		this.animation.play("runRightAnim_Cowboy"); 
     	}else {
     		this.animation.play("standStillAnim_Cowboy");
     	}
@@ -169,7 +169,7 @@ cc.Class({
             this.node.y = this.node.y - (this.playerTempo/2) * dt;
         }
 
-        if(this.punch  == true) cc.log("punch = TRUE")
+        if(this.punch  == true) cc.log("punch =")
 
     },
      doOtherStuff: function(){

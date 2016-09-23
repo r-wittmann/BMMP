@@ -122,13 +122,13 @@ cc.Class({
         this.playerDirection = this.node.getChildByName("KnightAnimation").scaleX;
 
         if(this.left){
-            this.animation.play("runAnimLeft_Knight");          
+            this.animation.play("runLeftAnim_Knight");          
         }else if(this.right ){
-            this.animation.play("runAnimRight_Knight");             
+            this.animation.play("runRightAnim_Knight");             
         }else if((this.playerDirection == -1 && (this.up || this.down))){
-            this.animation.play("runAnimLeft_Knight"); 
+            this.animation.play("runLeftAnim_Knight"); 
         }else if((this.playerDirection == 1 && (this.up || this.down))){
-            this.animation.play("runAnimRight_Knight"); 
+            this.animation.play("runRightAnim_Knight"); 
         }else {
             this.animation.play("standStillAnim_Knight");
         }

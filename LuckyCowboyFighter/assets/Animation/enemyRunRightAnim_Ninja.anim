@@ -1,0 +1,57 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "enemyRunRight_Ninja",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.35,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "props": {
+      "scaleX": [
+        {
+          "frame": 0,
+          "value": 1
+        }
+      ]
+    },
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "a04d73bc-fb13-4843-906d-bc1f2daf82c0"
+            }
+          },
+          {
+            "frame": 0.08333333333333333,
+            "value": {
+              "__uuid__": "3f6f6e44-9f00-44dc-add6-ccbe5f51fb7b"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "493561d6-d7e8-4ec5-98ce-aef4d2838b49"
+            }
+          },
+          {
+            "frame": 0.25,
+            "value": {
+              "__uuid__": "42745e89-0f39-4932-bfd5-099861e31712"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "a04d73bc-fb13-4843-906d-bc1f2daf82c0"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

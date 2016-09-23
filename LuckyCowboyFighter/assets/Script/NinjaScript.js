@@ -127,13 +127,13 @@ cc.Class({
         this.playerDirection = this.node.getChildByName("NinjaAnimation").scaleX;
 
         if(this.left){
-            this.animation.play("runAnimLeft_Ninja");          
+            this.animation.play("runLeftAnim_Ninja");          
         }else if(this.right ){
-            this.animation.play("runAnimRight_Ninja");             
+            this.animation.play("runRightAnim_Ninja");             
         }else if((this.playerDirection == -1 && (this.up || this.down))){
-            this.animation.play("runAnimLeft_Ninja"); 
+            this.animation.play("runLeftAnim_Ninja"); 
         }else if((this.playerDirection == 1 && (this.up || this.down))){
-            this.animation.play("runAnimRight_Ninja"); 
+            this.animation.play("runRightAnim_Ninja"); 
         }else {
             this.animation.play("standStillAnim_Ninja");
         }
