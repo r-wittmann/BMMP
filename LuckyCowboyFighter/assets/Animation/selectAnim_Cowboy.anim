@@ -3,7 +3,7 @@
   "_name": "selectAnim_Cowboy",
   "_objFlags": 0,
   "_rawFiles": null,
-  "_duration": 0.85,
+  "_duration": 0.6833333333333333,
   "sample": 60,
   "speed": 1,
   "wrapMode": 1,
@@ -15,7 +15,7 @@
           "value": 1
         },
         {
-          "frame": 0.8333333333333334,
+          "frame": 0.6666666666666666,
           "value": 2
         }
       ],
@@ -25,7 +25,7 @@
           "value": 1
         },
         {
-          "frame": 0.8333333333333334,
+          "frame": 0.6666666666666666,
           "value": 2
         }
       ]
@@ -36,37 +36,31 @@
           {
             "frame": 0,
             "value": {
-              "__uuid__": "3cba1009-8113-4c6a-89e7-a562ebc1fe82"
+              "__uuid__": "a7f287b3-af75-442e-be0b-df41445a638b"
             }
           },
           {
             "frame": 0.16666666666666666,
             "value": {
-              "__uuid__": "52b7c885-6421-42ab-9578-0705bc88e27a"
+              "__uuid__": "9da4fddf-9811-42ab-bb87-0090cb70c012"
             }
           },
           {
             "frame": 0.3333333333333333,
             "value": {
-              "__uuid__": "ae6a5311-21d9-4f54-9068-aa64a6fd6b40"
+              "__uuid__": "5132b98f-ecc9-46a5-b203-ea1ecf51c247"
             }
           },
           {
             "frame": 0.5,
             "value": {
-              "__uuid__": "ae6a5311-21d9-4f54-9068-aa64a6fd6b40"
+              "__uuid__": "dea0d232-0d64-489c-9f88-0378d195759c"
             }
           },
           {
             "frame": 0.6666666666666666,
             "value": {
-              "__uuid__": "8db3d602-a658-44c3-8b7c-49f9417f6a36"
-            }
-          },
-          {
-            "frame": 0.8333333333333334,
-            "value": {
-              "__uuid__": "3cba1009-8113-4c6a-89e7-a562ebc1fe82"
+              "__uuid__": "f0f3918a-15b6-40ef-8693-e775e050eee5"
             }
           }
         ]
