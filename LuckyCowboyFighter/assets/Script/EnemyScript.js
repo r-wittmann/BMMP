@@ -5,11 +5,12 @@ cc.Class({
         attackRadius: 0,
         xSpeed: 0,
         ySpeed: 0,
-
         animation:{
         default: null,
         type:cc.Animation,
         },
+        strength: 0,
+        health: 0,
     },
 
     // use this for initialization
@@ -17,7 +18,7 @@ cc.Class({
         //Will be triggered after being hit by player. This is so that a player
         //will only hit the enemy once with each punch.
         this.isStanding = false;
-        this.isAlive = true;
+        this.isAttacking = false;
     },
 
 
@@ -27,33 +28,23 @@ cc.Class({
         return dist;
     },
 
-    attack: function() {
-        //this.game.spawnNewStar();
-        //this.game.gainScore();
-        //this.attackAction = cc.sequence(
-        //    cc.spawn(cc.log(this.node.x)),
-        //    cc.delayTime(2),
-        //    cc.spawn(cc.log(this.isStanding)),
-        //    cc.spawn(this.node.x = this.node.x + 50, this.isStanding = false, this.node.destroy())
-        //);
-
-        cc.log(this.game.player.x);
-        cc.log(this.game.player.playerDirection);
-        if(this.game.player.x > this.node.x){
-          this.game.player.runAction(cc.moveBy(0.1, 100, 0));
-        }else{
-          this.game.player.runAction(cc.moveBy(0.1, -100, 0));
-        }
-        if (this.isAlive){
-            this.node.runAction(
-              cc.sequence(
-                    cc.moveBy(0.1, 300, 50),
-                    cc.delayTime(1),
-                    cc.callFunc(this.node.destroy, this.node)
-                )
-            );
-            this.isAlive = false;
-        }
+    attack: function () {
+        // triggerAnimation
+        this.isAttacking = true;
+        this.node.runAction(
+            cc.sequence(
+                cc.delayTime(5),
+                cc.callFunc(() => {
+                    if (Math.abs(this.node.x - this.game.player.x) < this.attackRadius) {
+                        this.game.player.getComponent('PlayerScript').health -= this.strength;
+                    }
+                    this.isAttacking = false;
+                    this.isStanding = false;
+                    cc.log(this.game.player.getComponent('PlayerScript').health)
+                })
+            )
+        )
+        
     },
 
     moveEnemy: function(dt){
@@ -77,13 +68,41 @@ cc.Class({
         }
     },
 
+    checkPlayerAttack: function () {
+        let playerDirection = this.game.player.getChildByName('PlayerAnimation').scaleX;
+        let playerX = this.game.player.getPositionX();
+        let playerY = this.game.player.getPositionY();
+        let playerStrength = this.game.player.getComponent('PlayerScript').strength;
+        let enemyX = this.node.x;
+        let enemyY = this.node.y;
+        let playerPunch = this.game.player.getComponent('PlayerScript').punch;
+        //let playerAttackRadius = this.game.player.getComponent('PlayerScript').attackRadius;
+        let playerAttackRadius = 100;
+
+        if(((enemyX - playerX <= 0 && playerDirection <= 0) || (enemyX - playerX >= 0 && playerDirection >= 0)) && playerPunch) {
+            if(Math.abs(enemyY - playerY) <= 100 && playerAttackRadius >= Math.abs(enemyX - playerX)){
+                this.health -= playerStrength;
+                cc.warn('playerx: ', playerX, 'playerY: ', playerY);
+                cc.warn('enemyX: ', enemyX, 'enemyY: ', enemyY);
+            }
+        }
+    },
+
     // called every frame
     update: function (dt) {
         if (this.getPlayerDistance() < this.attackRadius) {
             this.isStanding = true;
-            this.attack();
+            if (!this.isAttacking) {
+                this.attack();
+            }
             return;
         }
         this.moveEnemy(dt);
+
+        this.checkPlayerAttack();
+
+        if(this.health <= 0) {
+            this.node.destroy();
+        }
     },
 });

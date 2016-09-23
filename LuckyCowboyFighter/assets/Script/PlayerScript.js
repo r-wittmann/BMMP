@@ -5,11 +5,9 @@ cc.Class({
         playerTempo: 0,
 
         animation:{
-        default: null,
-        type:cc.Animation,
+            default: null,
+            type:cc.Animation,
         },
-
- 
     },
 
     // use this for initialization
@@ -23,6 +21,10 @@ cc.Class({
         this.down = false;
         this.punch = false;
         this.shoot = false;
+
+        this.health = cc.sys.localStorage.characterHealth || 100,
+        this.strength = cc.sys.localStorage.characterStrenght || 50,
+        this.attackRadius = cc.sys.localStorage.characterAttackRadius || 50,
 
         this.setInputControl();
         this.playerDirection = 1;
@@ -72,12 +74,12 @@ cc.Class({
                     case cc.KEY.space:
                     	cc.log("space");
                     	//self.animation.play("punchAnimRight_Cowboy");
-                    	this.punch = true;
+                    	self.punch = true;
                     	self.playPunchAnimation();
                     	break;
                     case cc.KEY.x:
                     	cc.log("x");
-                    	this.shoot = true;
+                    	self.shoot = true;
                     	self.playShootAnimation();
                     	break;
 
@@ -119,6 +121,8 @@ cc.Class({
     },
 
     playAnimation: function(){
+        this.punch = false;
+        this.shoot = false;
  
     	this.playerDirection = this.node.getChildByName("PlayerAnimation").scaleX;
 
