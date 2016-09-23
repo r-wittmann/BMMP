@@ -7,7 +7,7 @@
 			<key>cowboy-0.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{269,0},{132,179}}</string>
+				<string>{{0,538},{132,179}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -21,7 +21,7 @@
 			<key>cowboy-1.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{535,0},{132,180}}</string>
+				<string>{{0,718},{132,180}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -35,7 +35,7 @@
 			<key>cowboy-2.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{668,0},{131,181}}</string>
+				<string>{{133,180},{131,181}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -49,7 +49,7 @@
 			<key>cowboy-3.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{402,0},{132,177}}</string>
+				<string>{{0,360},{132,177}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -63,7 +63,7 @@
 			<key>cowboy-4.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{136,0},{132,179}}</string>
+				<string>{{0,180},{132,179}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -88,6 +88,48 @@
 				<string>{250,250}</string>
 			</dict>
 
+			<key>cowboy-6.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{133,362},{109,173}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{73,52},{109,173}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>cowboy-7.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{133,711},{80,170}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{85,51},{80,170}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>cowboy-8.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{133,536},{96,174}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{79,50},{96,174}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
 		</dict>
 
 		<key>metadata</key>
@@ -95,7 +137,7 @@
 			<key>format</key>
 			<integer>2</integer>
 			<key>size</key>
-			<string>{1024,256}</string>
+			<string>{512,1024}</string>
 			<key>textureFileName</key>
 			<string>sprites.png</string>
 			</dict>
