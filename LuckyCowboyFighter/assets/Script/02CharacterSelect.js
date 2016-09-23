@@ -72,6 +72,6 @@ cc.Class({
     //start game
     goToGame: function () {
         cc.director.loadScene('Stages/stage01');
-        // this.selectedCharacter an nächste Scene übergeben
+        cc.sys.localStorage.selectedCharacter = this.selectedCharacter;
     },
 });

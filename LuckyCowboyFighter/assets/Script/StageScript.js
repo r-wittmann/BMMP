@@ -46,6 +46,7 @@ cc.Class({
         this.loseFlag = 0;
         this.wonPositionX = 0;
         this.currentEnemies = 0;
+        this.selectedCharacter = cc.sys.localStorage.selectedCharacter;
     },
 
     // called every frame, uncomment this function to activate update callback
