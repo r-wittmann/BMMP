@@ -73,13 +73,11 @@ cc.Class({
             this.winGame(floor.x, this.wonPositionX)
         }
 
-        if (floor.x > 500 && this.loseFlag === 0) {
+        if (this.player.getComponent('PlayerScript').health <= 0 && this.loseFlag === 0) {
             this.loseFlag = 1;
-            this.writeMessage('You lost. You will be returned to the Main Menu')
         } else if (this.loseFlag === 1) {
             this.loseFlag = 2;
-            // player is returned to main menu after loseTimeout seconds
-            this.scheduleOnce(() => this.loseGame(), this.loseTimeout);
+            this.loseGame();
         }
     },
 
@@ -95,6 +93,15 @@ cc.Class({
         }
     },
     loseGame: function () {
-        cc.director.loadScene('01startMenu');
+        this.writeMessage('You lost. You will be returned to the Main Menu');
+        // this.scheduleOnce(() => cc.director.loadScene('01startMenu'), this.loseTimeout);
+        this.node.runAction(
+            cc.sequence(
+                cc.delayTime(this.loseTimeout),
+                cc.callFunc(() => {
+                    cc.director.loadScene('01startMenu')
+                })
+            )
+        )
     }
 });
