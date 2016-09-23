@@ -8,17 +8,12 @@ cc.Class({
         default: null,
         type:cc.Animation,
         },
-        animationShuriken:{
-        default: null,
-        type:cc.Animation,
-        },
 
- 
     },
 
     // use this for initialization
     onLoad: function () {
-      this.animation.play("standStillAnim_Ninja"); 
+      this.animation.play("standStillAnim_Knight"); 
         //-1:move to right; 0: do not move; 1:move to left
         this.moveBackground = 0;
         this.left = false;
@@ -75,7 +70,7 @@ cc.Class({
                         break;
                     case cc.KEY.space:
                         cc.log("space");
-                        //self.animation.play("punchAnimRight_Ninja");
+                        //self.animation.play("punchAnimRight_Knight");
                         this.punch = true;
                         self.playPunchAnimation();
                         break;
@@ -124,31 +119,30 @@ cc.Class({
 
     playAnimation: function(){
  
-        this.playerDirection = this.node.getChildByName("NinjaAnimation").scaleX;
+        this.playerDirection = this.node.getChildByName("KnightAnimation").scaleX;
 
         if(this.left){
-            this.animation.play("runAnimLeft_Ninja");          
+            this.animation.play("runAnimLeft_Knight");          
         }else if(this.right ){
-            this.animation.play("runAnimRight_Ninja");             
+            this.animation.play("runAnimRight_Knight");             
         }else if((this.playerDirection == -1 && (this.up || this.down))){
-            this.animation.play("runAnimLeft_Ninja"); 
+            this.animation.play("runAnimLeft_Knight"); 
         }else if((this.playerDirection == 1 && (this.up || this.down))){
-            this.animation.play("runAnimRight_Ninja"); 
+            this.animation.play("runAnimRight_Knight"); 
         }else {
-            this.animation.play("standStillAnim_Ninja");
+            this.animation.play("standStillAnim_Knight");
         }
 
         
     },
 
     playPunchAnimation : function(){
-        this.animation.play("punchAnim_Ninja");
+        this.animation.play("punchAnim_Knight");
     },
 
     playShootAnimation: function(){
-        this.animation.play("shootAnim_Ninja");
-        this.animationShuriken.play("shurikenAnim_Ninja");
-    },
+        this.animation.play("shootAnim_Knight");
+            },
 
     // called every frame, uncomment this function to activate update callback
      update: function (dt) {

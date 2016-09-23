@@ -1,0 +1,55 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "punchAnim_Knight",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 1.0166666666666666,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "a261b0bc-e5bf-4705-a020-d168cdf0b471"
+            }
+          },
+          {
+            "frame": 0.05,
+            "value": {
+              "__uuid__": "41f7c099-d31a-411b-ab0b-02a0eae44c6f"
+            }
+          },
+          {
+            "frame": 0.26666666666666666,
+            "value": {
+              "__uuid__": "a261b0bc-e5bf-4705-a020-d168cdf0b471"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "8e3d66a3-942f-4be3-b4f2-9c2af0bb5ac3"
+            }
+          },
+          {
+            "frame": 0.7333333333333333,
+            "value": {
+              "__uuid__": "a261b0bc-e5bf-4705-a020-d168cdf0b471"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": [
+    {
+      "frame": 1.0166666666666666,
+      "func": "returnToStandardMode",
+      "params": []
+    }
+  ]
+}

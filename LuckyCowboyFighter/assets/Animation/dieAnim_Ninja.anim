@@ -1,0 +1,47 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "dieAnim_Ninja",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.43333333333333335,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "e6875065-db4e-4152-8855-b599c596ac42"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "fa63038b-32b9-47e8-a18e-b08b0c194615"
+            }
+          },
+          {
+            "frame": 0.2833333333333333,
+            "value": {
+              "__uuid__": "61d5042d-e1ac-494e-abfb-3b8133e928fc"
+            }
+          },
+          {
+            "frame": 0.4166666666666667,
+            "value": {
+              "__uuid__": "86a54cb0-df1d-40e8-b9a3-824c337ff199"
+            }
+          }
+        ]
+      }
+    },
+    "props": {
+      "scaleX": [],
+      "scaleY": []
+    }
+  },
+  "events": []
+}

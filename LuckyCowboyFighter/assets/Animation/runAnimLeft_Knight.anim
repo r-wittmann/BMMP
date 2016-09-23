@@ -1,0 +1,57 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "runAnimLeft_Knight",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.5166666666666667,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "035d74b6-1e47-473a-9136-11f6ceb9415d"
+            }
+          },
+          {
+            "frame": 0.11666666666666667,
+            "value": {
+              "__uuid__": "51ec56fd-c4dc-4da0-a693-091bc19f3225"
+            }
+          },
+          {
+            "frame": 0.25,
+            "value": {
+              "__uuid__": "788f4552-9d49-412a-b5d5-998e33b8f3f6"
+            }
+          },
+          {
+            "frame": 0.38333333333333336,
+            "value": {
+              "__uuid__": "dd11b594-894d-41fa-b48f-6ba11934a5f8"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "035d74b6-1e47-473a-9136-11f6ceb9415d"
+            }
+          }
+        ]
+      }
+    },
+    "props": {
+      "scaleX": [
+        {
+          "frame": 0,
+          "value": -1
+        }
+      ]
+    }
+  },
+  "events": []
+}

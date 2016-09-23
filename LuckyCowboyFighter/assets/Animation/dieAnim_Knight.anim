@@ -1,0 +1,55 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "dieAnim_Knight",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 1.2666666666666666,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "02cea212-5711-43ce-9188-343f2fce6c28"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "500f1ef3-b3cd-4661-b49f-2321c5e564b2"
+            }
+          },
+          {
+            "frame": 0.4,
+            "value": {
+              "__uuid__": "ca1d531e-0205-4f7c-a101-3168df9ccbd3"
+            }
+          },
+          {
+            "frame": 0.6166666666666667,
+            "value": {
+              "__uuid__": "285f664c-47c8-4efb-95e9-af318c311fc9"
+            }
+          },
+          {
+            "frame": 0.8166666666666667,
+            "value": {
+              "__uuid__": "fd0a028e-6e75-4159-8ad0-d8b211f3f9ef"
+            }
+          },
+          {
+            "frame": 1.25,
+            "value": {
+              "__uuid__": "97167023-ca23-45e5-ba80-5419f7ca11ed"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

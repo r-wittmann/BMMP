@@ -164,9 +164,9 @@ cc.Class({
         
 
         if(this.up == true  && this.node.y < -80){
-            this.node.y = this.node.y + this.playerTempo * dt;
+            this.node.y = this.node.y + (this.playerTempo/2) * dt;
         }else if(this.down == true  && this.node.y > -250){
-            this.node.y = this.node.y - this.playerTempo * dt;
+            this.node.y = this.node.y - (this.playerTempo/2) * dt;
         }
 
     },
