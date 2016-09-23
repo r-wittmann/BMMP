@@ -1638,7 +1638,7 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "a6ac0PaxMRIbaToobgfdydl",
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 47
@@ -1767,7 +1767,10 @@
     "ySpeed": 0,
     "animation": {
       "__id__": 46
-    }
+    },
+    "strength": 0,
+    "health": 0,
+    "enemyType": "dummy"
   },
   {
     "__type__": "cc.Node",
@@ -1816,7 +1819,7 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "aeeb2d9ghhGCKpMw75mFUu/",
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 52
@@ -1945,7 +1948,10 @@
     "ySpeed": 0,
     "animation": {
       "__id__": 51
-    }
+    },
+    "strength": 0,
+    "health": 0,
+    "enemyType": "dummy"
   },
   {
     "__type__": "cc.Node",
@@ -1994,7 +2000,7 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "d1090Ae9gJMZptGCkO7K28t",
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 57
@@ -2121,7 +2127,10 @@
     "ySpeed": 0,
     "animation": {
       "__id__": 56
-    }
+    },
+    "strength": 0,
+    "health": 0,
+    "enemyType": "dummy"
   },
   {
     "__type__": "cc.Node",
@@ -2219,8 +2228,8 @@
       "__id__": 2
     },
     "_enabled": true,
-    "enemyPrefab": {
-      "__uuid__": "c4833dff-8310-410f-8b8e-0cd2a41554ca"
+    "prefabEnemy": {
+      "__uuid__": "75cdc822-284d-4328-b09f-4455507df909"
     },
     "maximumEnemies": 5,
     "player": {

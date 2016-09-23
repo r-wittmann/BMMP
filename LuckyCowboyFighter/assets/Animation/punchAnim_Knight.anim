@@ -3,7 +3,7 @@
   "_name": "punchAnim_Knight",
   "_objFlags": 0,
   "_rawFiles": null,
-  "_duration": 1.0166666666666666,
+  "_duration": 0.75,
   "sample": 60,
   "speed": 1,
   "wrapMode": 1,
@@ -47,7 +47,7 @@
   },
   "events": [
     {
-      "frame": 1.0166666666666666,
+      "frame": 0.7333333333333333,
       "func": "returnToStandardMode",
       "params": []
     }

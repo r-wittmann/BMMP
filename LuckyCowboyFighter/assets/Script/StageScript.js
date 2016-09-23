@@ -2,10 +2,10 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        enemyPrefab: {
+        prefabEnemy: {
             default: null,
             type: cc.Prefab
-         },
+        },
         maximumEnemies: 0,
     	player: {
     		default: null,
@@ -26,7 +26,7 @@ cc.Class({
     },
 
     spawnNewEnemy: function (){
-      var newEnemy = cc.instantiate(this.enemyPrefab);
+      var newEnemy = cc.instantiate(this.prefabEnemy);
       this.node.addChild(newEnemy);
       newEnemy.setPosition(this.getNewEnemyPosition());
       newEnemy.getComponent('EnemyScript').game = this;

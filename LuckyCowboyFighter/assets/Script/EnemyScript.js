@@ -6,11 +6,12 @@ cc.Class({
         xSpeed: 0,
         ySpeed: 0,
         animation:{
-        default: null,
-        type:cc.Animation,
+            default: null,
+            type:cc.Animation,
         },
         strength: 0,
         health: 0,
+        enemyType: 'dummy',
     },
 
     // use this for initialization
