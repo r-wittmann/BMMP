@@ -1,0 +1,57 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "enemyRunRightAnim_Cowboy",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.5166666666666667,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "props": {
+      "scaleX": [
+        {
+          "frame": 0,
+          "value": 1
+        }
+      ]
+    },
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "d4519158-1bad-474b-bf06-a0dafe65dc6a"
+            }
+          },
+          {
+            "frame": 0.11666666666666667,
+            "value": {
+              "__uuid__": "7599c84c-c32e-49c5-843a-4b95738b2639"
+            }
+          },
+          {
+            "frame": 0.25,
+            "value": {
+              "__uuid__": "77174bbd-515c-4edc-8bdc-4c362ff66ef5"
+            }
+          },
+          {
+            "frame": 0.3666666666666668,
+            "value": {
+              "__uuid__": "6f5dddec-8f8b-4649-9d83-30b124305773"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "d4519158-1bad-474b-bf06-a0dafe65dc6a"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

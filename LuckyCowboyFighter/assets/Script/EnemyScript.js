@@ -5,6 +5,11 @@ cc.Class({
         attackRadius: 0,
         xSpeed: 0,
         ySpeed: 0,
+
+        animation:{
+        default: null,
+        type:cc.Animation,
+        },
     },
 
     // use this for initialization
