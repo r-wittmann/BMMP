@@ -21,6 +21,18 @@ cc.Class({
         startGame: {
             default: null,
             type: cc.Button
+        },
+        character1animation: {
+            default: null,
+            type: cc.Animation
+        },
+        character2animation: {
+            default: null,
+            type: cc.Animation
+        },
+        character3animation: {
+            default: null,
+            type: cc.Animation
         }
     },
 
@@ -36,12 +48,21 @@ cc.Class({
 
     character1Select: function () {
         this.selectedCharacter = 1;
+        this.character1animation.play('selectAnim_Cowboy');
+        this.node.getChildByName('Character2').getChildByName('Profile').scale = 1;
+        this.node.getChildByName('Character3').getChildByName('Profile').scale = 1;
     },
     character2Select: function () {
         this.selectedCharacter = 2;
+        this.character2animation.play('selectAnim_Knight');
+        this.node.getChildByName('Character1').getChildByName('Profile').scale = 1;
+        this.node.getChildByName('Character3').getChildByName('Profile').scale = 1;
     },
     character3Select: function () {
         this.selectedCharacter = 3;
+        this.character3animation.play('selectAnim_Ninja');
+        this.node.getChildByName('Character1').getChildByName('Profile').scale = 1;
+        this.node.getChildByName('Character2').getChildByName('Profile').scale = 1;
     },
     
     //back to menu
@@ -51,6 +72,6 @@ cc.Class({
     //start game
     goToGame: function () {
         cc.director.loadScene('Stages/stage01');
-        // this.selectedCharacter an nächste Scene übergeben
+        cc.sys.localStorage.selectedCharacter = this.selectedCharacter;
     },
 });

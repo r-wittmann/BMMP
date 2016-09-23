@@ -1,0 +1,71 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "selectAnim_Knight",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 1.0166666666666666,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "props": {
+      "scaleX": [
+        {
+          "frame": 0,
+          "value": 1
+        },
+        {
+          "frame": 1,
+          "value": 2
+        }
+      ],
+      "scaleY": [
+        {
+          "frame": 0,
+          "value": 1
+        },
+        {
+          "frame": 1,
+          "value": 2
+        }
+      ]
+    },
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "801bb124-401e-4f87-8355-d7fc1f371920"
+            }
+          },
+          {
+            "frame": 0.25,
+            "value": {
+              "__uuid__": "32cfd232-81fd-4678-a355-34f1ebf885e2"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "ec166190-2d78-48d7-95c3-dc82e8136b4b"
+            }
+          },
+          {
+            "frame": 0.75,
+            "value": {
+              "__uuid__": "23396653-6a12-4b1a-b8e7-5ab271a66117"
+            }
+          },
+          {
+            "frame": 1,
+            "value": {
+              "__uuid__": "801bb124-401e-4f87-8355-d7fc1f371920"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}
