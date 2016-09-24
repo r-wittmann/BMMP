@@ -5,9 +5,9 @@ cc.Class({
         attackRadius: 0,
         xSpeed: 0,
         ySpeed: 0,
-        animation:{
+        animation: {
             default: null,
-            type:cc.Animation,
+            type: cc.Animation,
         },
         strength: 0,
         health: 0,
@@ -18,11 +18,9 @@ cc.Class({
     onLoad: function () {
         //Will be triggered after being hit by player. This is so that a player
         //will only hit the enemy once with each punch.
-        this.left = false;
-        this.triggeredAnim = false;
+        this.left = true;
         this.isStanding = false;
-        this.isAttacking = false;
-        this.animation.play("enemyRunRightAnim_"+this.enemyType);
+        this.animation.play("enemyRunLeftAnim_" + this.enemyType);
     },
 
 
@@ -33,73 +31,53 @@ cc.Class({
     },
 
     attack: function () {
-        // triggerAnimation
-        
-        this.animation.play("enemyShootAnim_" + this.enemyType);
-        this.isAttacking = true;
-        this.node.runAction(
-            cc.sequence(
-                cc.delayTime(5),
-                cc.callFunc(() => {
-                    if (Math.abs(this.node.x - this.game.player.x) < this.attackRadius) {
-                        this.game.player.getComponent('PlayerScript').health -= this.strength;
-                    }
-                    this.isAttacking = false;
-                    this.isStanding = false;
-                    cc.log(this.game.player.getComponent('PlayerScript').health)
-                })
+        if (this.getPlayerDistance() < this.attackRadius) {
+            this.isStanding = true;
+            this.animation.play("enemyShootAnim_" + this.enemyType),
+            this.node.runAction(
+                cc.sequence(
+                    cc.delayTime(5),
+                    cc.callFunc(() => {
+                        if(this.getPlayerDistance() < this.attackRadius) {
+                            this.game.player.getComponent('PlayerScript').health -= this.strength;
+                        }
+                        this.isStanding = false;
+                    })
+                )
             )
-        )
-        
+        }
     },
 
-    moveEnemy: function(dt){
+    moveEnemy: function (dt){
         var playerX = this.game.player.getPositionX();
         var playerY = this.game.player.getPositionY();
         var xPos = this.node.x;
         var yPos = this.node.y;
         
-
-        if(!this.isStanding){
-            if(yPos <= playerY){
-              this.node.y = yPos + this.ySpeed * dt;
-            }else {
-              this.node.y = yPos - this.ySpeed * dt;
-            }
-             
-
-            //von links nach rechts
-             if(xPos <= playerX){
-                if(this.left == false){
-                    this.triggeredAnim = false;
-                }else {
-                    this.triggeredAnim = true;
-                }
-              this.node.x = xPos + this.xSpeed * dt;
-              this.left = false;
-
-            //von rechts nach links
-            }else{
-                if(this.left == true){
-                    this.triggeredAnim = false;
-                }
-                else{
-                    this.triggeredAnim = true;
-                }
-              this.node.x = xPos - this.xSpeed * dt;
-              this.left = true;
-            }
-
-            if(this.left == true && this.triggeredAnim == true){
-                this.animation.play("enemyRunLeftAnim_"+this.enemyType);
-                            this.triggeredAnim = false;
-
-
-            }else if (this.left == false && this.triggeredAnim == true){
-                this.animation.play("enemyRunRightAnim_"+this.enemyType);
-                            this.triggeredAnim = false;
-            }
+        // Bewegung in y-Richtung
+        if(yPos <= playerY){
+          this.node.y += this.ySpeed * dt;
+        }else {
+          this.node.y -= this.ySpeed * dt;
         }
+
+        // Bewegung in x-Richtung
+        if (xPos <= playerX) {
+            this.node.x += this.xSpeed * dt;
+            this.left = false;
+        } else {
+            this.node.x -= this.xSpeed * dt;
+            this.left = true;
+        }
+
+        // Animation
+        if (this.left && !this.animation.currentClip.name.includes('enemyRunLeftAnim')) {
+            this.animation.play("enemyRunLeftAnim_" + this.enemyType);
+
+        } else if (!this.left && !this.animation.currentClip.name.includes('enemyRunRightAnim')) {
+            this.animation.play("enemyRunRightAnim_" + this.enemyType);
+        }
+
     },
 
     checkPlayerAttack: function () {
@@ -116,27 +94,18 @@ cc.Class({
         if(((enemyX - playerX <= 0 && playerDirection <= 0) || (enemyX - playerX >= 0 && playerDirection >= 0)) && playerPunch) {
             if(Math.abs(enemyY - playerY) <= 100 && playerAttackRadius >= Math.abs(enemyX - playerX)){
                 this.health -= playerStrength;
-                cc.warn('playerx: ', playerX, 'playerY: ', playerY);
-                cc.warn('enemyX: ', enemyX, 'enemyY: ', enemyY);
             }
         }
     },
 
     // called every frame
     update: function (dt) {
-        if (this.getPlayerDistance() < this.attackRadius) {
-            this.isStanding = true;
-            if (!this.isAttacking) {
-                this.attack();
-            }
-            return;
-        }
-        this.moveEnemy(dt);
+        if (!this.isStanding) this.attack();
+        
+        if (!this.isStanding) this.moveEnemy(dt);
+
+        if(this.health <= 0) this.node.destroy();
 
         this.checkPlayerAttack();
-
-        if(this.health <= 0) {
-            this.node.destroy();
-        }
     },
 });
