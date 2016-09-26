@@ -7,13 +7,13 @@
 			<key>cowboy-0.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,791},{132,179}}</string>
+				<string>{{117,613},{83,171}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{86,48},{132,179}}</string>
+				<string>{{90,48},{83,171}}</string>
 				<key>sourceSize</key>
 				<string>{250,250}</string>
 			</dict>
@@ -21,13 +21,13 @@
 			<key>cowboy-1.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{133,433},{132,180}}</string>
+				<string>{{0,613},{116,171}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{89,47},{132,180}}</string>
+				<string>{{86,50},{116,171}}</string>
 				<key>sourceSize</key>
 				<string>{250,250}</string>
 			</dict>
@@ -63,13 +63,13 @@
 			<key>cowboy-2.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{133,614},{131,181}}</string>
+				<string>{{136,85},{94,181}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{84,45},{131,181}}</string>
+				<string>{{77,49},{94,181}}</string>
 				<key>sourceSize</key>
 				<string>{250,250}</string>
 			</dict>
@@ -77,13 +77,13 @@
 			<key>cowboy-3.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,613},{132,177}}</string>
+				<string>{{220,608},{84,177}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{90,44},{132,177}}</string>
+				<string>{{92,48},{84,177}}</string>
 				<key>sourceSize</key>
 				<string>{250,250}</string>
 			</dict>
@@ -119,7 +119,7 @@
 			<key>cowboy-6.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{136,85},{109,173}}</string>
+				<string>{{110,785},{109,173}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -133,7 +133,7 @@
 			<key>cowboy-7.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{136,259},{80,170}}</string>
+				<string>{{220,786},{80,170}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -147,7 +147,7 @@
 			<key>cowboy-8.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{243,796},{96,174}}</string>
+				<string>{{133,433},{96,174}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -161,7 +161,7 @@
 			<key>cowboy-9.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{133,796},{109,173}}</string>
+				<string>{{0,785},{109,173}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
