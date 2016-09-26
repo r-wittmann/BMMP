@@ -26,8 +26,8 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        this.animation1.play('windmillAnim2');
-        this.animation2.play('windmillAnim2');
+        this.animation1 && this.animation1.play('windmillAnim2');
+        this.animation2 && this.animation2.play('windmillAnim2');
     },
 
     // called every frame, uncomment this function to activate update callback

@@ -81,7 +81,8 @@ cc.Class({
                     currentHealth: 100,
                     characterStrength: 20,
                     characterExperience: 0,
-                    characterLevel: 1
+                    characterLevel: 1,
+                    stage: 1
                 }
                 break;
             case 2:
@@ -91,7 +92,8 @@ cc.Class({
                     currentHealth: 200,
                     characterStrength: 30,
                     characterExperience: 0,
-                    characterLevel: 1
+                    characterLevel: 1,
+                    stage: 1
                 }
                 break;
             case 3:
@@ -101,7 +103,8 @@ cc.Class({
                     currentHealth: 50,
                     characterStrength: 15,
                     characterExperience: 0,
-                    characterLevel: 1
+                    characterLevel: 1,
+                    stage: 1
                 }
                 break; 
         }

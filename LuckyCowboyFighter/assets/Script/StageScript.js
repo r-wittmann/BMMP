@@ -78,7 +78,8 @@ cc.Class({
                 currentHealth: 100,
                 characterStrength: 20,
                 characterExperience: 0,
-                characterLevel: 1
+                characterLevel: 1,
+                stage: 1
             }
         }
 
@@ -87,10 +88,11 @@ cc.Class({
 
         this.selectedCharacter = parseInt(this.localStorageObject.selectedCharacter)
         this.currentHealth = parseInt(this.localStorageObject.currentHealth)
+        this.characterExperience = parseInt(this.localStorageObject.characterExperience)
 
         this.profile._children[this.selectedCharacter - 1].opacity = 255
         this.healthBar.getChildByName('ProgressBar')._components[1].progress = this.currentHealth / parseInt(this.localStorageObject.characterHealth)
-        this.experienceBar.getChildByName('ProgressBar')._components[1].progress = (parseInt(this.localStorageObject.characterExperience) % 100) / 100
+        this.experienceBar.getChildByName('ProgressBar')._components[1].progress = (this.characterExperience % 100) / 100
         this.strengthLabel.string = this.localStorageObject.characterStrength
 
         this.player;
@@ -143,16 +145,24 @@ cc.Class({
             this.moveEnemiesOnScreen(this.player.getComponent('PlayerScript').playerTempo, moveBackground, dt);
         }
 
-        let floor = this.background.getChildByName('Floor')
+        let remainingEnemies = []
+        for (let child of this.node.getChildren()) {
+            if (child.getComponent('EnemyScript') && child.active) {
+                remainingEnemies.push(child)
+            }
+        }
 
-        // player wins and looses game, once he reaches a certain point in the world
-        // this has to be replaced with the acutal win and lose criteria
-        if (floor.x < -500 && this.wonFlag === 0) {
+        if (remainingEnemies.length === 0 && this.wonFlag === 0) {
             this.wonFlag = 1;
-            this.wonPositionX = floor.x;
+            this.wonPositionX = this.background.getChildByName('SecondBackground').getChildByName('SecondBackgroundSprite1').x
             this.writeMessage('You Won! Continue to the right for the next Stage >>>');
+
+            cc.sys.localStorage.currentHealth = this.currentHealth;
+            cc.sys.localStorage.stage = parseInt(cc.sys.localStorage.stage) + 1;
+
         } else if (this.wonFlag === 1) {
-            this.winGame(floor.x, this.wonPositionX)
+            
+            this.winGame(this.background.getChildByName('SecondBackground').getChildByName('SecondBackgroundSprite1').x, this.wonPositionX)
         }
 
         if (this.currentHealth <= 0 && this.loseFlag === 0) {
@@ -168,12 +178,16 @@ cc.Class({
     writeMessage: function (message) {
         this.winLoseLabel.string = message;
     },
-    winGame: function (floorX, wonPositionX) {
+    winGame: function (currentPosition, wonPositionX) {
         // next stage is loaded after the player has continued to run the winDistance to the right
-        if (floorX < wonPositionX - this.winDistance) {
+        if (currentPosition < wonPositionX - this.winDistance) {
             this.wonFlag = 2;
             // this loadScene has to load the next stage
-            cc.director.loadScene('01startMenu');
+            if (parseInt(cc.sys.localStorage.stage) <= 6) {
+                cc.director.loadScene('Stages/stage0' + cc.sys.localStorage.stage);
+            } else {
+                cc.director.loadScene('01startMenu');
+            }
         }
     },
     loseGame: function () {

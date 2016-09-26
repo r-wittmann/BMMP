@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "602d244f-271d-40df-b697-8e505357ae8e",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "Himmellevel2": {
+      "ver": "1.0.3",
+      "uuid": "4b3fcdf4-d5cb-4ee5-abf1-f86af3b7bc00",
+      "rawTextureUuid": "602d244f-271d-40df-b697-8e505357ae8e",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 96.5,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 2557,
+      "height": 410,
+      "rawWidth": 2557,
+      "rawHeight": 603,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
