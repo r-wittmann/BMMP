@@ -178,7 +178,8 @@ cc.Class({
     },
     loseGame: function () {
         this.writeMessage('You lost. You will be returned to the Main Menu');
-        // this.scheduleOnce(() => cc.director.loadScene('01startMenu'), this.loseTimeout);
+        this.player.getComponent('PlayerScript').loseGame();
+
         this.node.runAction(
             cc.sequence(
                 cc.delayTime(this.loseTimeout),

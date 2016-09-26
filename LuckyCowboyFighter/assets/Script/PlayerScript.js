@@ -22,6 +22,7 @@ cc.Class({
         this.down = false;
         this.punch = false;
         this.shoot = false;
+        this.dead = false;
 
         this.health = cc.sys.localStorage.characterHealth || 100,
         this.strength = cc.sys.localStorage.characterStrenght || 50,
@@ -42,7 +43,7 @@ cc.Class({
             onKeyPressed: function(keyCode, event) {
            
 
-           			if(self.punch == false && self.shoot == false) {
+           		if(!self.punch && !self.shoot && !self.dead) {
                     switch(keyCode) {					 
                     case cc.KEY.left:
                     	self.moveBackground = 0;
@@ -173,5 +174,10 @@ cc.Class({
 
     },
      doOtherStuff: function(){
-     } 
+     },
+
+     loseGame: function () {
+        this.animation.play('dieAnim_' + this.playerType)
+        this.dead = true;
+     }
 });
