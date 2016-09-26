@@ -56,6 +56,14 @@ cc.Class({
         this.currentEnemies++;
       }
 
+      //get all children and check if they are enemies
+      var allChildren = this.node.getChildren();
+      for (var i = 0; i < allChildren.length; i++){
+        if(allChildren[i].getComponent('EnemyScript')){
+          cc.log("AAAAHHHH " + allChildren[i].getComponent('EnemyScript').enemyType + " Nr. " + i);
+        }
+      }
+
     	let moveBackground = this.player.getComponent('PlayerScript').moveBackground;
         if (moveBackground !== 0) {
             this.background.getComponent('BackgroundScript').moveBackgroundChildren(moveBackground, dt);
