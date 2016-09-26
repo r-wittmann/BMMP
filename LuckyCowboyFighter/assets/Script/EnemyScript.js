@@ -70,14 +70,22 @@ cc.Class({
             this.left = true;
         }
 
-        cc.log(this.animation.currentClip.name);
+        var animationName = String(this.animation.currentClip.name);
+     
+        if(animationName.contains){
+            if (this.left && !animationName.contains("enemyRunLeftAnim")) {
+                this.animation.play("enemyRunLeftAnim_" + this.enemyType);
+            } else if (!this.left && !animationName.contains("enemyRunRightAnim")) {
+                this.animation.play("enemyRunRightAnim_" + this.enemyType);
+            }
+        } else   
         // Animation
-      /*  if (this.left && !this.animation.currentClip.name.includes('enemyRunLeftAnim')) {
+      {if (this.left && !animationName.includes("enemyRunLeftAnim")) {
             this.animation.play("enemyRunLeftAnim_" + this.enemyType);
 
-        } else if (!this.left && !this.animation.currentClip.name.includes('enemyRunRightAnim')) {
+        } else if (!this.left && !animationName.includes("enemyRunRightAnim")) {
             this.animation.play("enemyRunRightAnim_" + this.enemyType);
-        }*/
+        }};
 
     },
 

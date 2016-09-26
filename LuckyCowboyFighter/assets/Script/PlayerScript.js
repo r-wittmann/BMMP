@@ -13,7 +13,6 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        cc.log("playaaaaa " + this.playerType);
         this.animation.play("standStillAnim_" + this.playerType); 
         //-1:move to right; 0: do not move; 1:move to left
         this.moveBackground = 0;
@@ -74,13 +73,11 @@ cc.Class({
                     	}
                         break;
                     case cc.KEY.space:
-                    	cc.log("space");
                     	//self.animation.play("punchAnimRight_Cowboy");
                     	self.punch = true;
                     	self.playPunchAnimation();
                     	break;
                     case cc.KEY.x:
-                    	cc.log("x");
                     	self.shoot = true;
                     	self.playShootAnimation();
                     	break;
@@ -113,7 +110,6 @@ cc.Class({
                         break;
                     case cc.KEY.space:
                     	//self.punch = false;
-                    	cc.log("space up")
                     	//self.playAnimation();
                     	break;
                 }
@@ -175,10 +171,7 @@ cc.Class({
             this.node.y = this.node.y - (this.playerTempo/2) * dt;
         }
 
-        if(this.punch  == true) cc.log("punch =")
-
     },
      doOtherStuff: function(){
-     	cc.log("JUST DO IT!");
      } 
 });
