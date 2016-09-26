@@ -1530,7 +1530,6 @@
       "__uuid__": "1f38d693-db3d-4348-a3ad-00fb14d5b4ba"
     },
     "maximumEnemies": 5,
-    "player": null,
     "background": {
       "__id__": 3
     },

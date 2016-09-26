@@ -19,11 +19,6 @@ cc.Class({
             type: cc.Prefab
         },
         maximumEnemies: 0,
-    	player: {
-    		default: null,
-    		type: cc.Node
-    	},
-
     	background: {
     		default: null,
     		type: cc.Node
@@ -58,25 +53,25 @@ cc.Class({
         this.loseFlag = 0;
         this.wonPositionX = 0;
         this.currentEnemies = 0;
-        this.selectedCharacter = cc.sys.localStorage.selectedCharacter  || 1;
-        //this.selectedCharacter = 1;
-        //this.player = cc.instantiate(this.cowboy);
-        
-
+        this.player;
+        this.selectedCharacter = parseInt(cc.sys.localStorage.selectedCharacter)  || 1;
+        cc.log("selectedCharacter " +this.selectedCharacter);
+        cc.log("must be undefined " + this.player);
 
         switch(this.selectedCharacter){
             case 1:
             this.player = cc.instantiate(this.cowboy);
             break;
             case 2: 
-            this.player = cc.instantiate(this.ninja);
+            this.player = cc.instantiate(this.knight);
             break;
             case 3:
-            this.player = cc.instantiate(this.knight)
+            this.player = cc.instantiate(this.ninja)
             break;
 
         }
 
+        cc.log("player " +this.player);
         this.node.addChild(this.player);
         this.player.setPosition(cc.p(0,0));
 
@@ -88,14 +83,6 @@ cc.Class({
       if(this.currentEnemies < this.maximumEnemies){
         this.spawnNewEnemy();
         this.currentEnemies++;
-      }
-
-      //get all children and check if they are enemies
-      var allChildren = this.node.getChildren();
-      for (var i = 0; i < allChildren.length; i++){
-        if(allChildren[i].getComponent('EnemyScript')){
-          cc.log("AAAAHHHH " + allChildren[i].getComponent('EnemyScript').enemyType + " Nr. " + i);
-        }
       }
 
     	let moveBackground = this.player.getComponent('PlayerScript').moveBackground;

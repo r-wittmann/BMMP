@@ -38,6 +38,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
+        cc.sys.localStorage.clear();
         this.selectedCharacter = null;
     },
 
