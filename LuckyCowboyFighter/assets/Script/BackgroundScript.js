@@ -14,7 +14,11 @@ cc.Class({
             default: null,
             type: cc.Node
         },
-        animation: {
+        animation1: {
+            default: null,
+            type: cc.Animation
+        },
+        animation2: {
             default: null,
             type: cc.Animation
         }
@@ -22,7 +26,8 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        this.animation.play('windmillAnim2');
+        this.animation1.play('windmillAnim2');
+        this.animation2.play('windmillAnim2');
     },
 
     // called every frame, uncomment this function to activate update callback
