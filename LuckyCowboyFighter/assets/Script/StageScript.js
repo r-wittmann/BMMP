@@ -54,8 +54,20 @@ cc.Class({
         this.wonPositionX = 0;
         this.currentEnemies = 0;
 
+        this.localStorageObject = cc.sys.localStorage
+
+        this.strengthLabel = this.node.getChildByName('HUD').getChildByName('Strength').getChildByName('Label')
+        this.healthBarProgress = this.node.getChildByName('HUD').getChildByName('HealthBar').getChildByName('ProgressBar')._components[1].progress
+        this.experienceBarProgress = this.node.getChildByName('HUD').getChildByName('EXPBar').getChildByName('ProgressBar')._components[1].progress
+
+        this.healthBarProgress =  parseInt(localStorageObject.currentHealth) / parseInt(localStorageObject.characterHealth)
+        this.experienceBarProgress = (parseInt(localStorageObject.characterExperience) % 100) / 100
+        this.strengthLabel.string = localStorageObject.characterStrength
+
         this.player;
-        this.selectedCharacter = parseInt(cc.sys.localStorage.selectedCharacter)  || 1;
+        this.selectedCharacter = parseInt(localStorageObject.selectedCharacter)  || 1;
+        cc.log("selectedCharacter " +this.selectedCharacter);
+        cc.log("must be undefined " + this.player);
 
         switch(this.selectedCharacter){
             case 1:
@@ -72,7 +84,6 @@ cc.Class({
 
         this.node.addChild(this.player);
         this.player.setPosition(cc.p(-300,-200));
-
 
     },
 
