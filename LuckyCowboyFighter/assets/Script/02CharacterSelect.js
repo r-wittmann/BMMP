@@ -76,7 +76,7 @@ cc.Class({
         switch (this.selectedCharacter) {
             case 1:
                 localStorageObject = {
-                    selectedCharacter: this.selectedCharacter,
+                    selectedCharacter: 1,
                     characterHealth: 100,
                     currentHealth: 100,
                     characterStrength: 20,
@@ -86,7 +86,7 @@ cc.Class({
                 break;
             case 2:
                 localStorageObject = {
-                    selectedCharacter: this.selectedCharacter,
+                    selectedCharacter: 2,
                     characterHealth: 200,
                     currentHealth: 200,
                     characterStrength: 30,
@@ -95,8 +95,8 @@ cc.Class({
                 }
                 break;
             case 3:
-                localStorageObject, {
-                    selectedCharacter: this.selectedCharacter,
+                localStorageObject = {
+                    selectedCharacter: 3,
                     characterHealth: 50,
                     currentHealth: 50,
                     characterStrength: 15,

@@ -27,6 +27,10 @@ cc.Class({
             default: null,
             type: cc.Label
         },
+        profile: {
+            default: null,
+            type: cc.Node
+        },
         experienceBar : {
             default: null,
             type: cc.Node
@@ -81,14 +85,15 @@ cc.Class({
         
         this.localStorageObject = cc.sys.localStorage
 
+        this.selectedCharacter = parseInt(this.localStorageObject.selectedCharacter)
         this.currentHealth = parseInt(this.localStorageObject.currentHealth)
 
+        this.profile._children[this.selectedCharacter - 1].opacity = 255
         this.healthBar.getChildByName('ProgressBar')._components[1].progress = this.currentHealth / parseInt(this.localStorageObject.characterHealth)
         this.experienceBar.getChildByName('ProgressBar')._components[1].progress = (parseInt(this.localStorageObject.characterExperience) % 100) / 100
         this.strengthLabel.string = this.localStorageObject.characterStrength
 
         this.player;
-        this.selectedCharacter = parseInt(this.localStorageObject.selectedCharacter)  || 1;
 
         switch(this.selectedCharacter){
             case 1:
