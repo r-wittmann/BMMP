@@ -1689,7 +1689,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Strenght",
+    "_name": "Strength",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -1822,7 +1822,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "New Label",
+    "_name": "Label",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -2027,7 +2027,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "New ProgressBar",
+    "_name": "ProgressBar",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -2339,7 +2339,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "New ProgressBar",
+    "_name": "ProgressBar",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -2558,6 +2558,15 @@
     },
     "winLoseLabel": {
       "__id__": 38
+    },
+    "experienceBar": {
+      "__id__": 56
+    },
+    "healthBar": {
+      "__id__": 48
+    },
+    "strengthLabel": {
+      "__id__": 47
     },
     "winDistance": 200,
     "loseTimeout": 5,

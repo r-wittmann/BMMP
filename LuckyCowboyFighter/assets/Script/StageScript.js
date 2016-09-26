@@ -27,6 +27,18 @@ cc.Class({
             default: null,
             type: cc.Label
         },
+        experienceBar : {
+            default: null,
+            type: cc.Node
+        },
+        healthBar : {
+            default: null,
+            type: cc.Node
+        },
+        strengthLabel: {
+            default: null,
+            type: cc.Label
+        },
         winDistance: 0,
         loseTimeout: 0,
         selectedCharacter: 0,
@@ -54,20 +66,30 @@ cc.Class({
         this.wonPositionX = 0;
         this.currentEnemies = 0;
 
+        cc.log(cc.sys.localStorage)
+
+        if (!cc.sys.localStorage.selectedCharacter) {
+            cc.sys.localStorage = {
+                selectedCharacter: 1,
+                characterHealth: 100,
+                currentHealth: 100,
+                characterStrength: 20,
+                characterExperience: 0,
+                characterLevel: 1
+            }
+        }
+
+        
         this.localStorageObject = cc.sys.localStorage
 
-        this.strengthLabel = this.node.getChildByName('HUD').getChildByName('Strength').getChildByName('Label')
-        this.healthBarProgress = this.node.getChildByName('HUD').getChildByName('HealthBar').getChildByName('ProgressBar')._components[1].progress
-        this.experienceBarProgress = this.node.getChildByName('HUD').getChildByName('EXPBar').getChildByName('ProgressBar')._components[1].progress
+        this.currentHealth = parseInt(this.localStorageObject.currentHealth)
 
-        this.healthBarProgress =  parseInt(localStorageObject.currentHealth) / parseInt(localStorageObject.characterHealth)
-        this.experienceBarProgress = (parseInt(localStorageObject.characterExperience) % 100) / 100
-        this.strengthLabel.string = localStorageObject.characterStrength
+        this.healthBar.getChildByName('ProgressBar')._components[1].progress = this.currentHealth / parseInt(this.localStorageObject.characterHealth)
+        this.experienceBar.getChildByName('ProgressBar')._components[1].progress = (parseInt(this.localStorageObject.characterExperience) % 100) / 100
+        this.strengthLabel.string = this.localStorageObject.characterStrength
 
         this.player;
-        this.selectedCharacter = parseInt(localStorageObject.selectedCharacter)  || 1;
-        cc.log("selectedCharacter " +this.selectedCharacter);
-        cc.log("must be undefined " + this.player);
+        this.selectedCharacter = parseInt(this.localStorageObject.selectedCharacter)  || 1;
 
         switch(this.selectedCharacter){
             case 1:
@@ -99,6 +121,10 @@ cc.Class({
       }
     },
 
+    updateBars: function () {
+        this.healthBar.getChildByName('ProgressBar')._components[1].progress = this.currentHealth / parseInt(this.localStorageObject.characterHealth)
+    },
+
     // called every frame, uncomment this function to activate update callback
     update: function (dt) {
       if(this.currentEnemies < this.maximumEnemies){
@@ -125,12 +151,14 @@ cc.Class({
             this.winGame(floor.x, this.wonPositionX)
         }
 
-        if (this.player.getComponent('PlayerScript').health <= 0 && this.loseFlag === 0) {
+        if (this.currentHealth <= 0 && this.loseFlag === 0) {
             this.loseFlag = 1;
         } else if (this.loseFlag === 1) {
             this.loseFlag = 2;
             this.loseGame();
         }
+
+        this.updateBars()
     },
 
     writeMessage: function (message) {
