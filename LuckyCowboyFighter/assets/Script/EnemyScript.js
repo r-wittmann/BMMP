@@ -39,7 +39,8 @@ cc.Class({
                     cc.delayTime(5),
                     cc.callFunc(() => {
                         if(this.getPlayerDistance() < this.attackRadius) {
-                            this.game.player.getComponent('PlayerScript').health -= this.strength;
+                            // this.game.player.getComponent('PlayerScript').health -= this.strength;
+                            this.game.currentHealth -= this.strength;
                         }
                         this.isStanding = false;
                     })
