@@ -70,13 +70,14 @@ cc.Class({
             this.left = true;
         }
 
+        cc.log(this.animation.currentClip.name);
         // Animation
-        if (this.left && !this.animation.currentClip.name.includes('enemyRunLeftAnim')) {
+      /*  if (this.left && !this.animation.currentClip.name.includes('enemyRunLeftAnim')) {
             this.animation.play("enemyRunLeftAnim_" + this.enemyType);
 
         } else if (!this.left && !this.animation.currentClip.name.includes('enemyRunRightAnim')) {
             this.animation.play("enemyRunRightAnim_" + this.enemyType);
-        }
+        }*/
 
     },
 

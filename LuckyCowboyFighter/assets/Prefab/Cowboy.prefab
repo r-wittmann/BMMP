@@ -10,7 +10,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Player",
+    "_name": "Cowboy",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -202,7 +202,9 @@
     "root": {
       "__id__": 1
     },
-    "asset": null,
+    "asset": {
+      "__uuid__": "fce6accc-6372-4edc-9a4c-f6dbf0b15de8"
+    },
     "fileId": "ef4a7l9y45Fspvxibel5xyt"
   },
   {
@@ -216,14 +218,17 @@
     "playerTempo": 300,
     "animation": {
       "__id__": 4
-    }
+    },
+    "playerType": "Cowboy"
   },
   {
     "__type__": "cc.PrefabInfo",
     "root": {
       "__id__": 1
     },
-    "asset": null,
+    "asset": {
+      "__uuid__": "fce6accc-6372-4edc-9a4c-f6dbf0b15de8"
+    },
     "fileId": "75487uGNg5FYKi1ii5re7SD"
   }
 ]

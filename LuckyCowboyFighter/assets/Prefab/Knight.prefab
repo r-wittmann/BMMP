@@ -66,7 +66,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "KnightAnimation",
+    "_name": "PlayerAnimation",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -183,7 +183,7 @@
     "playOnLoad": false
   },
   {
-    "__type__": "5cf85sHaPBJLIYt5NiRsrKq",
+    "__type__": "e9485VgsSZAjbT4QETx9iS8",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -199,11 +199,13 @@
     "root": {
       "__id__": 1
     },
-    "asset": null,
+    "asset": {
+      "__uuid__": "1f38d693-db3d-4348-a3ad-00fb14d5b4ba"
+    },
     "fileId": "5695950qPhOjJJB2HBlkZTI"
   },
   {
-    "__type__": "ddea17Sh+NOjqoffhtEznpe",
+    "__type__": "58acc9ZSupDe7q81ov+Ipdc",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -213,14 +215,17 @@
     "playerTempo": 250,
     "animation": {
       "__id__": 4
-    }
+    },
+    "playerType": "Knight"
   },
   {
     "__type__": "cc.PrefabInfo",
     "root": {
       "__id__": 1
     },
-    "asset": null,
+    "asset": {
+      "__uuid__": "1f38d693-db3d-4348-a3ad-00fb14d5b4ba"
+    },
     "fileId": "50067TFBCdCT7BChvoECcSi"
   }
 ]
