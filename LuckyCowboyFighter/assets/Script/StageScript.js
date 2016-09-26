@@ -66,7 +66,6 @@ cc.Class({
         this.wonPositionX = 0;
         this.currentEnemies = 0;
 
-        cc.log(cc.sys.localStorage)
 
         if (!cc.sys.localStorage.selectedCharacter) {
             cc.sys.localStorage = {

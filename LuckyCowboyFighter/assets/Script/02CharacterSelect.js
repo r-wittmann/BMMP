@@ -72,37 +72,38 @@ cc.Class({
     //start game
     goToGame: function () {
         cc.director.loadScene('Stages/stage01');
-        let localStorageObject = {
-            selectedCharacter: this.selectedCharacter
-        }
+        let localStorageObject = {}
         switch (this.selectedCharacter) {
             case 1:
-                Object.assign( localStorageObject, {
+                localStorageObject = {
+                    selectedCharacter: this.selectedCharacter,
                     characterHealth: 100,
                     currentHealth: 100,
                     characterStrength: 20,
                     characterExperience: 0,
                     characterLevel: 1
-                })
-                break
+                }
+                break;
             case 2:
-                Object.assign( localStorageObject, {
+                localStorageObject = {
+                    selectedCharacter: this.selectedCharacter,
                     characterHealth: 200,
                     currentHealth: 200,
                     characterStrength: 30,
                     characterExperience: 0,
                     characterLevel: 1
-                })
-                break
+                }
+                break;
             case 3:
-                Object.assign( localStorageObject, {
+                localStorageObject, {
+                    selectedCharacter: this.selectedCharacter,
                     characterHealth: 50,
                     currentHealth: 50,
                     characterStrength: 15,
                     characterExperience: 0,
                     characterLevel: 1
-                })
-                break 
+                }
+                break; 
         }
         cc.sys.localStorage = localStorageObject;
     },
