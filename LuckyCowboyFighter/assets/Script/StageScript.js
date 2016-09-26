@@ -56,8 +56,6 @@ cc.Class({
 
         this.player;
         this.selectedCharacter = parseInt(cc.sys.localStorage.selectedCharacter)  || 1;
-        cc.log("selectedCharacter " +this.selectedCharacter);
-        cc.log("must be undefined " + this.player);
 
         switch(this.selectedCharacter){
             case 1:
@@ -72,7 +70,6 @@ cc.Class({
 
         }
 
-        cc.log("player " +this.player);
         this.node.addChild(this.player);
         this.player.setPosition(cc.p(0,0));
 
@@ -86,7 +83,6 @@ cc.Class({
       var allChildren = this.node.getChildren();
       for (var i = 0; i < allChildren.length; i++){
         if(allChildren[i].getComponent('EnemyScript')){
-          cc.log("AAAAHHHH " + allChildren[i].getComponent('EnemyScript').enemyType + " Nr. " + i);
           allChildren[i].x +=  direction * speed * dt;
         }
       }

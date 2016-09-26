@@ -53,7 +53,7 @@ cc.Class({
         var playerY = this.game.player.getPositionY();
         var xPos = this.node.x;
         var yPos = this.node.y;
-        
+
         // Bewegung in y-Richtung
         if(yPos <= playerY){
           this.node.y += this.ySpeed * dt;
@@ -70,7 +70,6 @@ cc.Class({
             this.left = true;
         }
 
-        cc.log(this.animation.currentClip.name);
         // Animation
       /*  if (this.left && !this.animation.currentClip.name.includes('enemyRunLeftAnim')) {
             this.animation.play("enemyRunLeftAnim_" + this.enemyType);
@@ -102,7 +101,7 @@ cc.Class({
     // called every frame
     update: function (dt) {
         if (!this.isStanding) this.attack();
-        
+
         if (!this.isStanding) this.moveEnemy(dt);
 
         if(this.health <= 0) this.node.destroy();
