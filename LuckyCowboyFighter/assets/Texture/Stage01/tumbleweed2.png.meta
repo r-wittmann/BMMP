@@ -1,14 +1,14 @@
 {
   "ver": "1.0.0",
-  "uuid": "1a17ae75-cf62-4b77-89cd-98dfe27390ad",
+  "uuid": "2e380300-57ac-4afa-a669-f2639bd59d6e",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
   "subMetas": {
-    "Stadt": {
+    "tumbleweed2": {
       "ver": "1.0.3",
-      "uuid": "c593f167-7301-4955-ae08-5b7681df3f34",
-      "rawTextureUuid": "1a17ae75-cf62-4b77-89cd-98dfe27390ad",
+      "uuid": "139135f4-2405-4cb8-a6f9-8785fe36d1a0",
+      "rawTextureUuid": "2e380300-57ac-4afa-a669-f2639bd59d6e",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -16,10 +16,10 @@
       "offsetY": 0,
       "trimX": 0,
       "trimY": 0,
-      "width": 2558,
-      "height": 582,
-      "rawWidth": 2558,
-      "rawHeight": 582,
+      "width": 50,
+      "height": 50,
+      "rawWidth": 50,
+      "rawHeight": 50,
       "borderTop": 0,
       "borderBottom": 0,
       "borderLeft": 0,

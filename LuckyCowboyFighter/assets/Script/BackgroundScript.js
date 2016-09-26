@@ -13,12 +13,16 @@ cc.Class({
         floor: {
             default: null,
             type: cc.Node
+        },
+        animation: {
+            default: null,
+            type: cc.Animation
         }
     },
 
     // use this for initialization
     onLoad: function () {
-
+        this.animation.play('windmillAnim2');
     },
 
     // called every frame, uncomment this function to activate update callback
