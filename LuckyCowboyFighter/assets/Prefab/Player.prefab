@@ -10,7 +10,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "EnemyNinja",
+    "_name": "Player",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -29,8 +29,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 0,
-      "height": 0
+      "width": 104,
+      "height": 205
     },
     "_children": [
       {
@@ -39,12 +39,12 @@
     ],
     "_rotationX": 0,
     "_rotationY": 0,
-    "_scaleX": 0.5,
-    "_scaleY": 0.5,
+    "_scaleX": 0.6,
+    "_scaleY": 0.6,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 414,
-      "y": -154
+      "x": 85.4,
+      "y": -137.6
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -56,17 +56,17 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 6
+        "__id__": 7
       }
     ],
     "_prefab": {
-      "__id__": 7
+      "__id__": 8
     },
     "groupIndex": 0
   },
   {
     "__type__": "cc.Node",
-    "_name": "EnemyNinjaAnimation",
+    "_name": "PlayerAnimation",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -87,8 +87,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 193,
-      "height": 202
+      "width": 113,
+      "height": 205
     },
     "_children": [],
     "_rotationX": 0,
@@ -114,10 +114,13 @@
       },
       {
         "__id__": 4
+      },
+      {
+        "__id__": 5
       }
     ],
     "_prefab": {
-      "__id__": 5
+      "__id__": 6
     },
     "groupIndex": 0
   },
@@ -130,7 +133,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "a04d73bc-fb13-4843-906d-bc1f2daf82c0"
+      "__uuid__": "28a2623b-db12-4fed-b734-fe4d4e06f3d6"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -146,7 +149,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_atlas": {
-      "__uuid__": "d7003677-a441-4f54-9e4a-5cb11e73a1bf"
+      "__uuid__": "4cefebdf-c0f9-4a78-816a-69214749eccc"
     }
   },
   {
@@ -157,54 +160,70 @@
       "__id__": 2
     },
     "_enabled": true,
-    "_defaultClip": null,
+    "_defaultClip": {
+      "__uuid__": "9c1e537f-145d-48c1-aea1-c1d4904dec0f"
+    },
     "_clips": [
       {
-        "__uuid__": "6d82e49a-6b55-46bb-b24f-736169cf90a0"
+        "__uuid__": "9c1e537f-145d-48c1-aea1-c1d4904dec0f"
       },
       {
-        "__uuid__": "f678c5ec-aa28-4211-a36a-f2953721d959"
+        "__uuid__": "d2d4d9b6-ba46-4cb1-8de6-8c37295fd1ea"
       },
       {
-        "__uuid__": "87c2b0dd-036b-4636-9c7b-459f53bf8d23"
+        "__uuid__": "b1d90978-edc1-4f69-8ffc-ba2a7daa809a"
+      },
+      {
+        "__uuid__": "be2036ab-7ee0-4301-8b8e-9b295305d913"
+      },
+      {
+        "__uuid__": "4e95cc66-1dc1-4120-b72d-f89e8cc538f1"
+      },
+      {
+        "__uuid__": "60ab0c8e-b7fa-4340-b104-2f01e6672e82"
       }
     ],
     "playOnLoad": false
+  },
+  {
+    "__type__": "e9485VgsSZAjbT4QETx9iS8",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 2
+    },
+    "_enabled": true,
+    "parent": {
+      "__id__": 1
+    }
   },
   {
     "__type__": "cc.PrefabInfo",
     "root": {
       "__id__": 1
     },
-    "asset": {
-      "__uuid__": "e5e805bc-d536-4bba-9993-adb12ff85b2b"
-    },
-    "fileId": "e95cdy8T0NLNovJK5ZKsoyl"
+    "asset": null,
+    "fileId": "ef4a7l9y45Fspvxibel5xyt"
   },
   {
-    "__type__": "930928NwAhILqGlYjjAFt//",
+    "__type__": "58acc9ZSupDe7q81ov+Ipdc",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 1
     },
     "_enabled": true,
-    "attackRadius": 0,
-    "xSpeed": 0,
-    "ySpeed": 0,
-    "animation": null,
-    "strength": 0,
-    "health": 0,
-    "enemyType": "enemyNinja"
+    "playerTempo": 300,
+    "animation": {
+      "__id__": 4
+    }
   },
   {
     "__type__": "cc.PrefabInfo",
     "root": {
       "__id__": 1
     },
-    "asset": {
-      "__uuid__": "e5e805bc-d536-4bba-9993-adb12ff85b2b"
-    },
-    "fileId": "d1090Ae9gJMZptGCkO7K28t"
+    "asset": null,
+    "fileId": "75487uGNg5FYKi1ii5re7SD"
   }
 ]

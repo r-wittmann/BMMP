@@ -54,9 +54,13 @@
     "_opacityModifyRGB": false,
     "_id": "",
     "_active": true,
-    "_components": [],
+    "_components": [
+      {
+        "__id__": 6
+      }
+    ],
     "_prefab": {
-      "__id__": 6
+      "__id__": 7
     },
     "groupIndex": 0
   },
@@ -165,6 +169,9 @@
       },
       {
         "__uuid__": "f610d6b3-b21d-4d81-8f03-d43d1d0327de"
+      },
+      {
+        "__uuid__": "552a229d-a6c0-4191-835f-0e6b545ff20f"
       }
     ],
     "playOnLoad": false
@@ -174,15 +181,35 @@
     "root": {
       "__id__": 1
     },
-    "asset": null,
+    "asset": {
+      "__uuid__": "7b104913-b1ab-4e39-838a-838d2104cfba"
+    },
     "fileId": "669042geWVEg5TLChEYeZYK"
+  },
+  {
+    "__type__": "930928NwAhILqGlYjjAFt//",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "attackRadius": 0,
+    "xSpeed": 0,
+    "ySpeed": 0,
+    "animation": null,
+    "strength": 0,
+    "health": 0,
+    "enemyType": "enemyKnight"
   },
   {
     "__type__": "cc.PrefabInfo",
     "root": {
       "__id__": 1
     },
-    "asset": null,
+    "asset": {
+      "__uuid__": "7b104913-b1ab-4e39-838a-838d2104cfba"
+    },
     "fileId": "aeeb2d9ghhGCKpMw75mFUu/"
   }
 ]

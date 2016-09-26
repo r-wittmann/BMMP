@@ -1,0 +1,49 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "enemyDieAnim_Knight",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.6833333333333333,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "acf0ed11-d3e9-45b1-bbf9-33b2ec1a8032"
+            }
+          },
+          {
+            "frame": 0.11666666666666667,
+            "value": {
+              "__uuid__": "eac6479d-f668-4c09-94f7-e3befce2ef1f"
+            }
+          },
+          {
+            "frame": 0.21666666666666667,
+            "value": {
+              "__uuid__": "852da242-34df-4e07-9f6e-c9de3c207a2c"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "d5f31216-e59d-4ddc-8be5-48600b16f1ec"
+            }
+          },
+          {
+            "frame": 0.6666666666666666,
+            "value": {
+              "__uuid__": "d5f31216-e59d-4ddc-8be5-48600b16f1ec"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

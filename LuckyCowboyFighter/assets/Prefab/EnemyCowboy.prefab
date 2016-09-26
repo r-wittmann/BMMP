@@ -211,7 +211,7 @@
     },
     "strength": 10,
     "health": 100,
-    "enemyType": "Cowboy"
+    "enemyType": "enemyCowboy"
   },
   {
     "__type__": "cc.PrefabInfo",
