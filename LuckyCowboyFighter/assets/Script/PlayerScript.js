@@ -8,11 +8,13 @@ cc.Class({
             default: null,
             type:cc.Animation,
         },
+        playerType: "dummy",
     },
 
     // use this for initialization
     onLoad: function () {
-      this.animation.play("standStillAnim_Cowboy"); 
+        cc.log("playaaaaa " + this.playerType);
+        this.animation.play("standStillAnim_" + this.playerType); 
         //-1:move to right; 0: do not move; 1:move to left
         this.moveBackground = 0;
         this.left = false;
@@ -127,26 +129,26 @@ cc.Class({
     	this.playerDirection = this.node.getChildByName("PlayerAnimation").scaleX;
 
     	if(this.left){
-    		this.animation.play("runLeftAnim_Cowboy");    		
+    		this.animation.play("runLeftAnim_" + this.playerType);    		
     	}else if(this.right ){
-    		this.animation.play("runRightAnim_Cowboy");     		
+    		this.animation.play("runRightAnim_" + this.playerType);     		
     	}else if((this.playerDirection == -1 && (this.up || this.down))){
     		this.animation.play("runLeftAnim_Cowboy"); 
     	}else if((this.playerDirection == 1 && (this.up || this.down))){
-    		this.animation.play("runRightAnim_Cowboy"); 
+    		this.animation.play("runRightAnim_" + this.playerType); 
     	}else {
-    		this.animation.play("standStillAnim_Cowboy");
+    		this.animation.play("standStillAnim_" + this.playerType);
     	}
 
     	
     },
 
     playPunchAnimation : function(){
-    	this.animation.play("punchAnim_Cowboy");
+    	this.animation.play("punchAnim_" + this.playerType);
     },
 
     playShootAnimation: function(){
-    	this.animation.play("shootAnim_Cowboy");
+    	this.animation.play("shootAnim_" + this.playerType);
     },
 
     // called every frame, uncomment this function to activate update callback
