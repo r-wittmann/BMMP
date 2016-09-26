@@ -71,7 +71,7 @@ cc.Class({
         }
 
         this.node.addChild(this.player);
-        this.player.setPosition(cc.p(0,0));
+        this.player.setPosition(cc.p(-300,-200));
 
 
     },
