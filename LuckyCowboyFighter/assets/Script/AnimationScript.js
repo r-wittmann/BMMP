@@ -15,7 +15,6 @@ cc.Class({
 
     },
      returnToStandardMode: function(){
-             cc.log("DO IT!!");
              this.parent.getComponent("PlayerScript").punch = false;
              this.parent.getComponent("PlayerScript").shoot = false;
              this.parent.getComponent("PlayerScript").playAnimation();
