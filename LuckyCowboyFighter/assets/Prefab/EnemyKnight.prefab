@@ -54,9 +54,13 @@
     "_opacityModifyRGB": false,
     "_id": "",
     "_active": true,
-    "_components": [],
+    "_components": [
+      {
+        "__id__": 6
+      }
+    ],
     "_prefab": {
-      "__id__": 6
+      "__id__": 7
     },
     "groupIndex": 0
   },
@@ -181,6 +185,22 @@
       "__uuid__": "7b104913-b1ab-4e39-838a-838d2104cfba"
     },
     "fileId": "669042geWVEg5TLChEYeZYK"
+  },
+  {
+    "__type__": "930928NwAhILqGlYjjAFt//",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "attackRadius": 0,
+    "xSpeed": 0,
+    "ySpeed": 0,
+    "animation": null,
+    "strength": 0,
+    "health": 0,
+    "enemyType": "enemyKnight"
   },
   {
     "__type__": "cc.PrefabInfo",

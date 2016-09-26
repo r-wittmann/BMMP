@@ -6,6 +6,18 @@ cc.Class({
             default: null,
             type: cc.Prefab
         },
+        cowboy:{
+            default: null,
+            type: cc.Prefab
+        },
+        ninja:{
+            default: null,
+            type: cc.Prefab
+        },
+        knight:{
+            default: null,
+            type: cc.Prefab
+        },
         maximumEnemies: 0,
     	player: {
     		default: null,
@@ -46,7 +58,29 @@ cc.Class({
         this.loseFlag = 0;
         this.wonPositionX = 0;
         this.currentEnemies = 0;
-        this.selectedCharacter = cc.sys.localStorage.selectedCharacter;
+        this.selectedCharacter = cc.sys.localStorage.selectedCharacter  || 1;
+        //this.selectedCharacter = 1;
+        //this.player = cc.instantiate(this.cowboy);
+        
+
+
+        switch(this.selectedCharacter){
+            case 1:
+            this.player = cc.instantiate(this.cowboy);
+            break;
+            case 2: 
+            this.player = cc.instantiate(this.ninja);
+            break;
+            case 3:
+            this.player = cc.instantiate(this.knight)
+            break;
+
+        }
+
+        this.node.addChild(this.player);
+        this.player.setPosition(cc.p(0,0));
+
+
     },
 
     // called every frame, uncomment this function to activate update callback
