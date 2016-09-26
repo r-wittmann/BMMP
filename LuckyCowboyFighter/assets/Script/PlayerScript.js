@@ -179,5 +179,8 @@ cc.Class({
      loseGame: function () {
         this.animation.play('dieAnim_' + this.playerType)
         this.dead = true;
+        if (this.playerType === 'Ninja') {
+            this.node.getChildByName('PlayerAnimation').getChildByName('ShurikenAnimation').destroy()
+        }
      }
 });

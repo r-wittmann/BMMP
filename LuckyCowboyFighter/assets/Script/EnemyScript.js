@@ -36,7 +36,7 @@ cc.Class({
             this.animation.play("enemyShootAnim_" + this.enemyType),
             this.node.runAction(
                 cc.sequence(
-                    cc.delayTime(5),
+                    cc.delayTime(2),
                     cc.callFunc(() => {
                         if(this.getPlayerDistance() < this.attackRadius) {
                             // this.game.player.getComponent('PlayerScript').health -= this.strength;
