@@ -53,6 +53,7 @@ cc.Class({
         this.loseFlag = 0;
         this.wonPositionX = 0;
         this.currentEnemies = 0;
+
         this.player;
         this.selectedCharacter = parseInt(cc.sys.localStorage.selectedCharacter)  || 1;
         cc.log("selectedCharacter " +this.selectedCharacter);
@@ -62,7 +63,7 @@ cc.Class({
             case 1:
             this.player = cc.instantiate(this.cowboy);
             break;
-            case 2: 
+            case 2:
             this.player = cc.instantiate(this.knight);
             break;
             case 3:
@@ -78,6 +79,19 @@ cc.Class({
 
     },
 
+    // when player walks out of screen, players will be moved so they are "stuck"
+    // to the ground
+    moveEnemiesOnScreen: function (speed, direction, dt){
+      //get all children and check if they are enemies
+      var allChildren = this.node.getChildren();
+      for (var i = 0; i < allChildren.length; i++){
+        if(allChildren[i].getComponent('EnemyScript')){
+          cc.log("AAAAHHHH " + allChildren[i].getComponent('EnemyScript').enemyType + " Nr. " + i);
+          allChildren[i].x +=  direction * speed * dt;
+        }
+      }
+    },
+
     // called every frame, uncomment this function to activate update callback
     update: function (dt) {
       if(this.currentEnemies < this.maximumEnemies){
@@ -85,9 +99,11 @@ cc.Class({
         this.currentEnemies++;
       }
 
+      //moves background and enemies when player walks to edges of the screen
     	let moveBackground = this.player.getComponent('PlayerScript').moveBackground;
         if (moveBackground !== 0) {
             this.background.getComponent('BackgroundScript').moveBackgroundChildren(moveBackground, dt);
+            this.moveEnemiesOnScreen(this.player.getComponent('PlayerScript').playerTempo, moveBackground, dt);
         }
 
         let floor = this.background.getChildByName('Floor')
