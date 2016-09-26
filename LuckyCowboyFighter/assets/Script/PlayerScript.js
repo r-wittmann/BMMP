@@ -130,7 +130,7 @@ cc.Class({
     	}else if(this.right ){
     		this.animation.play("runRightAnim_" + this.playerType);     		
     	}else if((this.playerDirection == -1 && (this.up || this.down))){
-    		this.animation.play("runLeftAnim_Cowboy"); 
+    		this.animation.play("runLeftAnim_" + this.playerType); 
     	}else if((this.playerDirection == 1 && (this.up || this.down))){
     		this.animation.play("runRightAnim_" + this.playerType); 
     	}else {
