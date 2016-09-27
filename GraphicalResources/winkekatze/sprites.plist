@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>winken-01.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{42,57},{41,55}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{9,0},{41,55}}</string>
+				<key>sourceSize</key>
+				<string>{61,60}</string>
+			</dict>
+
+			<key>winken-02.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{84,55},{41,54}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{8,1},{41,54}}</string>
+				<key>sourceSize</key>
+				<string>{60,60}</string>
+			</dict>
+
+			<key>winken-03.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{43,0},{41,54}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{9,1},{41,54}}</string>
+				<key>sourceSize</key>
+				<string>{60,60}</string>
+			</dict>
+
+			<key>winken-04.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{84,55},{41,54}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{8,1},{41,54}}</string>
+				<key>sourceSize</key>
+				<string>{60,60}</string>
+			</dict>
+
+			<key>winken-06.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{85,0},{41,54}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{9,1},{41,54}}</string>
+				<key>sourceSize</key>
+				<string>{60,60}</string>
+			</dict>
+
+			<key>winken-07.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,57},{41,55}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{9,0},{41,55}}</string>
+				<key>sourceSize</key>
+				<string>{60,60}</string>
+			</dict>
+
+			<key>winken-08.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{42,56}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{8,0},{42,56}}</string>
+				<key>sourceSize</key>
+				<string>{61,60}</string>
+			</dict>
+
+			<key>winken-09.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,57},{41,55}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{9,0},{41,55}}</string>
+				<key>sourceSize</key>
+				<string>{60,60}</string>
+			</dict>
+
+		</dict>
+
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>size</key>
+			<string>{128,128}</string>
+			<key>textureFileName</key>
+			<string>sprites.png</string>
+			</dict>
+		</dict>
+</plist>
