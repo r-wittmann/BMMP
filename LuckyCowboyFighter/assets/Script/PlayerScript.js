@@ -157,8 +157,6 @@ cc.Class({
       bullet.setPosition((this.node.x, this.node.y+10));
     },
 
-    shoot:
-
     forwardAttackToStage: function(){
         this.node.getParent().getComponent("StageScript").attackEnemy();
     },
