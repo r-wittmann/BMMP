@@ -36,10 +36,15 @@ cc.Class({
             this.animation.play("enemyShootAnim_" + this.enemyType),
             this.node.runAction(
                 cc.sequence(
-                    cc.delayTime(5),
+                    cc.delayTime(0.5),
                     cc.callFunc(() => {
                         if(this.getPlayerDistance() < this.attackRadius) {
                             this.game.player.getComponent('PlayerScript').health -= this.strength;
+                            if(this.game.player.x > this.node.x){
+                              this.game.player.runAction(cc.moveBy(0.1, 100, 0));
+                            }else{
+                              this.game.player.runAction(cc.moveBy(0.1, -100, 0));
+                            }
                         }
                         this.isStanding = false;
                     })
@@ -100,11 +105,18 @@ cc.Class({
         //let playerAttackRadius = this.game.player.getComponent('PlayerScript').attackRadius;
         let playerAttackRadius = 100;
 
-        if(((enemyX - playerX <= 0 && playerDirection <= 0) || (enemyX - playerX >= 0 && playerDirection >= 0)) && playerPunch) {
-            if(Math.abs(enemyY - playerY) <= 100 && playerAttackRadius >= Math.abs(enemyX - playerX)){
-                this.health -= playerStrength;
-            }
+        // if(((enemyX - playerX <= 0 && playerDirection <= 0) || (enemyX - playerX >= 0 && playerDirection >= 0)) && playerPunch) {
+        if(Math.abs(enemyY - playerY) <= 100 && playerAttackRadius >= Math.abs(enemyX - playerX) && playerPunch){
+          this.health -= playerStrength;
+          cc.log("PLAYERSTRENGTH" + playerStrength);
+          cc.log("HEALTH" + this.health);
+          if(playerDirection <= 0){
+            this.node.runAction(cc.moveBy(0.1, -100, 0));
+          }else {
+            this.node.runAction(cc.moveBy(0.1, 100, 0));
+          }
         }
+        // }
     },
 
     // called every frame
@@ -115,6 +127,7 @@ cc.Class({
 
         if(this.health <= 0) this.node.destroy();
 
+        // cc.log(new Date().getTime());
         this.checkPlayerAttack();
     },
 });
