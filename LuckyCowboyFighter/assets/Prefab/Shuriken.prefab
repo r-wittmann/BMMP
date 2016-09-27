@@ -107,7 +107,7 @@
         "__uuid__": "dcd9209b-0be5-4f29-bd75-94cf9771a909"
       }
     ],
-    "playOnLoad": false
+    "playOnLoad": true
   },
   {
     "__type__": "cc.PrefabInfo",

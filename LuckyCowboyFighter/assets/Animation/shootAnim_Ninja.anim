@@ -41,6 +41,11 @@
   },
   "events": [
     {
+      "frame": 0.18333333333333332,
+      "func": "triggerBullet",
+      "params": []
+    },
+    {
       "frame": 0.3333333333333333,
       "func": "returnToStandardMode",
       "params": []

@@ -25,7 +25,8 @@ cc.Class({
     },
 
     triggerBullet: function(){
-      this.parent.getComponent("PlayerScript").shoot = true;
+      cc.log("triggerBullet");
+      this.parent.getComponent("PlayerScript").forwardBulletAttackToStage();
     }
 
     // called every frame, uncomment this function to activate update callback

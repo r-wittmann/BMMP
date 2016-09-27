@@ -151,16 +151,18 @@ cc.Class({
     playShootAnimation: function(){
     	this.animation.play("shootAnim_" + this.playerType);
 
-      var bullet = cc.instantiate(this.bulletPrefab);
-      this.node.addChild(bullet);
-      // bullet.getComponent('BulletScript').game = this.node.getParent().getComponent("StageScript");
-      bullet.setPosition((this.node.x, this.node.y+10));
     },
 
     forwardAttackToStage: function(){
         this.node.getParent().getComponent("StageScript").attackEnemy();
     },
 
+    forwardBulletAttackToStage: function(){
+
+        var bullet = cc.instantiate(this.bulletPrefab);
+        this.node.getParent().getComponent("StageScript").attackEnemyWithBullet(bullet);
+
+    },
     // called every frame, uncomment this function to activate update callback
      update: function (dt) {
 

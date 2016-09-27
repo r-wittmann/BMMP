@@ -88,13 +88,13 @@ cc.Class({
 
         if (!cc.sys.localStorage.selectedCharacter) {
             cc.sys.localStorage = {
-                selectedCharacter: 1,
+                selectedCharacter: 3,
                 characterHealth: 100,
                 currentHealth: 100,
                 characterStrength: 20,
                 characterExperience: 0,
                 characterLevel: 1,
-                characterAttackRadius: 10,
+                characterAttackRadius: 50,
                 stage: 1
             }
         }
@@ -238,7 +238,95 @@ cc.Class({
         }
     },
 
+    attackEnemyWithBullet: function(bullet){
+      cc.log("attackEnemyWithBullet");
 
+      cc.log(bullet);
+      //bullet.getComponent('BulletScript').game = this.node.getParent().getComponent("StageScript");
+      //bullet.setPosition(cc.p(this.player.x, this.player.y+10));
+
+
+
+        let playerDirection = this.player.getChildByName('PlayerAnimation').scaleX;
+        let playerX = this.player.getPositionX();
+        let playerY = this.player.getPositionY();
+        let playerStrength = this.player.getComponent('PlayerScript').strength;
+        let enemyX;
+        let enemyY;
+        //let playerAttackRadius = this.player.getComponent('PlayerScript').attackRadius;
+        let playerAttackRadius = 1000;
+        let nearestEnemyDistance;
+        let nearestEnemyIndex;
+        let allChildren = this.node.getChildren();
+        let enemySpeedX;
+
+        //possible bug enemy behind is nearest but cant be hit (second for) -> no damage
+        for(var i = 0; i < allChildren.length; i++) {
+            if(allChildren[i].getComponent('EnemyScript') && allChildren[i].active) {
+                if(!nearestEnemyDistance) {
+                    nearestEnemyDistance = Math.abs(allChildren[i].x - playerX);
+                    nearestEnemyIndex = i;
+                    enemyX = allChildren[nearestEnemyIndex].x;
+                    enemyY = allChildren[nearestEnemyIndex].y;
+                    enemySpeedX = allChildren[nearestEnemyIndex].getComponent("EnemyScript").xSpeed ;
+                    cc.log(enemySpeedX);
+                } else {
+                    if(nearestEnemyDistance > Math.abs(allChildren[i].x - playerX)) {
+                        nearestEnemyDistance = Math.abs(allChildren[i].x - playerX);
+                        nearestEnemyIndex = i;
+                        enemyX = allChildren[nearestEnemyIndex].x;
+                        enemyY = allChildren[nearestEnemyIndex].y;
+                        enemySpeedX = allChildren[nearestEnemyIndex].getComponent("EnemyScript").xSpeed ;
+                        
+                    }
+                }
+            }
+        }
+        
+
+        if((enemyX - playerX >= 0 && playerDirection >= 0)) {
+            if(Math.abs(enemyY - playerY) <= 100 && playerAttackRadius >= Math.abs(enemyX - playerX)){
+              
+                this.node.addChild(bullet);
+                bullet.setPosition(cc.p(this.player.x, this.player.y+10));
+                bullet.runAction(
+                    cc.sequence(
+                        cc.moveTo(0.001*nearestEnemyDistance, enemyX-(enemySpeedX*0.001*nearestEnemyDistance), enemyY),
+                        cc.callFunc(() => {
+                           // this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").health -= this.player.getComponent("PlayerScript").strength/2;
+                            bullet.destroy();
+
+
+                        })
+                    )
+                );
+            }
+
+
+                //this.node.getChildren()[nearestEnemyIndex].runAction(cc.moveBy(0.1, -100, 20));
+             
+            }else if((enemyX - playerX <= 0 && playerDirection <= 0) ){
+
+                if(Math.abs(enemyY - playerY) <= 100 && playerAttackRadius >= Math.abs(enemyX - playerX)){
+              
+                this.node.addChild(bullet);
+                bullet.setPosition(cc.p(this.player.x, this.player.y+10));
+                bullet.runAction(
+                    cc.sequence(
+                        cc.moveTo(0.001*nearestEnemyDistance, enemyX+(enemySpeedX*0.001*nearestEnemyDistance), enemyY),
+                        cc.callFunc(() => {
+                            bullet.destroy();
+
+
+                        })
+                    )
+                );
+
+            }
+        }
+
+
+    },
 
 
     winGame: function (currentPosition, wonPositionX) {
