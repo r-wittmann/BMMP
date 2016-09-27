@@ -82,7 +82,7 @@ cc.Class({
                     characterStrength: 20,
                     characterExperience: 0,
                     characterLevel: 1,
-                    characterAttackRadius: 10,
+                    characterAttackRadius: 50,
                     stage: 1
                 }
                 break;
@@ -94,7 +94,7 @@ cc.Class({
                     characterStrength: 30,
                     characterExperience: 0,
                     characterLevel: 1,
-                    characterAttackRadius: 200,
+                    characterAttackRadius: 120,
                     stage: 1
                 }
                 break;
@@ -106,7 +106,7 @@ cc.Class({
                     characterStrength: 15,
                     characterExperience: 0,
                     characterLevel: 1,
-                    characterAttackRadius: 100,
+                    characterAttackRadius: 90,
                     stage: 1
                 }
                 break; 

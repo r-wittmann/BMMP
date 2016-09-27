@@ -34,7 +34,7 @@ cc.Class({
     attack: function () {
         if (this.getPlayerDistance() < this.attackRadius) {
             this.isStanding = true;
-            this.animation.play("enemyShootAnim_" + this.enemyType),
+            this.animation.play("enemyPunchAnim_" + this.enemyType),
             this.node.runAction(
                 cc.sequence(
                     cc.delayTime(0.5),
