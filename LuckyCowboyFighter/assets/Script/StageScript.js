@@ -99,7 +99,7 @@ cc.Class({
             }
         }
 
-        
+
         this.localStorageObject = cc.sys.localStorage
 
         this.selectedCharacter = parseInt(this.localStorageObject.selectedCharacter)
@@ -165,7 +165,7 @@ cc.Class({
             var child = this.node.getChildren()[i];
             if (child.getComponent('EnemyScript') && child.active) {
                 remainingEnemies.push(child);
-            }   
+            }
         }
 
         if (remainingEnemies.length === 0 && this.wonFlag === 0) {
@@ -177,7 +177,6 @@ cc.Class({
             cc.sys.localStorage.stage = parseInt(cc.sys.localStorage.stage) + 1;
 
         } else if (this.wonFlag === 1) {
-            
             this.winGame(this.background.getChildByName('SecondBackground').getChildByName('SecondBackgroundSprite1').x, this.wonPositionX)
         }
 
@@ -226,7 +225,7 @@ cc.Class({
                 }
             }
         }
-       
+
         if(((enemyX - playerX <= 0 && playerDirection <= 0) || (enemyX - playerX >= 0 && playerDirection >= 0))) {
             if(Math.abs(enemyY - playerY) <= 100 && playerAttackRadius >= Math.abs(enemyX - playerX)){
               this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").health -= this.player.getComponent("PlayerScript").strength;
@@ -236,7 +235,7 @@ cc.Class({
                 this.node.getChildren()[nearestEnemyIndex].runAction(cc.moveBy(0.1, 100, 20));
               }
             }
-        }              
+        }
     },
 
 

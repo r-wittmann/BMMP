@@ -8,6 +8,10 @@ cc.Class({
             default: null,
             type:cc.Animation,
         },
+        bulletPrefab:{
+            default: null,
+            type:cc.Prefab,
+        },
         playerType: "dummy",
     },
 
@@ -44,7 +48,7 @@ cc.Class({
 
 
            		if(!self.punch && !self.shoot && !self.dead) {
-                    switch(keyCode) {					 
+                    switch(keyCode) {
                     case cc.KEY.left:
                     	self.moveBackground = 0;
                     	self.right = false;
@@ -130,7 +134,7 @@ cc.Class({
     	}else if(this.right ){
     		this.animation.play("runRightAnim_" + this.playerType);
     	}else if((this.playerDirection == -1 && (this.up || this.down))){
-    		this.animation.play("runLeftAnim_" + this.playerType); 
+    		this.animation.play("runLeftAnim_" + this.playerType);
     	}else if((this.playerDirection == 1 && (this.up || this.down))){
     		this.animation.play("runRightAnim_" + this.playerType);
     	}else {
@@ -146,7 +150,14 @@ cc.Class({
 
     playShootAnimation: function(){
     	this.animation.play("shootAnim_" + this.playerType);
+
+      var bullet = cc.instantiate(this.bulletPrefab);
+      this.node.addChild(bullet);
+      // bullet.getComponent('BulletScript').game = this.node.getParent().getComponent("StageScript");
+      bullet.setPosition((this.node.x, this.node.y+10));
     },
+
+    shoot:
 
     forwardAttackToStage: function(){
         this.node.getParent().getComponent("StageScript").attackEnemy();

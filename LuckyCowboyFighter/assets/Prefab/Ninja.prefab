@@ -219,6 +219,9 @@
     "animation": {
       "__id__": 4
     },
+    "bulletPrefab": {
+      "__uuid__": "0a150102-c8ca-4b8c-a90e-e111d7eb10a3"
+    },
     "playerType": "Ninja"
   },
   {

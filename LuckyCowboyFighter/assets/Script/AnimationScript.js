@@ -2,7 +2,7 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-      
+
       parent: {
         default: null,
         type:cc.Node,
@@ -21,9 +21,12 @@ cc.Class({
     },
     triggerAttackFromAnimation: function(){
         this.parent.getComponent("PlayerScript").forwardAttackToStage();
-        
+
     },
 
+    triggerBullet: function(){
+      this.parent.getComponent("PlayerScript").shoot = true;
+    }
 
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {
