@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "a0f728eb-e8fc-49e8-b662-b9e0b3fe0f47",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "level1_nacht_Boden": {
+      "ver": "1.0.3",
+      "uuid": "83248fe2-f763-49a0-bf16-f08cbbcc4dc6",
+      "rawTextureUuid": "a0f728eb-e8fc-49e8-b662-b9e0b3fe0f47",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 2558,
+      "height": 205,
+      "rawWidth": 2558,
+      "rawHeight": 205,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

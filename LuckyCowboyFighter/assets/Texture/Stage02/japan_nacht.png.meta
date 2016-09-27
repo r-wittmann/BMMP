@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "2b3de566-133e-49ce-a5ae-84cc8a3fa05f",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "japan_nacht": {
+      "ver": "1.0.3",
+      "uuid": "1b86df41-e571-49f7-9c24-43a8074e1754",
+      "rawTextureUuid": "2b3de566-133e-49ce-a5ae-84cc8a3fa05f",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": -78.5,
+      "trimX": 0,
+      "trimY": 157,
+      "width": 2554,
+      "height": 446,
+      "rawWidth": 2554,
+      "rawHeight": 603,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

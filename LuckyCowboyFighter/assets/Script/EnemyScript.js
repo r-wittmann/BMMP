@@ -39,12 +39,13 @@ cc.Class({
                     cc.delayTime(0.5),
                     cc.callFunc(() => {
                         if(this.getPlayerDistance() < this.attackRadius) {
-                            this.game.player.getComponent('PlayerScript').health -= this.strength;
+                            this.game.currentHealth -= this.strength;
                             if(this.game.player.x > this.node.x){
                               this.game.player.runAction(cc.moveBy(0.1, 100, 0));
                             }else{
                               this.game.player.runAction(cc.moveBy(0.1, -100, 0));
                             }
+
                         }
                         this.isStanding = false;
                     })

@@ -87,8 +87,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 132,
-      "height": 179
+      "width": 83,
+      "height": 171
     },
     "_children": [],
     "_rotationX": 0,
@@ -172,6 +172,9 @@
       },
       {
         "__uuid__": "d0903a3d-2693-4c5b-85f2-dbd43712bf2a"
+      },
+      {
+        "__uuid__": "b967a3e0-0511-4f07-9c2e-4f3cb3983d0f"
       }
     ],
     "playOnLoad": false

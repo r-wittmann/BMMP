@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "3405538b-28e2-4fff-a193-82ddd10537cd",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "windmillSpriteSheet": {
+      "ver": "1.0.3",
+      "uuid": "6f655fbf-fc36-4475-b70f-c024e4845bef",
+      "rawTextureUuid": "3405538b-28e2-4fff-a193-82ddd10537cd",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -85,
+      "offsetY": 25.5,
+      "trimX": 1,
+      "trimY": 2,
+      "width": 340,
+      "height": 457,
+      "rawWidth": 512,
+      "rawHeight": 512,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

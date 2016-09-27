@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "580db16b-6d9f-431d-8026-4a8f1a405099",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "Level3_Nacht_himmel": {
+      "ver": "1.0.3",
+      "uuid": "dab9e835-380d-4ab2-9089-83cc578a6fbc",
+      "rawTextureUuid": "580db16b-6d9f-431d-8026-4a8f1a405099",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 2558,
+      "height": 412,
+      "rawWidth": 2558,
+      "rawHeight": 412,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

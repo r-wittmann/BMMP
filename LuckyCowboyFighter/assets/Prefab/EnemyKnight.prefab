@@ -194,12 +194,14 @@
       "__id__": 1
     },
     "_enabled": true,
-    "attackRadius": 0,
-    "xSpeed": 0,
-    "ySpeed": 0,
-    "animation": null,
-    "strength": 0,
-    "health": 0,
+    "attackRadius": 50,
+    "xSpeed": 75,
+    "ySpeed": 35,
+    "animation": {
+      "__id__": 4
+    },
+    "strength": 20,
+    "health": 150,
     "enemyType": "enemyKnight"
   },
   {

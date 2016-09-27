@@ -22,6 +22,7 @@ cc.Class({
         this.down = false;
         this.punch = false;
         this.shoot = false;
+        this.dead = false;
 
         this.health = cc.sys.localStorage.characterHealth || 100,
         this.strength = cc.sys.localStorage.characterStrenght || 50,
@@ -42,8 +43,8 @@ cc.Class({
             onKeyPressed: function(keyCode, event) {
 
 
-           			if(self.punch == false && self.shoot == false) {
-                    switch(keyCode) {
+           		if(!self.punch && !self.shoot && !self.dead) {
+                    switch(keyCode) {					 
                     case cc.KEY.left:
                     	self.moveBackground = 0;
                     	self.right = false;
@@ -129,7 +130,7 @@ cc.Class({
     	}else if(this.right ){
     		this.animation.play("runRightAnim_" + this.playerType);
     	}else if((this.playerDirection == -1 && (this.up || this.down))){
-    		this.animation.play("runLeftAnim_Cowboy");
+    		this.animation.play("runLeftAnim_" + this.playerType); 
     	}else if((this.playerDirection == 1 && (this.up || this.down))){
     		this.animation.play("runRightAnim_" + this.playerType);
     	}else {
@@ -173,5 +174,13 @@ cc.Class({
 
     },
      doOtherStuff: function(){
+     },
+
+     loseGame: function () {
+        this.animation.play('dieAnim_' + this.playerType)
+        this.dead = true;
+        if (this.playerType === 'Ninja') {
+            this.node.getChildByName('PlayerAnimation').getChildByName('ShurikenAnimation').destroy()
+        }
      }
 });

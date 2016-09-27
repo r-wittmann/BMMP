@@ -1,0 +1,43 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "enemyPunchAnim_enemyCowboy",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.43333333333333335,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "35f96dde-9923-4b49-a359-9d8b1aaf59c3"
+            }
+          },
+          {
+            "frame": 0.1,
+            "value": {
+              "__uuid__": "749804ed-bea5-433b-9057-828ed30ea40f"
+            }
+          },
+          {
+            "frame": 0.18333333333333332,
+            "value": {
+              "__uuid__": "811a9d63-851e-4ec1-b8b0-2ae11bb8d91e"
+            }
+          },
+          {
+            "frame": 0.4166666666666667,
+            "value": {
+              "__uuid__": "29fb4210-580a-4fc1-9f06-b66902de798b"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

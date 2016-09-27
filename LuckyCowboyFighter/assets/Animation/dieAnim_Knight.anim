@@ -3,7 +3,7 @@
   "_name": "dieAnim_Knight",
   "_objFlags": 0,
   "_rawFiles": null,
-  "_duration": 1.2666666666666666,
+  "_duration": 1.2,
   "sample": 60,
   "speed": 1,
   "wrapMode": 1,
@@ -42,13 +42,25 @@
             }
           },
           {
-            "frame": 1.25,
+            "frame": 1,
             "value": {
               "__uuid__": "97167023-ca23-45e5-ba80-5419f7ca11ed"
             }
           }
         ]
       }
+    },
+    "props": {
+      "opacity": [
+        {
+          "frame": 1,
+          "value": 255
+        },
+        {
+          "frame": 1.2,
+          "value": 0
+        }
+      ]
     }
   },
   "events": []
