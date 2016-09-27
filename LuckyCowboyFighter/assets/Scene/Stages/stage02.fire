@@ -887,7 +887,8 @@
       "__id__": 9
     },
     "animation1": null,
-    "animation2": null
+    "animation2": null,
+    "rainAnimation": null
   },
   {
     "__type__": "cc.Node",

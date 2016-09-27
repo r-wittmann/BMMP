@@ -96,7 +96,7 @@ cc.Class({
     },
 
     checkPlayerAttack: function () {
-        let playerDirection = this.game.player.getChildByName('PlayerAnimation').scaleX;
+       /* let playerDirection = this.game.player.getChildByName('PlayerAnimation').scaleX;
         let playerX = this.game.player.getPositionX();
         let playerY = this.game.player.getPositionY();
         let playerStrength = this.game.player.getComponent('PlayerScript').strength;
@@ -117,7 +117,7 @@ cc.Class({
             this.node.runAction(cc.moveBy(0.1, 100, 0));
           }
         }
-        // }
+        // }*/
     },
 
     // called every frame

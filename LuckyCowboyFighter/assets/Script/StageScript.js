@@ -86,7 +86,6 @@ cc.Class({
         this.wonPositionX = 0;
         this.currentEnemies = 0;
 
-
         if (!cc.sys.localStorage.selectedCharacter) {
             cc.sys.localStorage = {
                 selectedCharacter: 1,
@@ -194,6 +193,54 @@ cc.Class({
     writeMessage: function (message) {
         this.winLoseLabel.string = message;
     },
+
+    attackEnemy: function(){
+        cc.log("attackEnemy");
+        let playerDirection = this.player.getChildByName('PlayerAnimation').scaleX;
+        let playerX = this.player.getPositionX();
+        let playerY = this.player.getPositionY();
+        let playerStrength = this.player.getComponent('PlayerScript').strength;
+        let enemyX;
+        let enemyY;
+        //let playerAttackRadius = this.game.player.getComponent('PlayerScript').attackRadius;
+        let playerAttackRadius = 100;
+        let nearestEnemyDistance;
+        let nearestEnemyIndex;
+        let allChildren = this.node.getChildren();
+
+        for(var i = 0; i < allChildren.length; i++) {
+            if(allChildren[i].getComponent('EnemyScript') && allChildren[i].active) {
+                if(!nearestEnemyDistance) {
+                    nearestEnemyDistance = Math.abs(allChildren[i].x - playerX);
+                    nearestEnemyIndex = i;
+                    enemyX = allChildren[nearestEnemyIndex].x;
+                    enemyY = allChildren[nearestEnemyIndex].y;
+                } else {
+                    if(nearestEnemyDistance > Math.abs(allChildren[i].x - playerX)) {
+                        nearestEnemyDistance = Math.abs(allChildren[i].x - playerX);
+                        nearestEnemyIndex = i;
+                        enemyX = allChildren[nearestEnemyIndex].x;
+                        enemyY = allChildren[nearestEnemyIndex].y;
+                    }
+                }
+            }
+        }
+       
+        if(((enemyX - playerX <= 0 && playerDirection <= 0) || (enemyX - playerX >= 0 && playerDirection >= 0))) {
+            if(Math.abs(enemyY - playerY) <= 100 && playerAttackRadius >= Math.abs(enemyX - playerX)){
+              this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").health -= this.player.getComponent("PlayerScript").strength;
+              if(playerDirection <= 0){
+                this.node.getChildren()[nearestEnemyIndex].runAction(cc.moveBy(0.1, -100, 20));
+              }else {
+                this.node.getChildren()[nearestEnemyIndex].runAction(cc.moveBy(0.1, 100, 20));
+              }
+            }
+        }              
+    },
+
+
+
+
     winGame: function (currentPosition, wonPositionX) {
         // next stage is loaded after the player has continued to run the winDistance to the right
         if (currentPosition < wonPositionX - this.winDistance) {

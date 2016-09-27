@@ -140,12 +140,16 @@ cc.Class({
 
     },
 
-    playPunchAnimation : function(){
+    playPunchAnimation: function(){
     	this.animation.play("punchAnim_" + this.playerType);
     },
 
     playShootAnimation: function(){
     	this.animation.play("shootAnim_" + this.playerType);
+    },
+
+    forwardAttackToStage: function(){
+        this.node.getParent().getComponent("StageScript").attackEnemy();
     },
 
     // called every frame, uncomment this function to activate update callback

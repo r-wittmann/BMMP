@@ -41,6 +41,11 @@
   },
   "events": [
     {
+      "frame": 0.15,
+      "func": "triggerAttackFromAnimation",
+      "params": []
+    },
+    {
       "frame": 0.2833333333333333,
       "func": "returnToStandardMode",
       "params": []
