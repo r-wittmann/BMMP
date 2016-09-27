@@ -293,7 +293,7 @@ cc.Class({
                     cc.sequence(
                         cc.moveTo(0.001*nearestEnemyDistance, enemyX-(enemySpeedX*0.001*nearestEnemyDistance), enemyY),
                         cc.callFunc(() => {
-                           // this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").health -= this.player.getComponent("PlayerScript").strength/2;
+                           this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").health -= this.player.getComponent("PlayerScript").strength/2;
                             bullet.destroy();
 
 
@@ -315,6 +315,7 @@ cc.Class({
                     cc.sequence(
                         cc.moveTo(0.001*nearestEnemyDistance, enemyX+(enemySpeedX*0.001*nearestEnemyDistance), enemyY),
                         cc.callFunc(() => {
+                            this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").health -= this.player.getComponent("PlayerScript").strength/2;
                             bullet.destroy();
 
 
