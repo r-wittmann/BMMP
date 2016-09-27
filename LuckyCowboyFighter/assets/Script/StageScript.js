@@ -160,10 +160,12 @@ cc.Class({
         }
 
         let remainingEnemies = []
-        for (let child of this.node.getChildren()) {
+        //for (let child of this.node.getChildren()) {
+        for( var i = 0; i < this.node.getChildren().length; i++ ){
+            var child = this.node.getChildren()[i];
             if (child.getComponent('EnemyScript') && child.active) {
-                remainingEnemies.push(child)
-            }
+                remainingEnemies.push(child);
+            }   
         }
 
         if (remainingEnemies.length === 0 && this.wonFlag === 0) {
