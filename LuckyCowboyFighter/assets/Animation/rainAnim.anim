@@ -1,0 +1,55 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "rainAnim",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.43333333333333335,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "8f618cd6-66dd-4b4b-8434-b34d47747ac5"
+            }
+          },
+          {
+            "frame": 0.08333333333333333,
+            "value": {
+              "__uuid__": "e5813110-7e63-4936-86b2-41b0fe0ce397"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "97a1e87e-83b0-4d9f-8d77-e463cc376689"
+            }
+          },
+          {
+            "frame": 0.25,
+            "value": {
+              "__uuid__": "eece0380-7f39-4d4f-b1bf-eab83a21afc4"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "ddba6a32-0306-4534-af19-4d229cd1d5b8"
+            }
+          },
+          {
+            "frame": 0.4166666666666667,
+            "value": {
+              "__uuid__": "683328f6-ee5d-48d0-8d12-5ea9f7e169d3"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

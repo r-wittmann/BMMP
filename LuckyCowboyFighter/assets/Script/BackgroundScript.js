@@ -21,13 +21,18 @@ cc.Class({
         animation2: {
             default: null,
             type: cc.Animation
-        }
+        },
+        rainAnimation: {
+            default: null,
+            type: cc.Animation
+        } 
     },
 
     // use this for initialization
     onLoad: function () {
         this.animation1 && this.animation1.play('windmillAnim2');
         this.animation2 && this.animation2.play('windmillAnim2');
+        this.rainAnimation && this.rainAnimation.play('rainAnim')
     },
 
     // called every frame, uncomment this function to activate update callback
