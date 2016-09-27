@@ -2972,6 +2972,7 @@
     },
     "maximumEnemies": 6,
     "attackWaves": 3,
+    "enemyStrengthFactor": 1,
     "background": {
       "__id__": 3
     },

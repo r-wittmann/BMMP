@@ -20,6 +20,7 @@ cc.Class({
         },
         maximumEnemies: 0,
         attackWaves: 0,
+        enemyStrengthFactor: 0,
     	background: {
     		default: null,
     		type: cc.Node
@@ -64,6 +65,8 @@ cc.Class({
             var newEnemy = cc.instantiate(this.prefabEnemy);
             this.node.addChild(newEnemy);
             newEnemy.getComponent('EnemyScript').game = this;
+            newEnemy.getComponent('EnemyScript').health *= this.enemyStrengthFactor;
+            newEnemy.getComponent('EnemyScript').strength *= this.enemyStrengthFactor;
             newEnemy.setPosition(this.getNewEnemyPosition(distanceFactor))
         }
     },
