@@ -20,6 +20,7 @@ cc.Class({
         //will only hit the enemy once with each punch.
         this.left = true;
         this.isStanding = false;
+        this.isDead = false;
         this.animation.play("enemyRunLeftAnim_" + this.enemyType);
     },
 
@@ -122,13 +123,42 @@ cc.Class({
 
     // called every frame
     update: function (dt) {
-        if (!this.isStanding) this.attack();
+        if (!this.isStanding && !this.isDead) this.attack();
 
-        if (!this.isStanding) this.moveEnemy(dt);
+        if (!this.isStanding && !this.isDead) this.moveEnemy(dt);
 
-        if(this.health <= 0) this.node.destroy();
+        if(this.health <= 0) {
+            this.isDead = true;
+            this.enemyDie();
+        }
 
         // cc.log(new Date().getTime());
         this.checkPlayerAttack();
     },
+
+    enemyDie: function () {
+        if (this.animation.currentClip.name.contains) {
+            if (!String(this.animation.currentClip.name).contains("enemyDie")) {
+                this.node.runAction(
+                    cc.sequence(
+                        cc.callFunc(() => this.animation.play("enemyDieAnim_" + this.enemyType)),
+                        cc.delayTime(3),
+                        cc.callFunc(() => this.node.destroy())
+                    )
+                )
+
+            }
+        } else {
+            if (!String(this.animation.currentClip.name).includes("enemyDie")) {
+                this.node.runAction(
+                    cc.sequence(
+                        cc.callFunc(() => this.animation.play("enemyDieAnim_" + this.enemyType)),
+                        cc.delayTime(3),
+                        cc.callFunc(() => this.node.destroy())
+                    )
+                )
+
+            }
+        }
+    }
 });

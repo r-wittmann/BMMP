@@ -94,6 +94,7 @@ cc.Class({
                 characterStrength: 20,
                 characterExperience: 0,
                 characterLevel: 1,
+                characterAttackRadius: 10,
                 stage: 1
             }
         }
@@ -202,8 +203,8 @@ cc.Class({
         let playerStrength = this.player.getComponent('PlayerScript').strength;
         let enemyX;
         let enemyY;
-        //let playerAttackRadius = this.game.player.getComponent('PlayerScript').attackRadius;
-        let playerAttackRadius = 100;
+        let playerAttackRadius = this.player.getComponent('PlayerScript').attackRadius;
+        //let playerAttackRadius = 100;
         let nearestEnemyDistance;
         let nearestEnemyIndex;
         let allChildren = this.node.getChildren();

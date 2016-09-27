@@ -1,9 +1,9 @@
 {
   "__type__": "cc.AnimationClip",
-  "_name": "enemyDieAnim_Ninja",
+  "_name": "enemyDieAnim_enemyNinja",
   "_objFlags": 0,
   "_rawFiles": null,
-  "_duration": 0.26666666666666666,
+  "_duration": 0.35,
   "sample": 60,
   "speed": 1,
   "wrapMode": 1,
@@ -30,13 +30,25 @@
             }
           },
           {
-            "frame": 0.25,
+            "frame": 0.3333333333333333,
             "value": {
               "__uuid__": "40d84f06-98e0-48e6-a268-eb5f43f1e9a7"
             }
           }
         ]
       }
+    },
+    "props": {
+      "opacity": [
+        {
+          "frame": 0.16666666666666666,
+          "value": 255
+        },
+        {
+          "frame": 0.3333333333333333,
+          "value": 0
+        }
+      ]
     }
   },
   "events": []
