@@ -1,14 +1,14 @@
 {
   "ver": "1.0.0",
-  "uuid": "31b4ec10-4c68-4bb7-a975-6e34a58e2ac3",
+  "uuid": "efafbe9b-86ef-49e9-b9c4-943b01014cec",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
   "subMetas": {
-    "Level3_Stadt": {
+    "japan_regen": {
       "ver": "1.0.3",
-      "uuid": "f3d16f51-07a0-4ee8-a91c-36babdec228b",
-      "rawTextureUuid": "31b4ec10-4c68-4bb7-a975-6e34a58e2ac3",
+      "uuid": "9596b324-3a13-4804-b654-532aabd82726",
+      "rawTextureUuid": "efafbe9b-86ef-49e9-b9c4-943b01014cec",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -16,10 +16,10 @@
       "offsetY": 0,
       "trimX": 0,
       "trimY": 0,
-      "width": 2560,
-      "height": 422,
-      "rawWidth": 2560,
-      "rawHeight": 422,
+      "width": 11042,
+      "height": 1768,
+      "rawWidth": 11042,
+      "rawHeight": 1768,
       "borderTop": 0,
       "borderBottom": 0,
       "borderLeft": 0,

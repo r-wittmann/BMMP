@@ -720,7 +720,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Windmill",
+    "_name": "BackgroundAnimation",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -781,16 +781,15 @@
       "__id__": 16
     },
     "_enabled": true,
-    "_defaultClip": null,
+    "_defaultClip": {
+      "__uuid__": "1e64af8f-ef2b-456a-9cbc-6afa54848e72"
+    },
     "_clips": [
-      {
-        "__uuid__": "0c66e37d-b869-4b3c-8872-7b31b79888d0"
-      },
       {
         "__uuid__": "1e64af8f-ef2b-456a-9cbc-6afa54848e72"
       }
     ],
-    "playOnLoad": false
+    "playOnLoad": true
   },
   {
     "__type__": "cc.Sprite",
@@ -904,7 +903,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Windmill",
+    "_name": "BackgroundAnimation",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -965,16 +964,15 @@
       "__id__": 21
     },
     "_enabled": true,
-    "_defaultClip": null,
+    "_defaultClip": {
+      "__uuid__": "1e64af8f-ef2b-456a-9cbc-6afa54848e72"
+    },
     "_clips": [
-      {
-        "__uuid__": "0c66e37d-b869-4b3c-8872-7b31b79888d0"
-      },
       {
         "__uuid__": "1e64af8f-ef2b-456a-9cbc-6afa54848e72"
       }
     ],
-    "playOnLoad": false
+    "playOnLoad": true
   },
   {
     "__type__": "cc.Sprite",

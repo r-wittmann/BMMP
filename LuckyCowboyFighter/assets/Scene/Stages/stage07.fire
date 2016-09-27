@@ -304,7 +304,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "9cafa552-d2c3-4d94-a082-0b37379e2707"
+      "__uuid__": "5bccfe82-39ff-42b1-baa5-21da133c90c3"
     },
     "_type": 0,
     "_sizeMode": 0,
@@ -382,7 +382,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "9cafa552-d2c3-4d94-a082-0b37379e2707"
+      "__uuid__": "5bccfe82-39ff-42b1-baa5-21da133c90c3"
     },
     "_type": 0,
     "_sizeMode": 0,
@@ -478,7 +478,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 2560,
-      "height": 640
+      "height": 206
     },
     "_children": [],
     "_rotationX": 0,
@@ -515,7 +515,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "b6ecbc7c-3513-46f0-83ce-40efd1f91a0d"
+      "__uuid__": "5ee0af78-27db-48f3-a120-4642bd99ce32"
     },
     "_type": 0,
     "_sizeMode": 0,
@@ -556,7 +556,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 2560,
-      "height": 640
+      "height": 206
     },
     "_children": [],
     "_rotationX": 0,
@@ -593,7 +593,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "b6ecbc7c-3513-46f0-83ce-40efd1f91a0d"
+      "__uuid__": "5ee0af78-27db-48f3-a120-4642bd99ce32"
     },
     "_type": 0,
     "_sizeMode": 0,
@@ -689,7 +689,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 2560,
-      "height": 583
+      "height": 640
     },
     "_children": [
       {
@@ -723,7 +723,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Windmill",
+    "_name": "BackgroundAnimation",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -754,8 +754,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 167.5,
-      "y": 385.5
+      "x": 164.6,
+      "y": 353.6
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -763,7 +763,7 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "0a8f0QFhCRKlaprNhnm2n+g",
+    "_id": "bc09cMWjodAS5ZpTulbXjws",
     "_active": true,
     "_components": [
       {
@@ -784,16 +784,15 @@
       "__id__": 16
     },
     "_enabled": true,
-    "_defaultClip": null,
+    "_defaultClip": {
+      "__uuid__": "1e64af8f-ef2b-456a-9cbc-6afa54848e72"
+    },
     "_clips": [
-      {
-        "__uuid__": "0c66e37d-b869-4b3c-8872-7b31b79888d0"
-      },
       {
         "__uuid__": "1e64af8f-ef2b-456a-9cbc-6afa54848e72"
       }
     ],
-    "playOnLoad": false
+    "playOnLoad": true
   },
   {
     "__type__": "cc.Sprite",
@@ -832,7 +831,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "c593f167-7301-4955-ae08-5b7681df3f34"
+      "__uuid__": "c59c792a-95e2-43b3-a7cb-13e919c3995e"
     },
     "_type": 0,
     "_sizeMode": 0,
@@ -873,7 +872,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 2560,
-      "height": 583
+      "height": 640
     },
     "_children": [
       {
@@ -907,7 +906,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Windmill",
+    "_name": "BackgroundAnimation",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -938,8 +937,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 164.9,
-      "y": 386
+      "x": 164.5,
+      "y": 353.1
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -947,7 +946,7 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "9be2dFrceJPUJz500w1iamW",
+    "_id": "b7188rRomxC3oMLhOs7g0o7",
     "_active": true,
     "_components": [
       {
@@ -968,16 +967,15 @@
       "__id__": 21
     },
     "_enabled": true,
-    "_defaultClip": null,
+    "_defaultClip": {
+      "__uuid__": "1e64af8f-ef2b-456a-9cbc-6afa54848e72"
+    },
     "_clips": [
-      {
-        "__uuid__": "0c66e37d-b869-4b3c-8872-7b31b79888d0"
-      },
       {
         "__uuid__": "1e64af8f-ef2b-456a-9cbc-6afa54848e72"
       }
     ],
-    "playOnLoad": false
+    "playOnLoad": true
   },
   {
     "__type__": "cc.Sprite",
@@ -1016,7 +1014,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "c593f167-7301-4955-ae08-5b7681df3f34"
+      "__uuid__": "c59c792a-95e2-43b3-a7cb-13e919c3995e"
     },
     "_type": 0,
     "_sizeMode": 0,
@@ -1199,12 +1197,6 @@
     },
     "floor": {
       "__id__": 9
-    },
-    "animation1": {
-      "__id__": 17
-    },
-    "animation2": {
-      "__id__": 22
     },
     "rainAnimation": {
       "__id__": 26
@@ -3075,8 +3067,8 @@
     "knight": {
       "__uuid__": "1f38d693-db3d-4348-a3ad-00fb14d5b4ba"
     },
-    "maximumEnemies": 6,
-    "attackWaves": 3,
+    "maximumEnemies": 56,
+    "attackWaves": 7,
     "enemyStrengthFactor": 1,
     "background": {
       "__id__": 3

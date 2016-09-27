@@ -720,7 +720,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Windmill",
+    "_name": "BackgroundAnimation",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -751,8 +751,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 167.5,
-      "y": 385.5
+      "x": 172,
+      "y": 385
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -760,7 +760,7 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "9d339VP+FZIW5Ycu5/2tApO",
+    "_id": "911c4lvMLlKhYkndTQNJDnO",
     "_active": true,
     "_components": [
       {
@@ -781,16 +781,15 @@
       "__id__": 16
     },
     "_enabled": true,
-    "_defaultClip": null,
+    "_defaultClip": {
+      "__uuid__": "1e64af8f-ef2b-456a-9cbc-6afa54848e72"
+    },
     "_clips": [
-      {
-        "__uuid__": "0c66e37d-b869-4b3c-8872-7b31b79888d0"
-      },
       {
         "__uuid__": "1e64af8f-ef2b-456a-9cbc-6afa54848e72"
       }
     ],
-    "playOnLoad": false
+    "playOnLoad": true
   },
   {
     "__type__": "cc.Sprite",
@@ -904,7 +903,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Windmill",
+    "_name": "BackgroundAnimation",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -935,7 +934,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 164.9,
+      "x": 166.6,
       "y": 386
     },
     "_skewX": 0,
@@ -944,7 +943,7 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "74462YWA91K8byNYWC6Zptu",
+    "_id": "4b20cZbvm5BrIIqpRohJJkT",
     "_active": true,
     "_components": [
       {
@@ -965,16 +964,15 @@
       "__id__": 21
     },
     "_enabled": true,
-    "_defaultClip": null,
+    "_defaultClip": {
+      "__uuid__": "1e64af8f-ef2b-456a-9cbc-6afa54848e72"
+    },
     "_clips": [
-      {
-        "__uuid__": "0c66e37d-b869-4b3c-8872-7b31b79888d0"
-      },
       {
         "__uuid__": "1e64af8f-ef2b-456a-9cbc-6afa54848e72"
       }
     ],
-    "playOnLoad": false
+    "playOnLoad": true
   },
   {
     "__type__": "cc.Sprite",
@@ -1098,12 +1096,7 @@
     "floor": {
       "__id__": 9
     },
-    "animation1": {
-      "__id__": 17
-    },
-    "animation2": {
-      "__id__": 22
-    }
+    "rainAnimation": null
   },
   {
     "__type__": "cc.Node",
