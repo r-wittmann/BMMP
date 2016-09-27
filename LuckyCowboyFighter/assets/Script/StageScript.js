@@ -19,6 +19,7 @@ cc.Class({
             type: cc.Prefab
         },
         maximumEnemies: 0,
+        attackWaves: 0,
     	background: {
     		default: null,
     		type: cc.Node
@@ -46,18 +47,30 @@ cc.Class({
         winDistance: 0,
         loseTimeout: 0,
         selectedCharacter: 0,
+
     },
 
     spawnNewEnemy: function (){
-      var newEnemy = cc.instantiate(this.prefabEnemy);
-      this.node.addChild(newEnemy);
-      newEnemy.setPosition(this.getNewEnemyPosition());
-      newEnemy.getComponent('EnemyScript').game = this;
+        // if(this.currentEnemies < this.maximumEnemies){
+        //     this.spawnNewEnemy();
+        //     this.currentEnemies++;
+        //   }
+        let distanceFactor = -1;
+        for (let currentEnemies = 0; currentEnemies < this.maximumEnemies; currentEnemies++) {
+            if (currentEnemies % (this.maximumEnemies / this.attackWaves) === 0) {
+                distanceFactor++
+            }
+
+            var newEnemy = cc.instantiate(this.prefabEnemy);
+            this.node.addChild(newEnemy);
+            newEnemy.getComponent('EnemyScript').game = this;
+            newEnemy.setPosition(this.getNewEnemyPosition(distanceFactor))
+        }
     },
 
-    getNewEnemyPosition: function () {
-        var randomX = (cc.random0To1() * 500)+100;
-        var randomY = (cc.random0To1() * -200)-100;
+    getNewEnemyPosition: function (factor) {
+        var randomX = ((cc.random0To1() * 500 * (factor + 1)) + 100) + (factor * 2000);
+        var randomY = (cc.random0To1() * -200) - 100;
         return cc.p(randomX, randomY);
     },
 
@@ -113,6 +126,8 @@ cc.Class({
         this.node.addChild(this.player);
         this.player.setPosition(cc.p(-300,-200));
 
+        this.spawnNewEnemy();
+
     },
 
     // when player walks out of screen, players will be moved so they are "stuck"
@@ -133,10 +148,6 @@ cc.Class({
 
     // called every frame, uncomment this function to activate update callback
     update: function (dt) {
-      if(this.currentEnemies < this.maximumEnemies){
-        this.spawnNewEnemy();
-        this.currentEnemies++;
-      }
 
       //moves background and enemies when player walks to edges of the screen
     	let moveBackground = this.player.getComponent('PlayerScript').moveBackground;
