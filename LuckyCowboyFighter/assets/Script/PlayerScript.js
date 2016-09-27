@@ -13,7 +13,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        this.animation.play("standStillAnim_" + this.playerType); 
+        this.animation.play("standStillAnim_" + this.playerType);
         //-1:move to right; 0: do not move; 1:move to left
         this.moveBackground = 0;
         this.left = false;
@@ -30,7 +30,7 @@ cc.Class({
 
         this.setInputControl();
         this.playerDirection = 1;
-      
+
 
     },
 
@@ -41,7 +41,7 @@ cc.Class({
             event: cc.EventListener.KEYBOARD,
             // When there is a key being pressed down, judge if it's the designated directional button and set up acceleration in the corresponding direction
             onKeyPressed: function(keyCode, event) {
-           
+
 
            		if(!self.punch && !self.shoot && !self.dead) {
                     switch(keyCode) {					 
@@ -62,7 +62,7 @@ cc.Class({
                     	}
                         break;
                     case cc.KEY.up:
-						if(self.up == false){                    
+						if(self.up == false){
 	                        self.up = true;
 	                        self.playAnimation();
 	                    }
@@ -84,7 +84,7 @@ cc.Class({
                     	break;
 
                     }
-                   
+
 
                 }
             },
@@ -105,7 +105,7 @@ cc.Class({
                         self.up = false;
                         self.playAnimation();
                         break;
-                    case cc.KEY.down:                    	
+                    case cc.KEY.down:
                         self.down = false;
                         self.playAnimation();
                         break;
@@ -122,22 +122,22 @@ cc.Class({
     playAnimation: function(){
         this.punch = false;
         this.shoot = false;
- 
+
     	this.playerDirection = this.node.getChildByName("PlayerAnimation").scaleX;
 
     	if(this.left){
-    		this.animation.play("runLeftAnim_" + this.playerType);    		
+    		this.animation.play("runLeftAnim_" + this.playerType);
     	}else if(this.right ){
-    		this.animation.play("runRightAnim_" + this.playerType);     		
+    		this.animation.play("runRightAnim_" + this.playerType);
     	}else if((this.playerDirection == -1 && (this.up || this.down))){
     		this.animation.play("runLeftAnim_" + this.playerType); 
     	}else if((this.playerDirection == 1 && (this.up || this.down))){
-    		this.animation.play("runRightAnim_" + this.playerType); 
+    		this.animation.play("runRightAnim_" + this.playerType);
     	}else {
     		this.animation.play("standStillAnim_" + this.playerType);
     	}
 
-    	
+
     },
 
     playPunchAnimation : function(){
@@ -150,7 +150,7 @@ cc.Class({
 
     // called every frame, uncomment this function to activate update callback
      update: function (dt) {
-        
+
         if(this.left == true){
             if(this.node.x > -400) {
                 this.node.x = this.node.x - this.playerTempo * dt;
@@ -164,7 +164,7 @@ cc.Class({
                 this.moveBackground =  -1;
             }
         }
-        
+
 
         if(this.up == true  && this.node.y < -80){
             this.node.y = this.node.y + (this.playerTempo/2) * dt;
