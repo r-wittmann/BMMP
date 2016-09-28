@@ -3,7 +3,7 @@
   "_name": "dieAnim_Cowboy",
   "_objFlags": 0,
   "_rawFiles": null,
-  "_duration": 1,
+  "_duration": 0.6833333333333333,
   "sample": 60,
   "speed": 1,
   "wrapMode": 1,
@@ -14,19 +14,19 @@
           {
             "frame": 0,
             "value": {
-              "__uuid__": "31a4f7c3-3333-46cd-90e6-a8e81ff004af"
+              "__uuid__": "f9abade5-bf1a-4e43-bd6a-57313d5bc7a2"
             }
           },
           {
-            "frame": 0.5,
+            "frame": 0.3333333333333333,
             "value": {
-              "__uuid__": "f6c284a2-5fc7-49f8-a043-602a02c15894"
+              "__uuid__": "3003c962-35f1-4d40-acf3-e893c7e26cfb"
             }
           },
           {
-            "frame": 0.9833333333333333,
+            "frame": 0.6666666666666666,
             "value": {
-              "__uuid__": "7dd061b8-28c7-4055-8881-791529815dfb"
+              "__uuid__": "15dfe773-d99b-4e30-9530-c70248912929"
             }
           }
         ]

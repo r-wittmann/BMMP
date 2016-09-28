@@ -4,94 +4,24 @@
 	<dict>
 		<key>frames</key>
 		<dict>
-			<key>cowboy-0.png</key>
+			<key>cowboy-block-0.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{536,0},{104,205}}</string>
+				<string>{{325,0},{104,195}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{62,28},{104,205}}</string>
+				<string>{{71,41},{104,195}}</string>
 				<key>sourceSize</key>
 				<string>{250,250}</string>
 			</dict>
 
-			<key>cowboy-1.png</key>
+			<key>cowboy-dead-0.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{527,208},{104,209}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{62,24},{104,209}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>cowboy-10.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{303,217},{114,205}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{73,24},{114,205}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>cowboy-11.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{279,446},{119,203}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{78,20},{119,203}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>cowboy-12.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{0,241},{180,200}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{52,28},{180,200}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>cowboy-13.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{0,442},{174,196}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{50,37},{174,196}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>cowboy-14.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{0,639},{144,208}}</string>
+				<string>{{151,639},{144,208}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -102,7 +32,7 @@
 				<string>{250,250}</string>
 			</dict>
 
-			<key>cowboy-15.png</key>
+			<key>cowboy-dead-1.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{0,85},{193,155}}</string>
@@ -116,7 +46,7 @@
 				<string>{250,250}</string>
 			</dict>
 
-			<key>cowboy-16.png</key>
+			<key>cowboy-dead-2.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{0,0},{194,84}}</string>
@@ -130,80 +60,10 @@
 				<string>{250,250}</string>
 			</dict>
 
-			<key>cowboy-17.png</key>
+			<key>cowboy-go-0.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{396,650},{113,205}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{73,32},{113,205}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>cowboy-18.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{510,619},{104,200}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{75,37},{104,200}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>cowboy-19.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{181,241},{121,204}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{69,32},{121,204}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>cowboy-2.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{195,0},{120,216}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{61,18},{120,216}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>cowboy-3.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{145,639},{133,216}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{60,18},{133,216}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>cowboy-4.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{316,0},{113,210}}</string>
+				<string>{{537,606},{113,210}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -214,10 +74,10 @@
 				<string>{250,250}</string>
 			</dict>
 
-			<key>cowboy-5.png</key>
+			<key>cowboy-go-1.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{418,211},{108,206}}</string>
+				<string>{{647,0},{108,206}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -228,10 +88,10 @@
 				<string>{250,250}</string>
 			</dict>
 
-			<key>cowboy-6.png</key>
+			<key>cowboy-go-3.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{430,0},{105,207}}</string>
+				<string>{{651,412},{105,207}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -242,10 +102,10 @@
 				<string>{250,250}</string>
 			</dict>
 
-			<key>cowboy-7.png</key>
+			<key>cowboy-go-4.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{399,423},{108,206}}</string>
+				<string>{{538,198},{108,206}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -256,10 +116,178 @@
 				<string>{250,250}</string>
 			</dict>
 
-			<key>cowboy-8.png</key>
+			<key>cowboy-hit-0.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{508,418},{104,200}}</string>
+				<string>{{537,817},{113,205}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{64,34},{113,205}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>cowboy-hit-1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{755,207},{104,200}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{66,39},{104,200}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>cowboy-hit-2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{647,207},{107,204}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{64,32},{107,204}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>cowboy-hit-3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{443,0},{114,197}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{75,36},{114,197}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>cowboy-hit-4.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{195,0},{129,195}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{76,39},{129,195}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>cowboy-hit-5.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{756,620},{104,200}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{79,38},{104,200}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>cowboy-idle-0.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{756,0},{104,205}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{62,28},{104,205}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>cowboy-idle-1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{651,620},{104,209}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{62,24},{104,209}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>cowboy-pain-0.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{296,658},{123,201}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{43,23},{123,201}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>cowboy-pain-1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,639},{150,204}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{26,25},{150,204}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>cowboy-pain-2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{181,241},{141,205}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{29,21},{141,205}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>cowboy-pain-3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{296,447},{126,210}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{47,18},{126,210}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>cowboy-run-0.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{538,405},{104,200}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -270,16 +298,72 @@
 				<string>{250,250}</string>
 			</dict>
 
-			<key>cowboy-9.png</key>
+			<key>cowboy-run-1.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{279,650},{116,214}}</string>
+				<string>{{420,658},{116,214}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
 				<string>{{82,16},{116,214}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>cowboy-run-2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{423,400},{114,205}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{73,24},{114,205}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>cowboy-run-3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{323,196},{119,203}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{78,20},{119,203}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>cowboy-shoot-0.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,241},{180,200}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{52,28},{180,200}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>cowboy-shoot-1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,442},{174,196}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{50,37},{174,196}}</string>
 				<key>sourceSize</key>
 				<string>{250,250}</string>
 			</dict>

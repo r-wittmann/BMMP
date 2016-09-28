@@ -1,0 +1,43 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "enemyTumbleAnim_enemyCowboy",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.38333333333333336,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "b0977bc7-11d8-4f4c-8424-255c48ea3edb"
+            }
+          },
+          {
+            "frame": 0.11666666666666667,
+            "value": {
+              "__uuid__": "b9dde192-3db0-48fa-8e19-589defe08270"
+            }
+          },
+          {
+            "frame": 0.25,
+            "value": {
+              "__uuid__": "82a10011-07bd-4a37-bc85-3801c798e332"
+            }
+          },
+          {
+            "frame": 0.36666666666666664,
+            "value": {
+              "__uuid__": "b0977bc7-11d8-4f4c-8424-255c48ea3edb"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

@@ -1,9 +1,9 @@
 {
   "__type__": "cc.AnimationClip",
-  "_name": "runLeftAnim_Cowboy",
+  "_name": "goLeftAnim_Cowboy",
   "_objFlags": 0,
   "_rawFiles": null,
-  "_duration": 0.35,
+  "_duration": 0.38333333333333336,
   "sample": 60,
   "speed": 1,
   "wrapMode": 2,
@@ -22,31 +22,25 @@
           {
             "frame": 0,
             "value": {
-              "__uuid__": "e8b5ecad-cd13-48e7-8bf8-8825bf7ee4aa"
+              "__uuid__": "b8f80f85-3248-48fb-8ad4-6a4e18638503"
             }
           },
           {
-            "frame": 0.08333333333333333,
+            "frame": 0.11666666666666667,
             "value": {
-              "__uuid__": "962b1bff-e99c-47d0-b833-b02a316c19d9"
-            }
-          },
-          {
-            "frame": 0.16666666666666666,
-            "value": {
-              "__uuid__": "0e31595b-1b23-4fd8-9ee3-9761ddaedcb2"
+              "__uuid__": "77b85c3d-786f-4b92-bb9a-8f817affa5fc"
             }
           },
           {
             "frame": 0.25,
             "value": {
-              "__uuid__": "3cc0e309-513e-477e-add1-3e677aacceff"
+              "__uuid__": "77b85c3d-786f-4b92-bb9a-8f817affa5fc"
             }
           },
           {
-            "frame": 0.3333333333333333,
+            "frame": 0.36666666666666664,
             "value": {
-              "__uuid__": "e8b5ecad-cd13-48e7-8bf8-8825bf7ee4aa"
+              "__uuid__": "690e8b52-073e-4c49-baed-e0873978436a"
             }
           }
         ]

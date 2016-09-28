@@ -87,7 +87,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 113,
+      "width": 104,
       "height": 205
     },
     "_children": [],
@@ -133,7 +133,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "28a2623b-db12-4fed-b734-fe4d4e06f3d6"
+      "__uuid__": "7ceb29d3-6b13-45da-8b49-f65e01bcd5eb"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -181,6 +181,15 @@
       },
       {
         "__uuid__": "60ab0c8e-b7fa-4340-b104-2f01e6672e82"
+      },
+      {
+        "__uuid__": "c5a3d7af-06d5-4b28-b5d0-509d50fbe4c7"
+      },
+      {
+        "__uuid__": "5c6f586f-ca9a-4505-ab1d-4edb495e53ae"
+      },
+      {
+        "__uuid__": "a0c477d4-7501-4562-b62e-2179dc5b6678"
       }
     ],
     "playOnLoad": false
@@ -218,6 +227,9 @@
     "playerTempo": 300,
     "animation": {
       "__id__": 4
+    },
+    "bulletPrefab": {
+      "__uuid__": "206eea53-c921-400e-b7aa-f0829d6f8bb6"
     },
     "playerType": "Cowboy"
   },

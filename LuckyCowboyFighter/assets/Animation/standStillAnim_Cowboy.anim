@@ -14,19 +14,19 @@
           {
             "frame": 0,
             "value": {
-              "__uuid__": "235f3de6-3490-4b90-becb-747885b16c44"
+              "__uuid__": "7ceb29d3-6b13-45da-8b49-f65e01bcd5eb"
             }
           },
           {
-            "frame": 1,
+            "frame": 0.9833333333333333,
             "value": {
-              "__uuid__": "684db9ea-5d65-4983-b328-9b4f89da160f"
+              "__uuid__": "3608c7b3-b6b3-4141-8178-357cbbf06f87"
             }
           },
           {
             "frame": 2,
             "value": {
-              "__uuid__": "235f3de6-3490-4b90-becb-747885b16c44"
+              "__uuid__": "7ceb29d3-6b13-45da-8b49-f65e01bcd5eb"
             }
           }
         ]
