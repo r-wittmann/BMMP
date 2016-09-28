@@ -1,0 +1,57 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "bossGoRightAnim_bossCowboy",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.68,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "da531c01-4bf3-4e19-aa2d-610efd85f7ce"
+            }
+          },
+          {
+            "frame": 0.1666666666666667,
+            "value": {
+              "__uuid__": "4ef7d07c-1f20-4987-b577-96f4ad1612f9"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "d2a0f096-cf99-4989-baae-f690e1b26c32"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "78f57ed7-f5bd-4c36-aa5b-e271ceda62cf"
+            }
+          },
+          {
+            "frame": 0.6666666666666666,
+            "value": {
+              "__uuid__": "7f5db40d-985c-454a-9d81-2eafc643735f"
+            }
+          }
+        ]
+      }
+    },
+    "props": {
+      "scaleX": [
+        {
+          "frame": 0,
+          "value": 1
+        }
+      ]
+    }
+  },
+  "events": []
+}

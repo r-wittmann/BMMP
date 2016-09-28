@@ -1,0 +1,49 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "bossStandStillAnim_bossCowboy",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 1.9333333333333333,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "5e430656-9480-4cf7-a7d0-237d6fecc611"
+            }
+          },
+          {
+            "frame": 0.5833333333333334,
+            "value": {
+              "__uuid__": "30e5409d-7def-4814-9c5f-246959ef5b7f"
+            }
+          },
+          {
+            "frame": 1.15,
+            "value": {
+              "__uuid__": "1d1a9c45-9e83-4cb4-aa9b-583c50919c7b"
+            }
+          },
+          {
+            "frame": 1.5833333333333333,
+            "value": {
+              "__uuid__": "6120e4de-00f5-447c-84b2-c324695f9f2f"
+            }
+          },
+          {
+            "frame": 1.9166666666666667,
+            "value": {
+              "__uuid__": "5e430656-9480-4cf7-a7d0-237d6fecc611"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

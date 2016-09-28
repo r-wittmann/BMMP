@@ -1,0 +1,43 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "bossDieAnim_bossCowboy",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.7666666666666667,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "ce24a344-656f-4d3f-a044-308178c2cdff"
+            }
+          },
+          {
+            "frame": 0.25,
+            "value": {
+              "__uuid__": "9b843dc5-b376-4e56-ba94-eed769e3499a"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "c68a8c41-68e7-4715-b97a-31e6d3e200c2"
+            }
+          },
+          {
+            "frame": 0.75,
+            "value": {
+              "__uuid__": "083ae054-79c1-4726-b213-aafd4b6596f5"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}
