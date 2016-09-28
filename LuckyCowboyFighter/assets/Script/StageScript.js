@@ -209,18 +209,20 @@ cc.Class({
         let allChildren = this.node.getChildren();
 
         for(var i = 0; i < allChildren.length; i++) {
-            if(allChildren[i].getComponent('EnemyScript') && allChildren[i].active) {
-                if(!nearestEnemyDistance) {
-                    nearestEnemyDistance = Math.abs(allChildren[i].x - playerX);
-                    nearestEnemyIndex = i;
-                    enemyX = allChildren[nearestEnemyIndex].x;
-                    enemyY = allChildren[nearestEnemyIndex].y;
-                } else {
-                    if(nearestEnemyDistance > Math.abs(allChildren[i].x - playerX)) {
+            if(((allChildren[i].x - playerX >= 0 && playerDirection >= 0) || (allChildren[i].x - playerX < 0 && playerDirection < 0))) {
+                if(allChildren[i].getComponent('EnemyScript') && allChildren[i].active) {
+                    if(!nearestEnemyDistance) {
                         nearestEnemyDistance = Math.abs(allChildren[i].x - playerX);
                         nearestEnemyIndex = i;
                         enemyX = allChildren[nearestEnemyIndex].x;
                         enemyY = allChildren[nearestEnemyIndex].y;
+                    } else {
+                        if(nearestEnemyDistance > Math.abs(allChildren[i].x - playerX)) {
+                            nearestEnemyDistance = Math.abs(allChildren[i].x - playerX);
+                            nearestEnemyIndex = i;
+                            enemyX = allChildren[nearestEnemyIndex].x;
+                            enemyY = allChildren[nearestEnemyIndex].y;
+                        }
                     }
                 }
             }
@@ -262,38 +264,47 @@ cc.Class({
 
         //possible bug enemy behind is nearest but cant be hit (second for) -> no damage
         for(var i = 0; i < allChildren.length; i++) {
-            if(allChildren[i].getComponent('EnemyScript') && allChildren[i].active) {
-                if(!nearestEnemyDistance) {
-                    nearestEnemyDistance = Math.abs(allChildren[i].x - playerX);
-                    nearestEnemyIndex = i;
-                    enemyX = allChildren[nearestEnemyIndex].x;
-                    enemyY = allChildren[nearestEnemyIndex].y;
-                    enemySpeedX = allChildren[nearestEnemyIndex].getComponent("EnemyScript").xSpeed ;
-                    cc.log(enemySpeedX);
-                } else {
-                    if(nearestEnemyDistance > Math.abs(allChildren[i].x - playerX)) {
-                        nearestEnemyDistance = Math.abs(allChildren[i].x - playerX);
+            if(allChildren[i].getComponent('EnemyScript') && allChildren[i].active && !allChildren[i].getComponent("EnemyScript").isDead) {
+                if(((allChildren[i].x - playerX >= 0 && playerDirection >= 0) || (allChildren[i].x - playerX < 0 && playerDirection < 0))) {
+                    if(!nearestEnemyDistance) {
+                        nearestEnemyDistance = allChildren[i].x - playerX;
                         nearestEnemyIndex = i;
                         enemyX = allChildren[nearestEnemyIndex].x;
                         enemyY = allChildren[nearestEnemyIndex].y;
                         enemySpeedX = allChildren[nearestEnemyIndex].getComponent("EnemyScript").xSpeed ;
-                        
+                        cc.log(enemySpeedX);
+                    } else {
+                        if(nearestEnemyDistance > allChildren[i].x - playerX) {
+                            nearestEnemyDistance = Math.abs(allChildren[i].x - playerX);
+                            nearestEnemyIndex = i;
+                            enemyX = allChildren[nearestEnemyIndex].x;
+                            enemyY = allChildren[nearestEnemyIndex].y;
+                            enemySpeedX = allChildren[nearestEnemyIndex].getComponent("EnemyScript").xSpeed ;
+                            
+                        }
                     }
                 }
             }
         }
         
 
-        if((enemyX - playerX >= 0 && playerDirection >= 0)) {
+        if((enemyX - playerX >= 0 && playerDirection >= 0) && this.node.getChildren()[nearestEnemyIndex] && !this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").isDead) {
             if(Math.abs(enemyY - playerY) <= 100 && playerAttackRadius >= Math.abs(enemyX - playerX)){
-              
+                var bulletSpeed = 0.001;
                 this.node.addChild(bullet);
                 bullet.setPosition(cc.p(this.player.x, this.player.y+10));
+
+                var bulletSpeed = 0.001;
+                if(this.player.getComponent("PlayerScript").playerType == "Cowboy"){
+                 bulletSpeed = 0.0005;
+                }
                 bullet.runAction(
                     cc.sequence(
-                        cc.moveTo(0.001*nearestEnemyDistance, enemyX-(enemySpeedX*0.001*nearestEnemyDistance), enemyY),
+                        cc.moveTo(bulletSpeed*nearestEnemyDistance, enemyX-(enemySpeedX*bulletSpeed*nearestEnemyDistance), enemyY),
                         cc.callFunc(() => {
-                           this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").health -= this.player.getComponent("PlayerScript").strength/2;
+                            if(!this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").isDead){
+                                this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").health -= this.player.getComponent("PlayerScript").strength/2;
+                            }
                             bullet.destroy();
 
 
@@ -302,10 +313,9 @@ cc.Class({
                 );
             }
 
-
                 //this.node.getChildren()[nearestEnemyIndex].runAction(cc.moveBy(0.1, -100, 20));
              
-            }else if((enemyX - playerX <= 0 && playerDirection <= 0) ){
+            }else if((enemyX - playerX <= 0 && playerDirection <= 0) && this.node.getChildren()[nearestEnemyIndex] && !this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").isDead){
 
                 if(Math.abs(enemyY - playerY) <= 100 && playerAttackRadius >= Math.abs(enemyX - playerX)){
               
@@ -315,7 +325,9 @@ cc.Class({
                     cc.sequence(
                         cc.moveTo(0.001*nearestEnemyDistance, enemyX+(enemySpeedX*0.001*nearestEnemyDistance), enemyY),
                         cc.callFunc(() => {
-                            this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").health -= this.player.getComponent("PlayerScript").strength/2;
+                            if(this.node.getChildren()[nearestEnemyIndex] && !this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").isDead){
+                                this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").health -= this.player.getComponent("PlayerScript").strength/2;
+                            }
                             bullet.destroy();
 
 

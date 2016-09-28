@@ -219,6 +219,9 @@
     "animation": {
       "__id__": 4
     },
+    "bulletPrefab": {
+      "__uuid__": "206eea53-c921-400e-b7aa-f0829d6f8bb6"
+    },
     "playerType": "Cowboy"
   },
   {
