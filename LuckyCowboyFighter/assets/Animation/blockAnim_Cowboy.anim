@@ -1,0 +1,37 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "blockAnim_Cowboy",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.43333333333333335,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "e8b5ecad-cd13-48e7-8bf8-8825bf7ee4aa"
+            }
+          },
+          {
+            "frame": 0.03333333333333333,
+            "value": {
+              "__uuid__": "8d189bf2-3493-46f3-8457-007fcc180f1b"
+            }
+          },
+          {
+            "frame": 0.4166666666666667,
+            "value": {
+              "__uuid__": "e8b5ecad-cd13-48e7-8bf8-8825bf7ee4aa"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}
