@@ -3,7 +3,7 @@
   "_name": "standStillAnim_Ninja",
   "_objFlags": 0,
   "_rawFiles": null,
-  "_duration": 1.3333333333333333,
+  "_duration": 1.5,
   "sample": 60,
   "speed": 1,
   "wrapMode": 2,
@@ -14,19 +14,25 @@
           {
             "frame": 0,
             "value": {
-              "__uuid__": "201d042b-48f1-4782-ad04-0913f5955d78"
+              "__uuid__": "a51496f7-fcc3-41a2-a238-0f83d7678f85"
             }
           },
           {
             "frame": 0.6666666666666666,
             "value": {
-              "__uuid__": "2997cde9-7067-4208-8111-63317a53ce22"
+              "__uuid__": "07fa8ac5-2ec5-4e42-99fa-5dd08bc6b5a4"
             }
           },
           {
             "frame": 1.3166666666666667,
             "value": {
-              "__uuid__": "201d042b-48f1-4782-ad04-0913f5955d78"
+              "__uuid__": "60912ec0-650d-4eca-9980-a0ec4be0989c"
+            }
+          },
+          {
+            "frame": 1.4833333333333334,
+            "value": {
+              "__uuid__": "a51496f7-fcc3-41a2-a238-0f83d7678f85"
             }
           }
         ]

@@ -3,7 +3,7 @@
   "_name": "punchAnim_Ninja",
   "_objFlags": 0,
   "_rawFiles": null,
-  "_duration": 0.3,
+  "_duration": 0.65,
   "sample": 60,
   "speed": 1,
   "wrapMode": 1,
@@ -14,25 +14,37 @@
           {
             "frame": 0,
             "value": {
-              "__uuid__": "52b1a93e-a4bf-4b6a-bc46-b179ffa02d93"
+              "__uuid__": "1db0ab49-3548-47b0-b81f-2d2e92a291bf"
             }
           },
           {
-            "frame": 0.05,
+            "frame": 0.08333333333333333,
             "value": {
-              "__uuid__": "7443155f-a083-45f5-ab8e-7b762d79c54a"
+              "__uuid__": "6615171e-5b25-4220-ace0-d78177f061a0"
             }
           },
           {
-            "frame": 0.13333333333333333,
+            "frame": 0.16666666666666666,
             "value": {
-              "__uuid__": "bb2f5ac3-a35d-41b2-939a-4433a7b8f634"
+              "__uuid__": "a5718234-cd9d-4c0d-8dc1-83a64ea13d9f"
             }
           },
           {
-            "frame": 0.2833333333333333,
+            "frame": 0.2333333333333334,
             "value": {
-              "__uuid__": "7443155f-a083-45f5-ab8e-7b762d79c54a"
+              "__uuid__": "59bcd672-d708-4362-b414-1ae7ddd79ce2"
+            }
+          },
+          {
+            "frame": 0.3,
+            "value": {
+              "__uuid__": "e866d7be-c793-4dbc-8465-597d2e1c9767"
+            }
+          },
+          {
+            "frame": 0.6333333333333333,
+            "value": {
+              "__uuid__": "1db0ab49-3548-47b0-b81f-2d2e92a291bf"
             }
           }
         ]
@@ -41,12 +53,12 @@
   },
   "events": [
     {
-      "frame": 0.15,
+      "frame": 0.31666666666666665,
       "func": "triggerAttackFromAnimation",
       "params": []
     },
     {
-      "frame": 0.2833333333333333,
+      "frame": 0.6333333333333333,
       "func": "returnToStandardMode",
       "params": []
     }

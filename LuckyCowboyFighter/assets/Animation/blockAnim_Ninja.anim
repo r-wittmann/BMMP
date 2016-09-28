@@ -1,9 +1,9 @@
 {
   "__type__": "cc.AnimationClip",
-  "_name": "shootAnim_Ninja",
+  "_name": "blockAnim_Ninja",
   "_objFlags": 0,
   "_rawFiles": null,
-  "_duration": 0.35,
+  "_duration": 0.43333333333333335,
   "sample": 60,
   "speed": 1,
   "wrapMode": 1,
@@ -14,41 +14,30 @@
           {
             "frame": 0,
             "value": {
-              "__uuid__": "acef67c5-d2cb-4ac7-8e27-2dfe4e4b8b90"
+              "__uuid__": "d3f41c50-ffe6-43ed-921b-b071a4627116"
             }
           },
           {
             "frame": 0.08333333333333333,
             "value": {
-              "__uuid__": "bb6c9956-276d-4d8f-97fd-9d6f50da2d96"
+              "__uuid__": "d32f72d8-b17c-48b7-9097-de5642053717"
             }
           },
           {
             "frame": 0.16666666666666666,
             "value": {
-              "__uuid__": "3d25cbd5-934d-40e1-b949-481543fe7df1"
+              "__uuid__": "8b3b49d4-c404-4aa4-a595-115a70593181"
             }
           },
           {
-            "frame": 0.3333333333333333,
+            "frame": 0.4166666666666667,
             "value": {
-              "__uuid__": "acef67c5-d2cb-4ac7-8e27-2dfe4e4b8b90"
+              "__uuid__": "8b3b49d4-c404-4aa4-a595-115a70593181"
             }
           }
         ]
       }
     }
   },
-  "events": [
-    {
-      "frame": 0.18333333333333332,
-      "func": "triggerBullet",
-      "params": []
-    },
-    {
-      "frame": 0.3333333333333333,
-      "func": "returnToStandardMode",
-      "params": []
-    }
-  ]
+  "events": []
 }
