@@ -154,9 +154,10 @@ cc.Class({
 
       //moves background and enemies when player walks to edges of the screen
     	let moveBackground = this.player.getComponent('PlayerScript').moveBackground;
+      let playerTempo = this.player.getComponent('PlayerScript').playerTempo;
         if (moveBackground !== 0) {
-            this.background.getComponent('BackgroundScript').moveBackgroundChildren(moveBackground, dt);
-            this.moveEnemiesOnScreen(this.player.getComponent('PlayerScript').playerTempo, moveBackground, dt);
+            this.background.getComponent('BackgroundScript').moveBackgroundChildren(playerTempo, moveBackground, dt);
+            this.moveEnemiesOnScreen(playerTempo, moveBackground, dt);
         }
 
         let remainingEnemies = []
@@ -232,9 +233,9 @@ cc.Class({
             if(Math.abs(enemyY - playerY) <= 100 && playerAttackRadius >= Math.abs(enemyX - playerX)){
               this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").health -= this.player.getComponent("PlayerScript").strength;
               if(playerDirection <= 0){
-                this.node.getChildren()[nearestEnemyIndex].runAction(cc.moveBy(0.1, -100, 20));
+                this.node.getChildren()[nearestEnemyIndex].runAction(cc.moveBy(0.1, (-100 + cc.random0To1() * 100), (cc.randomMinus1To1() * 100)));
               }else {
-                this.node.getChildren()[nearestEnemyIndex].runAction(cc.moveBy(0.1, 100, 20));
+                this.node.getChildren()[nearestEnemyIndex].runAction(cc.moveBy(0.1, (100 + cc.random0To1() * 100), (cc.randomMinus1To1() * 100)));
               }
             }
         }
@@ -286,7 +287,7 @@ cc.Class({
                 }
             }
         }
-        
+
 
         if((enemyX - playerX >= 0 && playerDirection >= 0) && this.node.getChildren()[nearestEnemyIndex] && !this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").isDead) {
             if(Math.abs(enemyY - playerY) <= 100 && playerAttackRadius >= Math.abs(enemyX - playerX)){
@@ -314,11 +315,9 @@ cc.Class({
             }
 
                 //this.node.getChildren()[nearestEnemyIndex].runAction(cc.moveBy(0.1, -100, 20));
-             
             }else if((enemyX - playerX <= 0 && playerDirection <= 0) && this.node.getChildren()[nearestEnemyIndex] && !this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").isDead){
-
                 if(Math.abs(enemyY - playerY) <= 100 && playerAttackRadius >= Math.abs(enemyX - playerX)){
-              
+
                 this.node.addChild(bullet);
                 bullet.setPosition(cc.p(this.player.x, this.player.y+10));
                 bullet.runAction(

@@ -17,7 +17,7 @@ cc.Class({
         rainAnimation: {
             default: null,
             type: cc.Animation
-        } 
+        }
     },
 
     // use this for initialization
@@ -30,15 +30,15 @@ cc.Class({
 
     // },
 
-    moveBackgroundChildren: function (direction, dt) {
+    moveBackgroundChildren: function (speed, direction, dt) {
         //this.floor.x = this.floor.x + 200 * dt * direction;
         var floor = this.node.getChildByName("Floor");
         var firstBackground = this.node.getChildByName("FirstBackground");
         var secondBackground = this.node.getChildByName("SecondBackground");
 
-        this.moveSprites(floor.getChildByName('FloorSprite1'), floor.getChildByName('FloorSprite2'), 200, direction, dt);
-        this.moveSprites(firstBackground.getChildByName('FirstBackgroundSprite1'), firstBackground.getChildByName('FirstBackgroundSprite2'), 100, direction, dt);
-        this.moveSprites(secondBackground.getChildByName('SecondBackgroundSprite1'), secondBackground.getChildByName('SecondBackgroundSprite2'), 10, direction, dt);
+        this.moveSprites(floor.getChildByName('FloorSprite1'), floor.getChildByName('FloorSprite2'), speed, direction, dt);
+        this.moveSprites(firstBackground.getChildByName('FirstBackgroundSprite1'), firstBackground.getChildByName('FirstBackgroundSprite2'), (speed / 2), direction, dt);
+        this.moveSprites(secondBackground.getChildByName('SecondBackgroundSprite1'), secondBackground.getChildByName('SecondBackgroundSprite2'), (speed / 20), direction, dt);
 
     },
     moveSprites: function (sprite1, sprite2, speed, direction, dt) {
@@ -50,7 +50,7 @@ cc.Class({
 
         if (sprite1.x < -sprite1Width) {
             sprite1.x += sprite1Width * 2;
-        } 
+        }
         if (sprite2.x < -sprite2Width) {
             sprite2.x += sprite2Width * 2;
         }
