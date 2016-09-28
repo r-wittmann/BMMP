@@ -4,80 +4,164 @@
 	<dict>
 		<key>frames</key>
 		<dict>
-			<key>ninja-0.png</key>
+			<key>ninja-block-0.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{740,452},{117,219}}</string>
+				<string>{{1809,217},{111,214}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{1,30},{117,219}}</string>
+				<string>{{16,36},{111,214}}</string>
 				<key>sourceSize</key>
 				<string>{250,250}</string>
 			</dict>
 
-			<key>ninja-1.png</key>
+			<key>ninja-block-1.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{740,672},{117,220}}</string>
+				<string>{{955,0},{132,214}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{1,30},{117,220}}</string>
+				<string>{{11,36},{132,214}}</string>
 				<key>sourceSize</key>
 				<string>{250,250}</string>
 			</dict>
 
-			<key>ninja-10.png</key>
+			<key>ninja-block-2.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{613,222},{123,206}}</string>
+				<string>{{688,0},{140,211}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{1,43},{123,206}}</string>
+				<string>{{10,36},{140,211}}</string>
 				<key>sourceSize</key>
 				<string>{250,250}</string>
 			</dict>
 
-			<key>ninja-11.png</key>
+			<key>ninja-dead-0.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{858,0},{112,202}}</string>
+				<string>{{1809,0},{114,216}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{1,48},{112,202}}</string>
+				<string>{{5,33},{114,216}}</string>
 				<key>sourceSize</key>
 				<string>{250,250}</string>
 			</dict>
 
-			<key>ninja-12.png</key>
+			<key>ninja-dead-1.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{481,660},{130,203}}</string>
+				<string>{{529,216},{146,187}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{1,47},{130,203}}</string>
+				<string>{{8,47},{146,187}}</string>
 				<key>sourceSize</key>
 				<string>{250,250}</string>
 			</dict>
 
-			<key>ninja-13.png</key>
+			<key>ninja-dead-2.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,415},{179,219}}</string>
+				<string>{{385,0},{133,135}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{27,64},{133,135}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>ninja-dead-3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{529,404},{96,97}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{57,83},{96,97}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>ninja-go-0.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1219,0},{116,203}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,47},{116,203}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>ninja-go-1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1577,211},{115,209}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{2,41},{115,209}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>ninja-go-2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1693,211},{115,204}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{2,45},{115,204}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>ninja-go-3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1577,0},{116,210}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,40},{116,210}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>ninja-hit-0.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{185,216},{179,219}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -88,10 +172,10 @@
 				<string>{179,250}</string>
 			</dict>
 
-			<key>ninja-14.png</key>
+			<key>ninja-hit-1.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{180,415},{158,215}}</string>
+				<string>{{529,0},{158,215}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -102,10 +186,10 @@
 				<string>{158,250}</string>
 			</dict>
 
-			<key>ninja-15.png</key>
+			<key>ninja-hit-2.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,635},{173,198}}</string>
+				<string>{{211,0},{173,198}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -116,7 +200,7 @@
 				<string>{173,250}</string>
 			</dict>
 
-			<key>ninja-16.png</key>
+			<key>ninja-hit-3.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{0,216},{184,198}}</string>
@@ -130,10 +214,10 @@
 				<string>{184,250}</string>
 			</dict>
 
-			<key>ninja-17.png</key>
+			<key>ninja-hit-4.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{974,217},{111,248}}</string>
+				<string>{{1921,217},{111,248}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -144,7 +228,7 @@
 				<string>{111,250}</string>
 			</dict>
 
-			<key>ninja-18.png</key>
+			<key>ninja-hit-5.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{0,0},{210,215}}</string>
@@ -158,24 +242,38 @@
 				<string>{250,250}</string>
 			</dict>
 
-			<key>ninja-19.png</key>
+			<key>ninja-idle-0.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{974,0},{114,216}}</string>
+				<string>{{1459,221},{117,219}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{5,33},{114,216}}</string>
+				<string>{{1,30},{117,219}}</string>
 				<key>sourceSize</key>
 				<string>{250,250}</string>
 			</dict>
 
-			<key>ninja-2.png</key>
+			<key>ninja-idle-1.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{490,0},{118,219}}</string>
+				<string>{{1459,0},{117,220}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{1,30},{117,220}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>ninja-idle-2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1340,0},{118,219}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -186,94 +284,10 @@
 				<string>{250,250}</string>
 			</dict>
 
-			<key>ninja-20.png</key>
+			<key>ninja-pain-0.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,834},{146,187}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{8,47},{146,187}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>ninja-21.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{147,852},{133,135}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{27,64},{133,135}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>ninja-22.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{185,228},{96,97}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{57,83},{96,97}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>ninja-23.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{338,631},{142,220}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{3,29},{142,220}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>ninja-24.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{613,0},{127,221}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{5,29},{127,221}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>ninja-25.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{354,0},{135,220}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{17,27},{135,220}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>ninja-26.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{480,221},{132,223}}</string>
+				<string>{{955,215},{132,223}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -284,10 +298,10 @@
 				<string>{250,250}</string>
 			</dict>
 
-			<key>ninja-27.png</key>
+			<key>ninja-pain-1.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{174,635},{163,215}}</string>
+				<string>{{365,199},{163,215}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -298,10 +312,10 @@
 				<string>{250,250}</string>
 			</dict>
 
-			<key>ninja-28.png</key>
+			<key>ninja-pain-2.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{738,222},{118,229}}</string>
+				<string>{{1340,220},{118,229}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -312,142 +326,100 @@
 				<string>{250,250}</string>
 			</dict>
 
-			<key>ninja-29.png</key>
+			<key>ninja-run-0.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{974,466},{111,214}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{16,36},{111,214}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>ninja-3.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{612,660},{127,230}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{2,20},{127,230}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>ninja-30.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{481,445},{132,214}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{11,36},{132,214}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>ninja-31.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{339,228},{140,211}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{10,36},{140,211}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>ninja-4.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{211,0},{142,227}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{2,22},{142,227}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>ninja-5.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{741,0},{116,203}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{0,47},{116,203}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>ninja-6.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{858,620},{115,209}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{2,41},{115,209}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>ninja-7.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{858,415},{115,204}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{2,45},{115,204}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>ninja-8.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{857,204},{116,210}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{0,40},{116,210}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>ninja-9.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{614,429},{123,202}}</string>
+				<string>{{829,0},{123,202}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
 				<string>{{1,47},{123,202}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>ninja-run-1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1216,204},{123,206}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{1,43},{123,206}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>ninja-run-2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1694,0},{112,202}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{1,48},{112,202}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>ninja-run-3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1088,0},{130,203}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{1,47},{130,203}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>ninja-shuriken-0.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{676,216},{142,220}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{3,29},{142,220}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>ninja-shuriken-1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1088,204},{127,221}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{5,29},{127,221}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>ninja-shuriken-2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{819,212},{135,220}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{17,27},{135,220}}</string>
 				<key>sourceSize</key>
 				<string>{250,250}</string>
 			</dict>
@@ -459,7 +431,7 @@
 			<key>format</key>
 			<integer>2</integer>
 			<key>size</key>
-			<string>{2048,1024}</string>
+			<string>{2048,512}</string>
 			<key>textureFileName</key>
 			<string>sprites.png</string>
 			</dict>
