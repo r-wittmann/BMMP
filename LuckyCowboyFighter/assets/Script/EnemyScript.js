@@ -21,6 +21,8 @@ cc.Class({
         this.left = true;
         this.isStanding = false;
         this.isDead = false;
+        this.tumbleUntilTime = 0;
+        this.isTumbling = false;
         this.animation.play("enemyRunLeftAnim_" + this.enemyType);
     },
 
@@ -121,8 +123,16 @@ cc.Class({
         // }*/
     },
 
+    tumble: function(){
+      if(!this.isTumbling){
+        this.animation.play("enemyTumbleAnim_" + this.enemyType);
+        this.isTumbling = true;
+      }
+    },
+
     // called every frame
     update: function (dt) {
+      if(this.tumbleUntilTime < new Date().getTime()){
         if (!this.isStanding && !this.isDead) this.attack();
 
         if (!this.isStanding && !this.isDead) this.moveEnemy(dt);
@@ -131,7 +141,10 @@ cc.Class({
             this.isDead = true;
             this.enemyDie();
         }
-
+        this.isTumbling = false;
+      } else { 
+        this.tumble();
+      }
         // cc.log(new Date().getTime());
         this.checkPlayerAttack();
     },
