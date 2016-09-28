@@ -4,122 +4,108 @@
 	<dict>
 		<key>frames</key>
 		<dict>
-			<key>knight-0.png</key>
+			<key>knight-block-0.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,671},{194,227}}</string>
+				<string>{{1055,238},{125,228}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{3,18},{194,227}}</string>
+				<string>{{21,10},{125,228}}</string>
 				<key>sourceSize</key>
 				<string>{250,250}</string>
 			</dict>
 
-			<key>knight-1.png</key>
+			<key>knight-block-1.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{233,227},{192,227}}</string>
+				<string>{{1059,0},{115,224}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{4,16},{192,227}}</string>
+				<string>{{18,14},{115,224}}</string>
 				<key>sourceSize</key>
 				<string>{250,250}</string>
 			</dict>
 
-			<key>knight-10.png</key>
+			<key>knight-dead-0.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{239,0},{191,226}}</string>
+				<string>{{927,460},{127,227}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{22,16},{191,226}}</string>
+				<string>{{29,18},{127,227}}</string>
 				<key>sourceSize</key>
 				<string>{250,250}</string>
 			</dict>
 
-			<key>knight-11.png</key>
+			<key>knight-dead-1.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{389,683},{191,228}}</string>
+				<string>{{927,824},{127,197}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{41,15},{191,228}}</string>
+				<string>{{16,39},{127,197}}</string>
 				<key>sourceSize</key>
 				<string>{250,250}</string>
 			</dict>
 
-			<key>knight-12.png</key>
+			<key>knight-dead-2.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{1103,0},{113,221}}</string>
+				<string>{{927,688},{127,135}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{42,22},{113,221}}</string>
+				<string>{{11,107},{127,135}}</string>
 				<key>sourceSize</key>
 				<string>{250,250}</string>
 			</dict>
 
-			<key>knight-13.png</key>
+			<key>knight-dead-3.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{1110,450},{125,237}}</string>
+				<string>{{762,460},{131,136}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{32,4},{125,237}}</string>
+				<string>{{10,105},{131,136}}</string>
 				<key>sourceSize</key>
 				<string>{250,250}</string>
 			</dict>
 
-			<key>knight-14.png</key>
+			<key>knight-dead-4.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{1236,441},{122,229}}</string>
+				<string>{{1175,0},{99,136}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{30,15},{122,229}}</string>
+				<string>{{13,107},{99,136}}</string>
 				<key>sourceSize</key>
 				<string>{250,250}</string>
 			</dict>
 
-			<key>knight-15.png</key>
+			<key>knight-farhit-0.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,0},{238,226}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{10,18},{238,226}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>knight-16.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{969,0},{133,221}}</string>
+				<string>{{616,0},{133,221}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -130,10 +116,10 @@
 				<string>{250,250}</string>
 			</dict>
 
-			<key>knight-17.png</key>
+			<key>knight-farhit-1.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{233,455},{154,213}}</string>
+				<string>{{233,227},{154,213}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -144,10 +130,10 @@
 				<string>{250,250}</string>
 			</dict>
 
-			<key>knight-18.png</key>
+			<key>knight-farhit-2.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{1224,229},{123,211}}</string>
+				<string>{{1055,467},{123,211}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -158,7 +144,7 @@
 				<string>{250,250}</string>
 			</dict>
 
-			<key>knight-19.png</key>
+			<key>knight-farhit-3.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{0,227},{232,221}}</string>
@@ -172,164 +158,10 @@
 				<string>{250,250}</string>
 			</dict>
 
-			<key>knight-2.png</key>
+			<key>knight-go-0.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{389,455},{192,227}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{4,14},{192,227}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>knight-20.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{1096,222},{127,227}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{29,18},{127,227}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>knight-21.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{941,452},{127,197}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{16,39},{127,197}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>knight-22.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{798,231},{127,135}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{11,107},{127,135}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>knight-23.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{618,0},{131,136}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{10,105},{131,136}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>knight-24.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{1348,229},{99,136}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{13,107},{99,136}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>knight-25.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{1110,688},{125,228}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{21,10},{125,228}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>knight-26.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{1236,671},{120,224}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{37,21},{120,224}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>knight-27.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{941,231},{154,220}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{3,25},{154,220}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>knight-28.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{0,449},{232,221}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{13,23},{232,221}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>knight-29.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{431,0},{186,219}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{18,21},{186,219}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>knight-3.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{940,671},{169,228}}</string>
+				<string>{{762,231},{169,228}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -340,66 +172,10 @@
 				<string>{250,250}</string>
 			</dict>
 
-			<key>knight-30.png</key>
+			<key>knight-go-1.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{615,220},{182,224}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{9,19},{182,224}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>knight-31.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{582,453},{184,228}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{9,17},{184,228}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>knight-32.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{1224,0},{125,228}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{21,10},{125,228}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>knight-33.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{1350,0},{115,224}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{18,14},{115,224}}</string>
-				<key>sourceSize</key>
-				<string>{250,250}</string>
-			</dict>
-
-			<key>knight-4.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{798,0},{170,230}}</string>
+				<string>{{762,0},{170,230}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -410,10 +186,10 @@
 				<string>{250,250}</string>
 			</dict>
 
-			<key>knight-5.png</key>
+			<key>knight-go-2.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{767,445},{173,225}}</string>
+				<string>{{579,680},{173,225}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -424,10 +200,10 @@
 				<string>{250,250}</string>
 			</dict>
 
-			<key>knight-6.png</key>
+			<key>knight-go-3.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{766,682},{173,229}}</string>
+				<string>{{753,680},{173,229}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -438,10 +214,164 @@
 				<string>{250,250}</string>
 			</dict>
 
-			<key>knight-7.png</key>
+			<key>knight-hit-0.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{581,683},{184,225}}</string>
+				<string>{{387,677},{191,228}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{41,15},{191,228}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>knight-hit-1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{932,238},{113,221}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{42,22},{113,221}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>knight-hit-2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{933,0},{125,237}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{32,4},{125,237}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>knight-hit-3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1055,679},{122,229}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{30,15},{122,229}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>knight-hit-4.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{238,226}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{10,18},{238,226}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>knight-idle-0.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,449},{194,227}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{3,18},{194,227}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>knight-idle-1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{195,449},{192,227}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{4,16},{192,227}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>knight-idle-2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{194,677},{192,227}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{4,14},{192,227}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>knight-pain-0.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{388,453},{186,219}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{18,21},{186,219}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>knight-pain-1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{579,455},{182,224}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{9,19},{182,224}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>knight-pain-2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{577,226},{184,228}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{9,17},{184,228}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>knight-run-0.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{431,0},{184,225}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -452,10 +382,10 @@
 				<string>{250,250}</string>
 			</dict>
 
-			<key>knight-8.png</key>
+			<key>knight-run-1.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{426,227},{188,225}}</string>
+				<string>{{388,227},{188,225}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -466,16 +396,30 @@
 				<string>{250,250}</string>
 			</dict>
 
-			<key>knight-9.png</key>
+			<key>knight-run-2.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{195,671},{193,222}}</string>
+				<string>{{0,677},{193,222}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
 				<string>{{21,16},{193,222}}</string>
+				<key>sourceSize</key>
+				<string>{250,250}</string>
+			</dict>
+
+			<key>knight-run-3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{239,0},{191,226}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{22,16},{191,226}}</string>
 				<key>sourceSize</key>
 				<string>{250,250}</string>
 			</dict>
