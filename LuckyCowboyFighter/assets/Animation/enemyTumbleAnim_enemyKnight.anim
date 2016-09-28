@@ -1,0 +1,43 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "enemyTumbleAnim_enemyKnight",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.5166666666666667,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "9f6ed1ef-fa9c-4ce4-9243-1e1bc8ab800b"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "0dfb4f5b-b5ba-45d3-8c15-18ad03f0adb4"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "8677612f-4085-4d76-9dcc-e911887012d7"
+            }
+          },
+          {
+            "frame": 0.5000000000000001,
+            "value": {
+              "__uuid__": "9f6ed1ef-fa9c-4ce4-9243-1e1bc8ab800b"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

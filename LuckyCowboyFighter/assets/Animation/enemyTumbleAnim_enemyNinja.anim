@@ -1,0 +1,43 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "enemyTumbleAnim_enemyNinja",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.7666666666666667,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "a4f7b57d-18fd-4efd-8e8e-6cbda12fc536"
+            }
+          },
+          {
+            "frame": 0.23333333333333334,
+            "value": {
+              "__uuid__": "9f5b2453-991f-4d0f-8fda-f4d21715b176"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "82c9785d-6762-4eaf-8fa5-fc08e8f13b9d"
+            }
+          },
+          {
+            "frame": 0.75,
+            "value": {
+              "__uuid__": "a4f7b57d-18fd-4efd-8e8e-6cbda12fc536"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

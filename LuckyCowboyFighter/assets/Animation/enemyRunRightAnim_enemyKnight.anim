@@ -1,6 +1,6 @@
 {
   "__type__": "cc.AnimationClip",
-  "_name": "enemyRunRightAnim_Knight",
+  "_name": "enemyRunRightAnim_enemyKnight",
   "_objFlags": 0,
   "_rawFiles": null,
   "_duration": 0.5166666666666667,
