@@ -1,38 +1,39 @@
 {
   "__type__": "cc.AnimationClip",
-  "_name": "standStillAnim_Knight",
+  "_name": "blockAnim_Knight",
   "_objFlags": 0,
   "_rawFiles": null,
-  "_duration": 2.0166666666666666,
+  "_duration": 0.7,
   "sample": 60,
   "speed": 1,
-  "wrapMode": 2,
+  "wrapMode": 1,
   "curveData": {
+    "props": {},
     "comps": {
       "cc.Sprite": {
         "spriteFrame": [
           {
             "frame": 0,
             "value": {
-              "__uuid__": "02a3f965-66ad-4448-a064-3a717c012d3f"
+              "__uuid__": "96996736-8c06-48d7-bd2a-e6dd3f8355e1"
             }
           },
           {
-            "frame": 1,
+            "frame": 0.15,
             "value": {
-              "__uuid__": "3c7851e0-239a-4618-ba60-530d6604c00b"
+              "__uuid__": "85afc300-1131-46b5-a63d-cf47d7fbecb1"
             }
           },
           {
-            "frame": 1.7333333333333334,
+            "frame": 0.4666666666666667,
             "value": {
-              "__uuid__": "4bd2dc3d-d289-4a5b-8834-65df31f11f90"
+              "__uuid__": "96996736-8c06-48d7-bd2a-e6dd3f8355e1"
             }
           },
           {
-            "frame": 1.9999999999999998,
+            "frame": 0.6833333333333333,
             "value": {
-              "__uuid__": "02a3f965-66ad-4448-a064-3a717c012d3f"
+              "__uuid__": "96996736-8c06-48d7-bd2a-e6dd3f8355e1"
             }
           }
         ]

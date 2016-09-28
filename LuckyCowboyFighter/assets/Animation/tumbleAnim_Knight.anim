@@ -1,9 +1,9 @@
 {
   "__type__": "cc.AnimationClip",
-  "_name": "standStillAnim_Knight",
+  "_name": "tumbleAnim_Knight",
   "_objFlags": 0,
   "_rawFiles": null,
-  "_duration": 2.0166666666666666,
+  "_duration": 0.5166666666666667,
   "sample": 60,
   "speed": 1,
   "wrapMode": 2,
@@ -14,25 +14,25 @@
           {
             "frame": 0,
             "value": {
-              "__uuid__": "02a3f965-66ad-4448-a064-3a717c012d3f"
+              "__uuid__": "34d08c7c-e7fd-45d5-b154-467fbc498de1"
             }
           },
           {
-            "frame": 1,
+            "frame": 0.16666666666666666,
             "value": {
-              "__uuid__": "3c7851e0-239a-4618-ba60-530d6604c00b"
+              "__uuid__": "36eba5c5-9547-4347-a9e1-c65e72aaa135"
             }
           },
           {
-            "frame": 1.7333333333333334,
+            "frame": 0.3333333333333333,
             "value": {
-              "__uuid__": "4bd2dc3d-d289-4a5b-8834-65df31f11f90"
+              "__uuid__": "6786c073-72e3-470e-bc68-454fd5d2fafa"
             }
           },
           {
-            "frame": 1.9999999999999998,
+            "frame": 0.5,
             "value": {
-              "__uuid__": "02a3f965-66ad-4448-a064-3a717c012d3f"
+              "__uuid__": "34d08c7c-e7fd-45d5-b154-467fbc498de1"
             }
           }
         ]

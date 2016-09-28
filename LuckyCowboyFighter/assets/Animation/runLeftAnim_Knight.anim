@@ -1,6 +1,6 @@
 {
   "__type__": "cc.AnimationClip",
-  "_name": "runAnimLeft_Knight",
+  "_name": "runLeftAnim_Knight",
   "_objFlags": 0,
   "_rawFiles": null,
   "_duration": 0.5166666666666667,
@@ -14,31 +14,31 @@
           {
             "frame": 0,
             "value": {
-              "__uuid__": "035d74b6-1e47-473a-9136-11f6ceb9415d"
+              "__uuid__": "e1221308-71be-485d-89e7-e0a2bee38f0f"
             }
           },
           {
             "frame": 0.11666666666666667,
             "value": {
-              "__uuid__": "51ec56fd-c4dc-4da0-a693-091bc19f3225"
+              "__uuid__": "e922110a-940d-4e70-afb2-65223e027063"
             }
           },
           {
             "frame": 0.25,
             "value": {
-              "__uuid__": "788f4552-9d49-412a-b5d5-998e33b8f3f6"
+              "__uuid__": "2a55684b-133b-4c74-8426-92e29c71a09d"
             }
           },
           {
             "frame": 0.38333333333333336,
             "value": {
-              "__uuid__": "dd11b594-894d-41fa-b48f-6ba11934a5f8"
+              "__uuid__": "378b9c77-c4d7-4789-b083-64b5e87b4926"
             }
           },
           {
             "frame": 0.5,
             "value": {
-              "__uuid__": "035d74b6-1e47-473a-9136-11f6ceb9415d"
+              "__uuid__": "e1221308-71be-485d-89e7-e0a2bee38f0f"
             }
           }
         ]

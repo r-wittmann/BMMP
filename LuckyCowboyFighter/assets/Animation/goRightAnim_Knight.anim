@@ -1,0 +1,57 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "goRightAnim_Knight",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 1.0166666666666666,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "props": {
+      "scaleX": [
+        {
+          "frame": 0,
+          "value": 1
+        }
+      ]
+    },
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "0d904bf9-c696-426a-b8ab-f5897a8e60a0"
+            }
+          },
+          {
+            "frame": 0.25,
+            "value": {
+              "__uuid__": "b362e192-38d8-4b57-84dc-338780ece09c"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "463b4008-fbdb-4eae-b185-d6014b55bdb1"
+            }
+          },
+          {
+            "frame": 0.75,
+            "value": {
+              "__uuid__": "c8201fdb-782d-41a8-b2cb-1128567d38c2"
+            }
+          },
+          {
+            "frame": 1,
+            "value": {
+              "__uuid__": "0d904bf9-c696-426a-b8ab-f5897a8e60a0"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}
