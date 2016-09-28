@@ -229,9 +229,12 @@ cc.Class({
             }
         }
 
+
+        // TODO add "tumbleUntilTime" or sth to enemy. make enemy tumble until that point in time is reached.
         if(((enemyX - playerX <= 0 && playerDirection <= 0) || (enemyX - playerX >= 0 && playerDirection >= 0))) {
             if(Math.abs(enemyY - playerY) <= 100 && playerAttackRadius >= Math.abs(enemyX - playerX)){
               this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").health -= this.player.getComponent("PlayerScript").strength;
+              this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").tumbleUntilTime = (new Date().getTime() + 3000);
               if(playerDirection <= 0){
                 this.node.getChildren()[nearestEnemyIndex].runAction(cc.moveBy(0.1, (-100 + cc.random0To1() * 100), (cc.randomMinus1To1() * 100)));
               }else {
@@ -281,7 +284,7 @@ cc.Class({
                             enemyX = allChildren[nearestEnemyIndex].x;
                             enemyY = allChildren[nearestEnemyIndex].y;
                             enemySpeedX = allChildren[nearestEnemyIndex].getComponent("EnemyScript").xSpeed ;
-                            
+
                         }
                     }
                 }
