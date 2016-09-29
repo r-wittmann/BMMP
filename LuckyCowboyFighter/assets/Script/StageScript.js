@@ -299,8 +299,13 @@ cc.Class({
 
                 var bulletSpeed = 0.001;
                 if(this.player.getComponent("PlayerScript").playerType == "Cowboy"){
-                    bulletSpeed = 0.0005;
+                    if(playerDirection<0)  { 
+                    bullet.setPosition(cc.p(this.player.x-45, this.player.y+8));
+                }else {
+                    bullet.setPosition(cc.p(this.player.x+45, this.player.y+8));
                 }
+            }
+                 bulletSpeed = 0.0005;
                 bullet.runAction(
                     cc.sequence(
                         cc.moveTo(bulletSpeed*nearestEnemyDistance, enemyX-(enemySpeedX*bulletSpeed*nearestEnemyDistance), enemyY),
@@ -323,9 +328,14 @@ cc.Class({
                     bullet.setPosition(cc.p(this.player.x, this.player.y+10));
 
                     var bulletSpeed = 0.001;
-                    if(this.player.getComponent("PlayerScript").playerType == "Cowboy"){
-                        bulletSpeed = 0.0005;
-                    }
+                if(this.player.getComponent("PlayerScript").playerType == "Cowboy"){
+                    if(playerDirection<0)  { 
+                    bullet.setPosition(cc.p(this.player.x-45, this.player.y+8));
+                }else {
+                    bullet.setPosition(cc.p(this.player.x+45, this.player.y+8));
+                }
+            }
+                 bulletSpeed = 0.0005;
                     bullet.runAction(
                         cc.sequence(
                             cc.moveTo(bulletSpeed*nearestEnemyDistance, enemyX+(enemySpeedX*bulletSpeed*nearestEnemyDistance), enemyY),
