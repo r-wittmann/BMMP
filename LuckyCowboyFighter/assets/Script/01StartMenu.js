@@ -26,7 +26,6 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        this.label.string = this.text;
         this.changeScene = require('ChangeSceneScript')
         this.changeScene.fadeIn(cc.director);
     },
