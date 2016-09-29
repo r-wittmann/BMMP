@@ -209,7 +209,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "6eecf00e-56a3-4fd6-a1a5-5576b0aaebe3"
+      "__uuid__": "f6645ab2-b25a-4312-9f55-12a2a721c355"
     },
     "_type": 1,
     "_sizeMode": 0,
@@ -456,8 +456,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 63,
+      "y": -120
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -887,7 +887,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 0,
+      "x": 0.1,
       "y": -2
     },
     "_skewX": 0,
@@ -1026,8 +1026,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
+      "x": -9,
+      "y": -99
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -1596,8 +1596,8 @@
     "_scaleY": 0.8,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 30,
-      "y": 65
+      "x": -29,
+      "y": -39
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -1973,8 +1973,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 130,
-      "y": -190
+      "x": 163,
+      "y": -277
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -2002,9 +2002,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 0,
-      "g": 0,
-      "b": 0,
+      "r": 250,
+      "g": 243,
+      "b": 243,
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
@@ -2018,18 +2018,18 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 152.7,
-      "height": 40
+      "width": 887,
+      "height": 378
     },
     "_children": [],
     "_rotationX": 0,
     "_rotationY": 0,
-    "_scaleX": 1,
-    "_scaleY": 1,
+    "_scaleX": 0.29,
+    "_scaleY": 0.29,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
+      "x": -3,
+      "y": -1
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -2048,24 +2048,30 @@
     "groupIndex": 0
   },
   {
-    "__type__": "cc.Label",
+    "__type__": "cc.Sprite",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 52
     },
     "_enabled": true,
-    "_useOriginalSize": false,
-    "_actualFontSize": 20,
-    "_fontSize": 20,
-    "_lineHeight": 40,
-    "_enableWrapText": false,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
-    "_N$string": "Start Game",
-    "_N$horizontalAlign": 1,
-    "_N$verticalAlign": 1,
-    "_N$overflow": 1
+    "_spriteFrame": {
+      "__uuid__": "73e7fba8-098d-4068-9986-8062bb59c49f"
+    },
+    "_type": 0,
+    "_sizeMode": 1,
+    "_fillType": 0,
+    "_fillCenter": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_fillStart": 0,
+    "_fillRange": 0,
+    "_isTrimmedMode": true,
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
+    "_atlas": null
   },
   {
     "__type__": "cc.Sprite",
@@ -2198,8 +2204,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -130,
-      "y": -190
+      "x": -157,
+      "y": -279
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -2227,9 +2233,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 0,
-      "g": 0,
-      "b": 0,
+      "r": 255,
+      "g": 252,
+      "b": 252,
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
@@ -2243,14 +2249,14 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 152.7,
-      "height": 40
+      "width": 887,
+      "height": 378
     },
     "_children": [],
     "_rotationX": 0,
     "_rotationY": 0,
-    "_scaleX": 1,
-    "_scaleY": 1,
+    "_scaleX": 0.29,
+    "_scaleY": 0.29,
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -2273,24 +2279,30 @@
     "groupIndex": 0
   },
   {
-    "__type__": "cc.Label",
+    "__type__": "cc.Sprite",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 58
     },
     "_enabled": true,
-    "_useOriginalSize": false,
-    "_actualFontSize": 20,
-    "_fontSize": 20,
-    "_lineHeight": 40,
-    "_enableWrapText": false,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
-    "_N$string": "Back to Menu",
-    "_N$horizontalAlign": 1,
-    "_N$verticalAlign": 1,
-    "_N$overflow": 1
+    "_spriteFrame": {
+      "__uuid__": "f081abdf-0f92-4939-bab3-d0f955d2831b"
+    },
+    "_type": 0,
+    "_sizeMode": 1,
+    "_fillType": 0,
+    "_fillCenter": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_fillStart": 0,
+    "_fillRange": 0,
+    "_isTrimmedMode": true,
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
+    "_atlas": null
   },
   {
     "__type__": "cc.Sprite",
