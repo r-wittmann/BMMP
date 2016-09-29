@@ -27,6 +27,8 @@ cc.Class({
     // use this for initialization
     onLoad: function () {
         this.label.string = this.text;
+        this.changeScene = require('ChangeSceneScript')
+        this.changeScene.fadeIn(cc.director);
     },
 
     // called every frame
@@ -36,7 +38,7 @@ cc.Class({
 
     // start game function
     startGame: function () {
-        cc.director.loadScene('02characterSelect');
+        this.changeScene.loadScene(cc.director, '02characterSelect');
     },
 
     // open imprint
