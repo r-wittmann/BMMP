@@ -2,20 +2,26 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        // foo: {
-        //    default: null,      // The default value will be used only when the component attaching
-        //                           to a node for the first time
-        //    url: cc.Texture2D,  // optional, default is typeof default
-        //    serializable: true, // optional, default is true
-        //    visible: true,      // optional, default is true
-        //    displayName: 'Foo', // optional
-        //    readonly: false,    // optional, default is false
-        // },
-        // ...
+        stepAudio:{
+        default: null,
+        url: cc.AudioClip
+      },
+      punchAudio:{
+        default: null,
+        url: cc.AudioClip
+      },
     },
 
     // use this for initialization
     onLoad: function () {
+
+    },
+
+    playFootstepSound: function(){
+        cc.audioEngine.playEffect(this.stepAudio, false);
+    },
+    playPunchSound: function(){
+        cc.audioEngine.playEffect(this.punchAudio, false);
 
     },
 

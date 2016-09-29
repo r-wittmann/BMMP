@@ -132,9 +132,7 @@
       "__id__": 2
     },
     "_enabled": true,
-    "_spriteFrame": {
-      "__uuid__": "624eed19-839c-496b-85ff-b4ccbac6b74a"
-    },
+    "_spriteFrame": null,
     "_type": 0,
     "_sizeMode": 1,
     "_fillType": 0,
@@ -148,9 +146,7 @@
     "_isTrimmedMode": true,
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_atlas": {
-      "__uuid__": "c488fb87-71bc-45aa-85e9-26f89aba7ded"
-    }
+    "_atlas": null
   },
   {
     "__type__": "cc.Animation",
@@ -192,6 +188,12 @@
     "_enabled": true,
     "parent": {
       "__id__": 1
+    },
+    "stepAudio": {
+      "__uuid__": "ad52d217-3699-435b-8830-274f23eae4ef"
+    },
+    "punchAudio": {
+      "__uuid__": "345898b0-2173-4c7a-b233-e1cd2b40b63f"
     }
   },
   {
@@ -216,6 +218,7 @@
     "animation": {
       "__id__": 4
     },
+    "bulletPrefab": null,
     "playerType": "Knight"
   },
   {

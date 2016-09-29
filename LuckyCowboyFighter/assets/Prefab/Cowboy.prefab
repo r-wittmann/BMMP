@@ -204,6 +204,12 @@
     "_enabled": true,
     "parent": {
       "__id__": 1
+    },
+    "stepAudio": {
+      "__uuid__": "8b734c78-093e-4ef7-a5cb-564d400233d6"
+    },
+    "shootAudio": {
+      "__uuid__": "a653691b-8079-4830-baf3-1b971c9a59ae"
     }
   },
   {

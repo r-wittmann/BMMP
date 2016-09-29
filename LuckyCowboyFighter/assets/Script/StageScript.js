@@ -300,6 +300,11 @@ cc.Class({
 
                 var bulletSpeed = 0.001;
                 if(this.player.getComponent("PlayerScript").playerType == "Cowboy"){
+                    if(playerDirection<0)  { 
+                    bullet.setPosition(cc.p(this.player.x-45, this.player.y+8));
+                }else {
+                    bullet.setPosition(cc.p(this.player.x+45, this.player.y+8));
+                }
                  bulletSpeed = 0.0005;
                 }
                 bullet.runAction(
@@ -323,9 +328,19 @@ cc.Class({
 
                 this.node.addChild(bullet);
                 bullet.setPosition(cc.p(this.player.x, this.player.y+10));
+
+                var bulletSpeed = 0.001;
+                if(this.player.getComponent("PlayerScript").playerType == "Cowboy"){
+                    if(playerDirection<0)  { 
+                    bullet.setPosition(cc.p(this.player.x-45, this.player.y+8));
+                }else {
+                    bullet.setPosition(cc.p(this.player.x+45, this.player.y+8));
+                }
+                 bulletSpeed = 0.0005;
+                }
                 bullet.runAction(
                     cc.sequence(
-                        cc.moveTo(0.001*nearestEnemyDistance, enemyX+(enemySpeedX*0.001*nearestEnemyDistance), enemyY),
+                        cc.moveTo(bulletSpeed*nearestEnemyDistance, enemyX+(enemySpeedX*bulletSpeed*nearestEnemyDistance), enemyY),
                         cc.callFunc(() => {
                             if(this.node.getChildren()[nearestEnemyIndex] && !this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").isDead){
                                 this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").health -= this.player.getComponent("PlayerScript").strength/2;

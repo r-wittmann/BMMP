@@ -6,7 +6,20 @@ cc.Class({
       parent: {
         default: null,
         type:cc.Node,
-      }
+      },
+      stepAudio:{
+        default: null,
+        url: cc.AudioClip
+      },
+      punchAudio:{
+        default: null,
+        url: cc.AudioClip
+      },
+      shootAudio:{
+        default: null,
+        url: cc.AudioClip
+      },
+
     },
 
     // use this for initialization
@@ -25,8 +38,17 @@ cc.Class({
     },
 
     triggerBullet: function(){
-      cc.log("triggerBullet");
       this.parent.getComponent("PlayerScript").forwardBulletAttackToStage();
+    },
+
+    playFootstepSound: function(){   
+        cc.audioEngine.playEffect(this.stepAudio, false);
+    },
+    playPunchSound: function(){
+        cc.audioEngine.playEffect(this.punchAudio, false);
+    },
+    playShootSound: function(){
+        cc.audioEngine.playEffect(this.shootAudio, false);
     }
 
     // called every frame, uncomment this function to activate update callback
