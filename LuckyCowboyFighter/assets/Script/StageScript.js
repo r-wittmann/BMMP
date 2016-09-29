@@ -130,7 +130,15 @@ cc.Class({
         }
 
         this.node.addChild(this.player);
-        this.player.setPosition(cc.p(-300,-200));
+        this.player.runAction(
+            cc.sequence(
+                cc.callFunc(() => this.player.setPosition(cc.p(-700,-200))),
+                cc.callFunc(() => this.player.getComponent('PlayerScript').animation.play('runRightAnim_' + this.player.getComponent('PlayerScript').playerType)),
+                cc.moveTo(2, cc.p(-300, -200)),
+                cc.callFunc(() => this.player.getComponent('PlayerScript').animation.play('standStillAnim_' + this.player.getComponent('PlayerScript').playerType))
+            )
+        )
+        
 
         this.spawnNewEnemy();
 
@@ -157,7 +165,7 @@ cc.Class({
 
       //moves background and enemies when player walks to edges of the screen
     	let moveBackground = this.player.getComponent('PlayerScript').moveBackground;
-      let playerTempo = this.player.getComponent('PlayerScript').playerTempo;
+        let playerTempo = this.player.getComponent('PlayerScript').playerTempo;
         if (moveBackground !== 0) {
             this.background.getComponent('BackgroundScript').moveBackgroundChildren(playerTempo, moveBackground, dt);
             this.moveEnemiesOnScreen(playerTempo, moveBackground, dt);
@@ -199,7 +207,6 @@ cc.Class({
     },
 
     attackEnemy: function(){
-        cc.log("attackEnemy");
         let playerDirection = this.player.getChildByName('PlayerAnimation').scaleX;
         let playerX = this.player.getPositionX();
         let playerY = this.player.getPositionY();
@@ -248,9 +255,6 @@ cc.Class({
     },
 
     attackEnemyWithBullet: function(bullet){
-      cc.log("attackEnemyWithBullet");
-
-      cc.log(bullet);
       //bullet.getComponent('BulletScript').game = this.node.getParent().getComponent("StageScript");
       //bullet.setPosition(cc.p(this.player.x, this.player.y+10));
 
@@ -279,7 +283,6 @@ cc.Class({
                         enemyX = allChildren[nearestEnemyIndex].x;
                         enemyY = allChildren[nearestEnemyIndex].y;
                         enemySpeedX = allChildren[nearestEnemyIndex].getComponent("EnemyScript").xSpeed;
-                        cc.log(enemySpeedX);
                     } else {
                         if(nearestEnemyDistance > allChildren[i].x - playerX) {
                             nearestEnemyDistance = Math.abs(allChildren[i].x - playerX);
@@ -361,17 +364,20 @@ cc.Class({
 
 
     winGame: function (currentPosition, wonPositionX) {
-        // next stage is loaded after the player has continued to run the winDistance to the right
         if (currentPosition < wonPositionX - this.winDistance) {
             this.wonFlag = 2;
-            // this loadScene has to load the next stage
-            if (parseInt(cc.sys.localStorage.stage) <= 6) {
-                this.changeScene.loadScene(cc.director, 'Stages/stage0' + cc.sys.localStorage.stage);
-                // cc.director.loadScene('Stages/stage0' + cc.sys.localStorage.stage);
-            } else {
-                this.changeScene.loadScene(cc.director, '01startMenu');
-                // cc.director.loadScene('01startMenu');
-            }
+            this.player.runAction(
+                cc.sequence(
+                    cc.callFunc(() => this.player.getComponent('PlayerScript').won = true),
+                    cc.callFunc(() => {
+                        if (parseInt(cc.sys.localStorage.stage) <= 6) {
+                            this.changeScene.loadScene(cc.director, 'Stages/stage0' + cc.sys.localStorage.stage);
+                        } else {
+                            this.changeScene.loadScene(cc.director, '01startMenu');
+                        }
+                    })
+                )
+            )            
         }
     },
     loseGame: function () {
