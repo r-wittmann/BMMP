@@ -3065,6 +3065,9 @@
     "strengthLabel": {
       "__id__": 58
     },
+    "backgroundAudio": {
+      "__uuid__": "7dfe391e-97d8-48d6-a31a-c92b489e7ad4"
+    },
     "winDistance": 10,
     "loseTimeout": 5,
     "selectedCharacter": 0

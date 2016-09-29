@@ -45,6 +45,11 @@ cc.Class({
             default: null,
             type: cc.Label
         },
+        backgroundAudio: {
+            default: null,
+            url: cc.AudioClip
+        },
+
         winDistance: 0,
         loseTimeout: 0,
         selectedCharacter: 0,
@@ -81,6 +86,7 @@ cc.Class({
     onLoad: function () {
         // won and loseFlag are set to 0 by default. Once the player has won or lost, the flag will be set to 1.
         // Once the winGame or loseGame function is called, the respective flag will be set to 2
+
         this.changeScene = require('ChangeSceneScript')
         this.changeScene.fadeIn(cc.director);
 
@@ -88,6 +94,9 @@ cc.Class({
         this.loseFlag = 0;
         this.wonPositionX = 0;
         this.currentEnemies = 0;
+        this.timerBackgroundSound = new Date().getTime();
+        cc.log("timerBackgroundSound "+this.timerBackgroundSound)
+
 
         if (!cc.sys.localStorage.selectedCharacter) {
             cc.sys.localStorage = {
@@ -154,6 +163,14 @@ cc.Class({
 
     // called every frame, uncomment this function to activate update callback
     update: function (dt) {
+
+      //TODO play background sounds half randomly
+      if(new Date().getTime() > this.timerBackgroundSound){
+        cc.audioEngine.playEffect(this.backgroundAudio, false);
+        this.timerBackgroundSound = new Date().getTime();
+        this.timerBackgroundSound += 5000 + (Math.random() * 5000);
+        cc.log("timerBackgroundSound "+this.timerBackgroundSound);
+      }
 
       //moves background and enemies when player walks to edges of the screen
     	let moveBackground = this.player.getComponent('PlayerScript').moveBackground;
@@ -302,7 +319,7 @@ cc.Class({
 
                 var bulletSpeed = 0.001;
                 if(this.player.getComponent("PlayerScript").playerType == "Cowboy"){
-                    if(playerDirection<0)  { 
+                    if(playerDirection<0)  {
                     bullet.setPosition(cc.p(this.player.x-45, this.player.y+8));
                 }else {
                     bullet.setPosition(cc.p(this.player.x+45, this.player.y+8));
@@ -332,7 +349,7 @@ cc.Class({
 
                     var bulletSpeed = 0.001;
                 if(this.player.getComponent("PlayerScript").playerType == "Cowboy"){
-                    if(playerDirection<0)  { 
+                    if(playerDirection<0)  {
                     bullet.setPosition(cc.p(this.player.x-45, this.player.y+8));
                 }else {
                     bullet.setPosition(cc.p(this.player.x+45, this.player.y+8));
