@@ -17,7 +17,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        this.animation.play("standStillAnim_" + this.playerType);
+        // this.animation.play("standStillAnim_" + this.playerType);
         //-1:move to right; 0: do not move; 1:move to left
         this.moveBackground = 0;
         this.left = false;
@@ -27,12 +27,18 @@ cc.Class({
         this.punch = false;
         this.shoot = false;
         this.dead = false;
+        this.won = false;
 
-        this.health = cc.sys.localStorage.characterHealth || 100,
-        this.strength = cc.sys.localStorage.characterStrenght || 50,
-        this.attackRadius = cc.sys.localStorage.characterAttackRadius || 50,
+        this.health = cc.sys.localStorage.characterHealth || 100;
+        this.strength = cc.sys.localStorage.characterStrenght || 50;
+        this.attackRadius = cc.sys.localStorage.characterAttackRadius || 50;
 
-        this.setInputControl();
+        this.node.runAction(
+            cc.sequence(
+                cc.delayTime(2),
+                cc.callFunc(() => this.setInputControl())
+            )
+        )
         this.playerDirection = 1;
 
 
@@ -47,7 +53,7 @@ cc.Class({
             onKeyPressed: function(keyCode, event) {
 
 
-           		if(!self.punch && !self.shoot && !self.dead) {
+           		if(!self.punch && !self.shoot && !self.dead && !self.won) {
                     switch(keyCode) {
                     case cc.KEY.left:
                     	self.moveBackground = 0;
@@ -173,7 +179,7 @@ cc.Class({
                 this.moveBackground = 1;
             }
         } else if(this.right == true){
-            if(this.node.x <  400) {
+            if(this.node.x < 400 || this.won) {
                 this.node.x = this.node.x + this.playerTempo * dt;
             } else {
                 this.moveBackground =  -1;
