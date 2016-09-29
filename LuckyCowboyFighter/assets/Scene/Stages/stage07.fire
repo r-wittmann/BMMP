@@ -1103,7 +1103,7 @@
         "__uuid__": "b19d6ab7-2266-44a6-91bf-5888c249c167"
       }
     ],
-    "playOnLoad": false
+    "playOnLoad": true
   },
   {
     "__type__": "cc.Sprite",
@@ -3148,9 +3148,9 @@
     "knight": {
       "__uuid__": "1f38d693-db3d-4348-a3ad-00fb14d5b4ba"
     },
-    "maximumEnemies": 56,
-    "attackWaves": 7,
-    "enemyStrengthFactor": 1,
+    "maximumEnemies": 36,
+    "attackWaves": 9,
+    "enemyStrengthFactor": 2,
     "background": {
       "__id__": 3
     },

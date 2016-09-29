@@ -3044,9 +3044,9 @@
     "knight": {
       "__uuid__": "1f38d693-db3d-4348-a3ad-00fb14d5b4ba"
     },
-    "maximumEnemies": 120,
+    "maximumEnemies": 30,
     "attackWaves": 10,
-    "enemyStrengthFactor": 2,
+    "enemyStrengthFactor": 1.5,
     "background": {
       "__id__": 3
     },

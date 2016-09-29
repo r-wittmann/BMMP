@@ -387,7 +387,7 @@ cc.Class({
                 cc.sequence(
                     cc.callFunc(() => this.player.getComponent('PlayerScript').won = true),
                     cc.callFunc(() => {
-                        if (parseInt(cc.sys.localStorage.stage) <= 6) {
+                        if (parseInt(cc.sys.localStorage.stage) <= 9) {
                             this.changeScene.loadScene(cc.director, 'Stages/stage0' + cc.sys.localStorage.stage);
                         } else {
                             this.changeScene.loadScene(cc.director, '01startMenu');
