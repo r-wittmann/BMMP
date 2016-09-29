@@ -271,11 +271,11 @@ cc.Class({
             if(allChildren[i].getComponent('EnemyScript') && allChildren[i].active && !allChildren[i].getComponent("EnemyScript").isDead) {
                 if(((allChildren[i].x - playerX >= 0 && playerDirection >= 0) || (allChildren[i].x - playerX < 0 && playerDirection < 0))) {
                     if(!nearestEnemyDistance) {
-                        nearestEnemyDistance = allChildren[i].x - playerX;
+                        nearestEnemyDistance = Math.abs(allChildren[i].x - playerX);
                         nearestEnemyIndex = i;
                         enemyX = allChildren[nearestEnemyIndex].x;
                         enemyY = allChildren[nearestEnemyIndex].y;
-                        enemySpeedX = allChildren[nearestEnemyIndex].getComponent("EnemyScript").xSpeed ;
+                        enemySpeedX = allChildren[nearestEnemyIndex].getComponent("EnemyScript").xSpeed;
                         cc.log(enemySpeedX);
                     } else {
                         if(nearestEnemyDistance > allChildren[i].x - playerX) {
@@ -283,7 +283,7 @@ cc.Class({
                             nearestEnemyIndex = i;
                             enemyX = allChildren[nearestEnemyIndex].x;
                             enemyY = allChildren[nearestEnemyIndex].y;
-                            enemySpeedX = allChildren[nearestEnemyIndex].getComponent("EnemyScript").xSpeed ;
+                            enemySpeedX = allChildren[nearestEnemyIndex].getComponent("EnemyScript").xSpeed;
 
                         }
                     }
@@ -294,19 +294,18 @@ cc.Class({
 
         if((enemyX - playerX >= 0 && playerDirection >= 0) && this.node.getChildren()[nearestEnemyIndex] && !this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").isDead) {
             if(Math.abs(enemyY - playerY) <= 100 && playerAttackRadius >= Math.abs(enemyX - playerX)){
-                var bulletSpeed = 0.001;
                 this.node.addChild(bullet);
                 bullet.setPosition(cc.p(this.player.x, this.player.y+10));
 
                 var bulletSpeed = 0.001;
                 if(this.player.getComponent("PlayerScript").playerType == "Cowboy"){
-                 bulletSpeed = 0.0005;
+                    bulletSpeed = 0.0005;
                 }
                 bullet.runAction(
                     cc.sequence(
                         cc.moveTo(bulletSpeed*nearestEnemyDistance, enemyX-(enemySpeedX*bulletSpeed*nearestEnemyDistance), enemyY),
                         cc.callFunc(() => {
-                            if(!this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").isDead){
+                            if(this.node.getChildren()[nearestEnemyIndex] && !this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").isDead){
                                 this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").health -= this.player.getComponent("PlayerScript").strength/2;
                             }
                             bullet.destroy();
@@ -320,22 +319,26 @@ cc.Class({
                 //this.node.getChildren()[nearestEnemyIndex].runAction(cc.moveBy(0.1, -100, 20));
             }else if((enemyX - playerX <= 0 && playerDirection <= 0) && this.node.getChildren()[nearestEnemyIndex] && !this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").isDead){
                 if(Math.abs(enemyY - playerY) <= 100 && playerAttackRadius >= Math.abs(enemyX - playerX)){
+                    this.node.addChild(bullet);
+                    bullet.setPosition(cc.p(this.player.x, this.player.y+10));
 
-                this.node.addChild(bullet);
-                bullet.setPosition(cc.p(this.player.x, this.player.y+10));
-                bullet.runAction(
-                    cc.sequence(
-                        cc.moveTo(0.001*nearestEnemyDistance, enemyX+(enemySpeedX*0.001*nearestEnemyDistance), enemyY),
-                        cc.callFunc(() => {
-                            if(this.node.getChildren()[nearestEnemyIndex] && !this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").isDead){
-                                this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").health -= this.player.getComponent("PlayerScript").strength/2;
-                            }
-                            bullet.destroy();
+                    var bulletSpeed = 0.001;
+                    if(this.player.getComponent("PlayerScript").playerType == "Cowboy"){
+                        bulletSpeed = 0.0005;
+                    }
+                    bullet.runAction(
+                        cc.sequence(
+                            cc.moveTo(bulletSpeed*nearestEnemyDistance, enemyX+(enemySpeedX*bulletSpeed*nearestEnemyDistance), enemyY),
+                            cc.callFunc(() => {
+                                if(this.node.getChildren()[nearestEnemyIndex] && !this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").isDead){
+                                    this.node.getChildren()[nearestEnemyIndex].getComponent("EnemyScript").health -= this.player.getComponent("PlayerScript").strength/2;
+                                }
+                                bullet.destroy();
 
 
-                        })
-                    )
-                );
+                            })
+                        )
+                    );
 
             }
         }
