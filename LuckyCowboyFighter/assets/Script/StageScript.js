@@ -81,6 +81,9 @@ cc.Class({
     onLoad: function () {
         // won and loseFlag are set to 0 by default. Once the player has won or lost, the flag will be set to 1.
         // Once the winGame or loseGame function is called, the respective flag will be set to 2
+        this.changeScene = require('ChangeSceneScript')
+        this.changeScene.fadeIn(cc.director);
+
         this.wonFlag = 0;
         this.loseFlag = 0;
         this.wonPositionX = 0;
@@ -299,8 +302,13 @@ cc.Class({
 
                 var bulletSpeed = 0.001;
                 if(this.player.getComponent("PlayerScript").playerType == "Cowboy"){
-                    bulletSpeed = 0.0005;
+                    if(playerDirection<0)  { 
+                    bullet.setPosition(cc.p(this.player.x-45, this.player.y+8));
+                }else {
+                    bullet.setPosition(cc.p(this.player.x+45, this.player.y+8));
                 }
+            }
+                 bulletSpeed = 0.0005;
                 bullet.runAction(
                     cc.sequence(
                         cc.moveTo(bulletSpeed*nearestEnemyDistance, enemyX-(enemySpeedX*bulletSpeed*nearestEnemyDistance), enemyY),
@@ -323,9 +331,14 @@ cc.Class({
                     bullet.setPosition(cc.p(this.player.x, this.player.y+10));
 
                     var bulletSpeed = 0.001;
-                    if(this.player.getComponent("PlayerScript").playerType == "Cowboy"){
-                        bulletSpeed = 0.0005;
-                    }
+                if(this.player.getComponent("PlayerScript").playerType == "Cowboy"){
+                    if(playerDirection<0)  { 
+                    bullet.setPosition(cc.p(this.player.x-45, this.player.y+8));
+                }else {
+                    bullet.setPosition(cc.p(this.player.x+45, this.player.y+8));
+                }
+            }
+                 bulletSpeed = 0.0005;
                     bullet.runAction(
                         cc.sequence(
                             cc.moveTo(bulletSpeed*nearestEnemyDistance, enemyX+(enemySpeedX*bulletSpeed*nearestEnemyDistance), enemyY),
@@ -353,9 +366,11 @@ cc.Class({
             this.wonFlag = 2;
             // this loadScene has to load the next stage
             if (parseInt(cc.sys.localStorage.stage) <= 6) {
-                cc.director.loadScene('Stages/stage0' + cc.sys.localStorage.stage);
+                this.changeScene.loadScene(cc.director, 'Stages/stage0' + cc.sys.localStorage.stage);
+                // cc.director.loadScene('Stages/stage0' + cc.sys.localStorage.stage);
             } else {
-                cc.director.loadScene('01startMenu');
+                this.changeScene.loadScene(cc.director, '01startMenu');
+                // cc.director.loadScene('01startMenu');
             }
         }
     },
@@ -367,7 +382,7 @@ cc.Class({
             cc.sequence(
                 cc.delayTime(this.loseTimeout),
                 cc.callFunc(() => {
-                    cc.director.loadScene('01startMenu')
+                    this.changeScene.loadScene(cc.director, '01startMenu');
                 })
             )
         )

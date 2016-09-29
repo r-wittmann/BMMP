@@ -1,3 +1,4 @@
+
 cc.Class({
     extends: cc.Component,
 
@@ -38,6 +39,8 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
+        this.changeScene = require('ChangeSceneScript');
+        this.changeScene.fadeIn(cc.director);
     },
 
     // called every frame, uncomment this function to activate update callback
@@ -96,10 +99,11 @@ cc.Class({
     
     //back to menu
     goBackToMenu: function () {
-        cc.director.loadScene('01startMenu');
+        this.changeScene.loadScene(cc.director, '01startMenu');
     },
     //start game
     goToGame: function () {
-        cc.director.loadScene('Stages/stage01');
+        this.changeScene.loadScene(cc.director, 'Stages/stage01');
+        //cc.director.loadScene();
     },
 });
