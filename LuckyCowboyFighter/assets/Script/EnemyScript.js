@@ -132,7 +132,7 @@ cc.Class({
 
     // called every frame
     update: function (dt) {
-      if(this.tumbleUntilTime < new Date().getTime()){
+      if(this.tumbleUntilTime < new Date().getTime() && Math.random() < 0.2){
         if (!this.isStanding && !this.isDead) this.attack();
 
         if (!this.isStanding && !this.isDead) this.moveEnemy(dt);
