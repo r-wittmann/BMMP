@@ -45,5 +45,11 @@
       }
     }
   },
-  "events": []
+  "events": [
+    {
+      "frame": 0.2833333333333333,
+      "func": "playPunchSound",
+      "params": []
+    }
+  ]
 }

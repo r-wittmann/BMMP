@@ -64,6 +64,11 @@
       "params": []
     },
     {
+      "frame": 0.16666666666666666,
+      "func": "playPunchSound",
+      "params": []
+    },
+    {
       "frame": 0.45,
       "func": "returnToStandardMode",
       "params": []

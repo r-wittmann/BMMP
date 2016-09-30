@@ -301,6 +301,9 @@
     "stepAudio": {
       "__uuid__": "8b734c78-093e-4ef7-a5cb-564d400233d6"
     },
+    "punchAudio": {
+      "__uuid__": "d4173f3d-b155-4800-9bdd-b2bf892615ea"
+    },
     "shootAudio": {
       "__uuid__": "a653691b-8079-4830-baf3-1b971c9a59ae"
     }

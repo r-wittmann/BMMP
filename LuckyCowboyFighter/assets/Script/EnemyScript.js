@@ -166,7 +166,7 @@ cc.Class({
                 this.node.runAction(
                     cc.sequence(
                         cc.callFunc(() => this.animation.play("enemyDieAnim_" + this.enemyType)),
-                        cc.delayTime(3),
+                        cc.delayTime(0.5),
                         cc.callFunc(() => this.node.destroy())
                     )
                 )

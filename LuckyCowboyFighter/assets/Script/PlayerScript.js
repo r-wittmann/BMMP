@@ -92,7 +92,9 @@ cc.Class({
                     	self.shoot = true;
                     	self.playShootAnimation();
                     	break;
-
+                    case cc.KEY.p:
+                        self.killAllEnemies();
+                        break;
                     }
 
 
@@ -127,6 +129,20 @@ cc.Class({
             }
         }, self.node);
 
+    },
+
+    killAllEnemies: function () {
+        cc.log('killAllEnemies')
+        var allChildren = this.node.getParent().getChildren();
+        cc.log(allChildren)
+
+        for (var i = 0; i < allChildren.length; i++){
+            if(allChildren[i].getComponent('EnemyScript')){
+              this.node.getParent().getChildren()[i].getComponent('EnemyScript').health = -1;
+              cc.log(this.node.getParent().getChildren()[i].getComponent('EnemyScript').health)
+
+            }
+        }
     },
 
     playAnimation: function(){
@@ -198,7 +214,15 @@ cc.Class({
      },
 
      loseGame: function () {
-        this.animation.play('dieAnim_' + this.playerType)
-        this.dead = true;
+        this.node.runAction(
+            cc.sequence(
+                cc.callFunc(() => {
+                    this.animation.play('dieAnim_' + this.playerType)
+                    this.dead = true;
+                }),
+                cc.delayTime(0.5),
+                cc.callFunc(() => this.node.getChildByName('shadow').destroy())
+            )
+        )
      }
 });

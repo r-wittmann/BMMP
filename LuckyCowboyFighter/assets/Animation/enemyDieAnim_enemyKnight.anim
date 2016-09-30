@@ -3,7 +3,7 @@
   "_name": "enemyDieAnim_enemyKnight",
   "_objFlags": 0,
   "_rawFiles": null,
-  "_duration": 0.6833333333333333,
+  "_duration": 0.4666666666666667,
   "sample": 60,
   "speed": 1,
   "wrapMode": 1,
@@ -30,13 +30,13 @@
             }
           },
           {
-            "frame": 0.5,
+            "frame": 0.3333333333333333,
             "value": {
               "__uuid__": "d5f31216-e59d-4ddc-8be5-48600b16f1ec"
             }
           },
           {
-            "frame": 0.6666666666666666,
+            "frame": 0.45,
             "value": {
               "__uuid__": "d5f31216-e59d-4ddc-8be5-48600b16f1ec"
             }
@@ -47,11 +47,11 @@
     "props": {
       "opacity": [
         {
-          "frame": 0.5,
+          "frame": 0.3333333333333333,
           "value": 255
         },
         {
-          "frame": 0.6666666666666666,
+          "frame": 0.4666666666666667,
           "value": 0
         }
       ]

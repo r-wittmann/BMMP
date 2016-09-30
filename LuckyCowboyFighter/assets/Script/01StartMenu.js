@@ -42,11 +42,24 @@ cc.Class({
 
     // open imprint
     openImprint: function () {
-        cc.log('openImprint');
+        this.node.getChildByName('Imprint').runAction(cc.moveTo(0.3, 0, 0))
+    },
+    closeImprint: function () {
+        this.node.getChildByName('Imprint').runAction(cc.moveTo(0.3, 0, -700))
     },
 
     // open manual
     openManual: function () {
-        cc.log('openManual');
+        cc.sys.localStorage = {
+            selectedCharacter: 1,
+            characterHealth: 500,
+            currentHealth: 500,
+            characterStrength: 20,
+            characterExperience: 0,
+            characterLevel: 1,
+            characterAttackRadius: 50,
+            stage: 10
+        }
+        this.changeScene.loadScene(cc.director, 'Tutorial');
     },
 });
