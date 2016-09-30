@@ -264,12 +264,12 @@
     "_children": [],
     "_rotationX": 0,
     "_rotationY": 0,
-    "_scaleX": 1,
-    "_scaleY": 1,
+    "_scaleX": 1.2,
+    "_scaleY": 1.2,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -279.3,
-      "y": 129.8
+      "x": -267.7,
+      "y": 128.8
     },
     "_skewX": 0,
     "_skewY": 0,
