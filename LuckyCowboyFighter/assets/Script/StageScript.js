@@ -77,7 +77,7 @@ cc.Class({
     },
 
     getNewEnemyPosition: function (factor) {
-        var randomX = ((cc.random0To1() * 500 * (factor + 1)) + 100) + (factor * 2000);
+        var randomX = ((cc.random0To1() * 500 * (factor + 1)) + 500) + (factor * 2000);
         var randomY = (cc.random0To1() * -200) - 100;
         return cc.p(randomX, randomY);
     },

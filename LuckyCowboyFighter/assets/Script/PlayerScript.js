@@ -198,7 +198,15 @@ cc.Class({
      },
 
      loseGame: function () {
-        this.animation.play('dieAnim_' + this.playerType)
-        this.dead = true;
+        this.node.runAction(
+            cc.sequence(
+                cc.callFunc(() => {
+                    this.animation.play('dieAnim_' + this.playerType)
+                    this.dead = true;
+                }),
+                cc.delayTime(0.5),
+                cc.callFunc(() => this.node.getChildByName('shadow').destroy())
+            )
+        )
      }
 });
