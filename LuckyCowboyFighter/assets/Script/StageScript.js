@@ -111,6 +111,8 @@ cc.Class({
             }
         }
 
+        this.remainingEnemies = [];
+
 
         this.localStorageObject = cc.sys.localStorage
 
@@ -166,7 +168,8 @@ cc.Class({
     },
 
     updateBars: function () {
-        this.healthBar.getChildByName('ProgressBar')._components[1].progress = this.currentHealth / parseInt(this.localStorageObject.characterHealth)
+        this.healthBar.getChildByName('ProgressBar')._components[1].progress = this.currentHealth / parseInt(this.localStorageObject.characterHealth);
+        this.experienceBar.getChildByName('ProgressBar')._components[1].progress = (this.maximumEnemies - this.remainingEnemies.length) / this.maximumEnemies;
     },
 
     // called every frame, uncomment this function to activate update callback
@@ -188,16 +191,16 @@ cc.Class({
             this.moveEnemiesOnScreen(playerTempo, moveBackground, dt);
         }
 
-        let remainingEnemies = []
+        this.remainingEnemies = []
         //for (let child of this.node.getChildren()) {
         for( var i = 0; i < this.node.getChildren().length; i++ ){
             var child = this.node.getChildren()[i];
             if (child.getComponent('EnemyScript') && child.active) {
-                remainingEnemies.push(child);
+                this.remainingEnemies.push(child);
             }
         }
 
-        if (remainingEnemies.length === 0 && this.wonFlag === 0) {
+        if (this.remainingEnemies.length === 0 && this.wonFlag === 0) {
             this.wonFlag = 1;
             this.wonPositionX = this.background.getChildByName('SecondBackground').getChildByName('SecondBackgroundSprite1').x
             this.writeMessage('You Won! Continue to the right for the next Stage >>>');
