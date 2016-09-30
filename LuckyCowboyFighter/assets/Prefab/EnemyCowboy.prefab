@@ -285,7 +285,10 @@
     "node": {
       "__id__": 5
     },
-    "_enabled": true
+    "_enabled": true,
+    "punchAudio": {
+      "__uuid__": "d4173f3d-b155-4800-9bdd-b2bf892615ea"
+    }
   },
   {
     "__type__": "cc.PrefabInfo",

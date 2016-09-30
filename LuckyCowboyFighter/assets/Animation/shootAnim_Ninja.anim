@@ -46,6 +46,11 @@
       "params": []
     },
     {
+      "frame": 0.18333333333333332,
+      "func": "playShootSound",
+      "params": []
+    },
+    {
       "frame": 0.3333333333333333,
       "func": "returnToStandardMode",
       "params": []
